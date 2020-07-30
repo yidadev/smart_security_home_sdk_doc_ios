@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>布防提醒 · GitBook</title>
+        <title>Arm Reminder · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -94,7 +94,7 @@
                 <a href="../">
             
                     
-                    前言
+                    Preface
             
                 </a>
             
@@ -107,7 +107,7 @@
                 <a href="../Overview.html">
             
                     
-                    功能描述
+                    Features Overview
             
                 </a>
             
@@ -120,7 +120,7 @@
                 <a href="../Preparation.html">
             
                     
-                    准备工作
+                    Preparation for Integration
             
                 </a>
             
@@ -133,7 +133,7 @@
                 <a href="../Integrated.html">
             
                     
-                    集成SDK
+                    Integrate SDK
             
                 </a>
             
@@ -159,7 +159,7 @@
                 <a href="../iOSAdaptation.html">
             
                     
-                    iOS 版本适配
+                    iOS Version Adaptation
             
                 </a>
             
@@ -172,7 +172,7 @@
                 <a href="../User/">
             
                     
-                    安防用户
+                    Security Users
             
                 </a>
             
@@ -186,7 +186,7 @@
                 <a href="../User/securityUser.html">
             
                     
-                    注册服务
+                    Register & Service
             
                 </a>
             
@@ -204,7 +204,7 @@
                 <a href="../Home/">
             
                     
-                    涂鸦基础能力
+                    Tuya Basical Skills
             
                 </a>
             
@@ -218,7 +218,7 @@
                 <a href="../Home/family.html">
             
                     
-                    家庭管理
+                    Family Management
             
                 </a>
             
@@ -231,7 +231,7 @@
                 <a href="../Home/deviceActivator.html">
             
                     
-                    设备配网
+                    Device Configuration & Management
             
                 </a>
             
@@ -244,7 +244,7 @@
                 <a href="../Home/group.html">
             
                     
-                    群组管理
+                    Group Management
             
                 </a>
             
@@ -257,7 +257,7 @@
                 <a href="../Home/Push.html">
             
                     
-                    集成Push
+                    Integrated Push
             
                 </a>
             
@@ -275,7 +275,7 @@
                 <a href="../Arm/">
             
                     
-                    安防基础能力
+                    Tuya Basical Skills
             
                 </a>
             
@@ -289,7 +289,7 @@
                 <a href="../Arm/armOperation.html">
             
                     
-                    布撤防
+                    Arm & disarm
             
                 </a>
             
@@ -302,7 +302,7 @@
                 <a href="../Arm/modeSetting.html">
             
                     
-                    模式设置
+                    Mode settings
             
                 </a>
             
@@ -315,7 +315,7 @@
                 <a href="../Arm/emContact.html">
             
                     
-                    紧急联系人
+                    Emergency Contact
             
                 </a>
             
@@ -333,7 +333,7 @@
                 <a href="./">
             
                     
-                    安防场景&消息
+                    Security Scene & News
             
                 </a>
             
@@ -347,7 +347,7 @@
                 <a href="securityScene.html">
             
                     
-                    安防场景
+                    Scene
             
                 </a>
             
@@ -360,7 +360,7 @@
                 <a href="geofence.html">
             
                     
-                    地理围栏
+                    Geofence
             
                 </a>
             
@@ -373,7 +373,7 @@
                 <a href="eventRecording.html">
             
                     
-                    事件绑定
+                    Event Recording
             
                 </a>
             
@@ -386,7 +386,7 @@
                 <a href="armReminder.html">
             
                     
-                    布防提醒
+                    Arm Reminder
             
                 </a>
             
@@ -399,7 +399,7 @@
                 <a href="message.html">
             
                     
-                    安防消息
+                    News
             
                 </a>
             
@@ -442,7 +442,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >布防提醒</a>
+        <a href=".." >Arm Reminder</a>
     </h1>
 </div>
 
@@ -457,146 +457,172 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="tuyasecurityarmreminder--&#x5E03;&#x9632;&#x63D0;&#x9192;">TuyaSecurityArmReminder  &#x5E03;&#x9632;&#x63D0;&#x9192;</h3>
-<h4 id="&#x83B7;&#x53D6;&#x5E03;&#x9632;&#x63D0;&#x9192;&#x7684;&#x5217;&#x8868;">&#x83B7;&#x53D6;&#x5E03;&#x9632;&#x63D0;&#x9192;&#x7684;&#x5217;&#x8868;</h4>
+                                <h2 id="1-arming-reminder">1 Arming reminder</h2>
+<h3 id="11-get-the-list-of-arming-reminders">1.1 Get the list of arming reminders</h3>
+<h4 id="interface-description">Interface Description</h4>
+<p>Get the list of arming reminders</p>
+<pre><code class="lang-objective-c">/// Get ArmReminder list
+///
+/// @param homeId Home ID
+/// @param success Success Callback
+/// @param failure Failure Callback
+- (void)getArmReminderStatus:(long long)homeId
+                     success:(ArmReminderList)success
+                     failure:(TYFailureError)failure;
+</code></pre>
+<h4 id="parameter-description">Parameter Description</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;Id</td>
+<td>Family Id</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<p>&#x5730;&#x7406;&#x56F4;&#x680F;&#x8BBE;&#x5907;&#x6570;&#x636E;&#x6A21;&#x578B;
-TYArmReminderModel</p>
+<p>Geofencing equipment data model TYArmReminderModel</p>
 <table>
 <thead>
 <tr>
-<th>&#x6570;&#x636E;&#x5B57;&#x6BB5;</th>
-<th>&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>Data field</th>
+<th>Field Type</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
 <td>NSString *</td>
-<td>&#x5BB6;&#x5EAD;ID </td>
+<td>Family ID</td>
 </tr>
 <tr>
 <td>type</td>
 <td>enum(TYArmReminderType)</td>
-<td>&#x5E03;&#x9632;&#x7C7B;&#x578B;</td>
+<td>Arming type</td>
 </tr>
 <tr>
 <td>enable</td>
 <td>BOOL</td>
-<td>&#x72B6;&#x6001;(&#x5F00;&#x542F;&#x6216;&#x8005;&#x5173;&#x95ED;)</td>
+<td>Status (open or closed)</td>
 </tr>
 </tbody>
 </table>
-<pre><code class="lang-objective-c">
-/// &#x83B7;&#x53D6;&#x5E03;&#x9632;&#x63D0;&#x9192;&#x7684;&#x5217;&#x8868;
-/// Get ArmReminder list
-/// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
-/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
-/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
-- (void)getArmReminderStatus:(long long)homeId
-                     success:(ArmReminderList)success
-                     failure:(TYFailureError)failure;
+<h4 id="code-example">Code example</h4>
+<p>Objc</p>
+<pre><code class="lang-objective-c">[[TuyaSmartSecurityArmReminder sharedInstance] getArmReminderStatus:123134 success:^(NSArray&lt;TuyaSmartSecurityArmReminderModel *&gt; * _Nullable armReminderList) {
+
+} failure:^(NSError *error) {
+
+}];
 </code></pre>
-<h4 id="&#x4FEE;&#x6539;&#x5E03;&#x9632;&#x63D0;&#x9192;">&#x4FEE;&#x6539;&#x5E03;&#x9632;&#x63D0;&#x9192;</h4>
-<table>
-<thead>
-<tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>homeId</td>
-<td>&#x5BB6;&#x5EAD;Id</td>
-</tr>
-<tr>
-<td>type</td>
-<td>&#x5E03;&#x9632;&#x7C7B;&#x578B;</td>
-</tr>
-<tr>
-<td>enable</td>
-<td>&#x72B6;&#x6001;(&#x5F00;&#x6216;&#x8005;&#x5173;)</td>
-</tr>
-<tr>
-<td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
-</tr>
-<tr>
-<td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
-</tr>
-</tbody>
-</table>
-<pre><code class="lang-objective-c">
-/// &#x4FEE;&#x6539;&#x5E03;&#x9632;&#x63D0;&#x9192;
-/// Modify ArmReminder
-/// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
-/// @param type &#x5E03;&#x9632;&#x7C7B;&#x578B;
-/// @param enable &#x5F00;/&#x5173;
-/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
-/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
+<h3 id="12-modify-the-arming-reminder-status">1.2 Modify the arming reminder status</h3>
+<h4 id="interface-description">Interface Description</h4>
+<p>Modify arm reminder status</p>
+<pre><code class="lang-objective-c">/// Modify ArmReminder
+///
+/// @param homeId  Home ID
+/// @param type  type
+/// @param enable open / close
+/// @param success Success Callback
+/// @param failure Failure Callback
 - (void)updateArmReminderStatus:(long long)homeId
                            type:(TYArmReminderType)type
                          enable:(BOOL)enable
                         success:(TYSuccessBOOL)success
                         failure:(TYFailureError)failure;
 </code></pre>
-<h4 id="&#x5FFD;&#x7565;&#x5E03;&#x9632;&#x63D0;&#x9192;">&#x5FFD;&#x7565;&#x5E03;&#x9632;&#x63D0;&#x9192;</h4>
+<h4 id="parameter-description">Parameter Description</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;Id</td>
+<td>Family Id</td>
+</tr>
+<tr>
+<td>type</td>
+<td>Arming type</td>
+</tr>
+<tr>
+<td>enable</td>
+<td>Status (open or closed)</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<pre><code class="lang-objective-c">
-/// &#x5FFD;&#x7565;&#x63D0;&#x9192;
-/// Ignore ArmReminder
-/// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
-/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
-/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
+<h4 id="code-example">Code example</h4>
+<p>Objc</p>
+<pre><code class="lang-objective-c">[[TuyaSmartSecurityArmReminder sharedInstance] updateArmReminderStatus:124 type:TYArmReminderTypeStay enable:YES success:^(BOOL result) {
+} failure:^(NSError *error) {
+}];
+</code></pre>
+<h3 id="13-ignore-arming-reminder">1.3 Ignore Arming Reminder</h3>
+<h4 id="interface-description">Interface Description</h4>
+<p>Ignore Arming Alert</p>
+<pre><code class="lang-objective-c">/// Ignore ArmReminder
+/// @param homeId Home ID
+/// @param success  Success Callback
+/// @param failure  Failure Callback
 - (void)ignoreArmReminder:(long long)homeId
                   success:(TYSuccessBOOL)success
                   failure:(TYFailureError)failure;
 </code></pre>
+<h4 id=""> </h4>
+<h4 id="parameter-description">Parameter Description</h4>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>homeId</td>
+<td>Family Id</td>
+</tr>
+<tr>
+<td>success</td>
+<td>Success callback</td>
+</tr>
+<tr>
+<td>failure</td>
+<td>Failure callback</td>
+</tr>
+</tbody>
+</table>
+<h4 id="code-example">Code example</h4>
+<p>Objc:</p>
+<pre><code class="lang-objective-c">[[TuyaSmartSecurityArmReminder sharedInstance] ignoreArmReminder:123124 success:^(BOOL result) {
+} failure:^(NSError *error) {
+}];
+</code></pre>
+<p>Swift:</p>
 
                                 
                                 </section>
@@ -624,12 +650,12 @@ TYArmReminderModel</p>
 
             
                 
-                <a href="eventRecording.html" class="navigation navigation-prev " aria-label="Previous page: 事件绑定">
+                <a href="eventRecording.html" class="navigation navigation-prev " aria-label="Previous page: Event Recording">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="message.html" class="navigation navigation-next " aria-label="Next page: 安防消息">
+                <a href="message.html" class="navigation navigation-next " aria-label="Next page: News">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -640,7 +666,7 @@ TYArmReminderModel</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"布防提醒","level":"1.10.4","depth":2,"next":{"title":"安防消息","level":"1.10.5","depth":2,"path":"Scene/message.md","ref":"Scene/message.md","articles":[]},"previous":{"title":"事件绑定","level":"1.10.3","depth":2,"path":"Scene/eventRecording.md","ref":"Scene/eventRecording.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Scene/armReminder.md","mtime":"2020-05-19T02:01:34.591Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-30T03:12:14.641Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Arm Reminder","level":"1.10.4","depth":2,"next":{"title":"News","level":"1.10.5","depth":2,"path":"Scene/message.md","ref":"Scene/message.md","articles":[]},"previous":{"title":"Event Recording","level":"1.10.3","depth":2,"path":"Scene/eventRecording.md","ref":"Scene/eventRecording.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Scene/armReminder.md","mtime":"2020-07-30T07:17:37.302Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-30T07:21:27.130Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

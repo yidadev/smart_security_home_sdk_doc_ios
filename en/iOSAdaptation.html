@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>iOS 版本适配 · GitBook</title>
+        <title>iOS Version Adaptation · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -94,7 +94,7 @@
                 <a href="./">
             
                     
-                    前言
+                    Preface
             
                 </a>
             
@@ -107,7 +107,7 @@
                 <a href="Overview.html">
             
                     
-                    功能描述
+                    Features Overview
             
                 </a>
             
@@ -120,7 +120,7 @@
                 <a href="Preparation.html">
             
                     
-                    准备工作
+                    Preparation for Integration
             
                 </a>
             
@@ -133,7 +133,7 @@
                 <a href="Integrated.html">
             
                     
-                    集成SDK
+                    Integrate SDK
             
                 </a>
             
@@ -159,7 +159,7 @@
                 <a href="iOSAdaptation.html">
             
                     
-                    iOS 版本适配
+                    iOS Version Adaptation
             
                 </a>
             
@@ -172,7 +172,7 @@
                 <a href="User/">
             
                     
-                    安防用户
+                    Security Users
             
                 </a>
             
@@ -186,7 +186,7 @@
                 <a href="User/securityUser.html">
             
                     
-                    注册服务
+                    Register & Service
             
                 </a>
             
@@ -204,7 +204,7 @@
                 <a href="Home/">
             
                     
-                    涂鸦基础能力
+                    Tuya Basical Skills
             
                 </a>
             
@@ -218,7 +218,7 @@
                 <a href="Home/family.html">
             
                     
-                    家庭管理
+                    Family Management
             
                 </a>
             
@@ -231,7 +231,7 @@
                 <a href="Home/deviceActivator.html">
             
                     
-                    设备配网
+                    Device Configuration & Management
             
                 </a>
             
@@ -244,7 +244,7 @@
                 <a href="Home/group.html">
             
                     
-                    群组管理
+                    Group Management
             
                 </a>
             
@@ -257,7 +257,7 @@
                 <a href="Home/Push.html">
             
                     
-                    集成Push
+                    Integrated Push
             
                 </a>
             
@@ -275,7 +275,7 @@
                 <a href="Arm/">
             
                     
-                    安防基础能力
+                    Tuya Basical Skills
             
                 </a>
             
@@ -289,7 +289,7 @@
                 <a href="Arm/armOperation.html">
             
                     
-                    布撤防
+                    Arm & disarm
             
                 </a>
             
@@ -302,7 +302,7 @@
                 <a href="Arm/modeSetting.html">
             
                     
-                    模式设置
+                    Mode settings
             
                 </a>
             
@@ -315,7 +315,7 @@
                 <a href="Arm/emContact.html">
             
                     
-                    紧急联系人
+                    Emergency Contact
             
                 </a>
             
@@ -333,7 +333,7 @@
                 <a href="Scene/">
             
                     
-                    安防场景&消息
+                    Security Scene & News
             
                 </a>
             
@@ -347,7 +347,7 @@
                 <a href="Scene/securityScene.html">
             
                     
-                    安防场景
+                    Scene
             
                 </a>
             
@@ -360,7 +360,7 @@
                 <a href="Scene/geofence.html">
             
                     
-                    地理围栏
+                    Geofence
             
                 </a>
             
@@ -373,7 +373,7 @@
                 <a href="Scene/eventRecording.html">
             
                     
-                    事件绑定
+                    Event Recording
             
                 </a>
             
@@ -386,7 +386,7 @@
                 <a href="Scene/armReminder.html">
             
                     
-                    布防提醒
+                    Arm Reminder
             
                 </a>
             
@@ -399,7 +399,7 @@
                 <a href="Scene/message.html">
             
                     
-                    安防消息
+                    News
             
                 </a>
             
@@ -442,7 +442,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >iOS 版本适配</a>
+        <a href="." >iOS Version Adaptation</a>
     </h1>
 </div>
 
@@ -457,33 +457,32 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="security-sdk--ios-&#x7248;&#x672C;&#x9002;&#x914D;">Security SDK  iOS &#x7248;&#x672C;&#x9002;&#x914D;</h2>
-<h3 id="ios-13-&#x9002;&#x914D;">iOS 13 &#x9002;&#x914D;</h3>
-<h4 id="wi-fi-&#x6743;&#x9650;&#x53D8;&#x5316;">Wi-Fi &#x6743;&#x9650;&#x53D8;&#x5316;</h4>
-<p>&#x4ECE; iOS 13 &#x5F00;&#x59CB;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5F00;&#x542F;&#x5730;&#x7406;&#x4F4D;&#x7F6E;&#x6743;&#x9650;&#xFF0C;<code>[[TuyaSmartActivator sharedInstance] currentWifiSSID]</code> &#x5C06;&#x83B7;&#x53D6;&#x4E0D;&#x5230;&#x6B63;&#x786E;&#x7684; SSID &#xFF08;&#x5728;&#x5DF2;&#x5F00;&#x542F; Wi-Fi &#x6743;&#x9650;&#x7684;&#x524D;&#x63D0;&#x4E0B;&#xFF09;,  &#x5728;&#x6B64;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x9ED8;&#x8BA4;&#x8FD4;&#x56DE; WLAN or Wi-Fi&#xFF0C;&#x4EE5;&#x4E0B;&#x662F; Apple &#x7684;&#x5B98;&#x65B9;&#x90AE;&#x4EF6;&#x8BF4;&#x660E;</p>
+                                <h2 id="during-the-development-process-you-can-turn-on-the-debug-mode-and-print-some-logs-for-problem-analysis">During the development process, you can turn on the Debug mode and print some logs for problem analysis.</h2>
+<h3 id="ios-13-adaptation">iOS 13 adaptation</h3>
+<h4 id="wi-fi-permission-changes">Wi-Fi permission changes</h4>
+<p>Starting from iOS 13, if the geographic location permission is not turned on, <code>[[TuyaSmartActivator sharedInstance] currentWifiSSID]</code>the correct SSID will not be obtained (provided that the Wi-Fi permission is turned on). In this case, the system will return to WLAN or Wi-Fi by default. The following is Apple Official email description</p>
 <pre><code>As we announced at WWDC19, we&apos;re making changes to further protect user privacy and prevent unauthorized location tracking. Starting with iOS 13, the CNCopyCurrentNetworkInfo API will no longer return valid Wi-Fi SSID and BSSID information. Instead, the information returned by default will be: 
 
 SSID: &#x201C;Wi-Fi&#x201D; or &#x201C;WLAN&#x201D; (&#x201C;WLAN&quot; will be returned for the China SKU)
 BSSID: &quot;00:00:00:00:00:00&quot;
 </code></pre><ol>
-<li>&#x786E;&#x8BA4; App &#x5DF2;&#x5F00;&#x542F;&#x5730;&#x7406;&#x4F4D;&#x7F6E;&#x6743;&#x9650;</li>
-<li>&#x786E;&#x8BA4;&#x901A;&#x8FC7;&#x7CFB;&#x7EDF;&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x7684; BSSID &#x4E3A; 00:00:00:00:00:00 &#x5219;&#x8BA4;&#x4E3A;&#x662F;&#x7CFB;&#x7EDF;&#x7684;&#x9ED8;&#x8BA4;&#x8FD4;&#x56DE;&#xFF0C;&#x8BE5;&#x7ED3;&#x679C;&#x4E0D;&#x53EF;&#x7528;&#xFF0C;&#x9700;&#x8981;&#x5F00;&#x53D1;&#x8005;&#x53E6;&#x5916;&#x5904;&#x7406;&#xFF0C;&#x6BD4;&#x5982;&#x624B;&#x52A8;&#x8F93;&#x5165; Wi-Fi &#x540D;&#x79F0;</li>
+<li>Confirm that the app has enabled geographic location permissions</li>
+<li>Confirm that the BSSID obtained through the system method is 00:00:00:00:00:00, it is considered to be the default return of the system. The result is not available and requires additional processing by the developer, such as manually entering the Wi-Fi name.</li>
 </ol>
-<h4 id="&#x84DD;&#x7259;&#x6743;&#x9650;&#x53D8;&#x5316;">&#x84DD;&#x7259;&#x6743;&#x9650;&#x53D8;&#x5316;</h4>
-<p>&#x5982;&#x679C;&#x60A8;&#x6709;&#x4F7F;&#x7528; SDK &#x5F00;&#x53D1;&#x96C6;&#x6210;&#x6D82;&#x9E26;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#xFF0C;&#x90A3;&#x4E48;&#x4E00;&#x5B9A;&#x8981;&#x5173;&#x6CE8; iOS 13 &#x65B0;&#x589E;&#x7684;&#x300C;&#x5E94;&#x7528;&#x84DD;&#x7259;&#x6743;&#x9650;&#x300D;
-&#x5728; iOS 13 &#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x9664;&#x4E86;&#x7CFB;&#x7EDF;&#x84DD;&#x7259;&#x6743;&#x9650;&#x5916;&#xFF0C;&#x6BCF;&#x4E2A; App &#x90FD;&#x4F1A;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x84DD;&#x7259;&#x6743;&#x9650;&#x3002;&#x82E5; App &#x4E2D;&#x4F7F;&#x7528;&#x5230;&#x84DD;&#x7259;&#xFF0C;&#x6BCF;&#x4E2A;&#x5E94;&#x7528;&#x9996;&#x6B21;&#x542F;&#x52A8;&#x524D;&#x90FD;&#x4F1A;&#x8BE2;&#x95EE;<strong>&#x662F;&#x5426;&#x5141;&#x8BB8;&#x5E94;&#x7528;&#x4F7F;&#x7528;&#x84DD;&#x7259;&#x6743;&#x9650;</strong></p>
-<p>&#x5728; iOS 13 &#x4E2D;&#xFF0C;&#x82F9;&#x679C;&#x5C06;&#x539F;&#x6765;&#x84DD;&#x7259;&#x7533;&#x8BF7;&#x6743;&#x9650;&#x7528;&#x7684; <code>NSBluetoothPeripheralUsageDescription</code> &#x5B57;&#x6BB5;&#xFF0C;&#x66FF;&#x6362;&#x4E3A;  <code>NSBluetoothAlwaysUsageDescription</code> &#x5B57;&#x6BB5;&#x3002;&#x5728; info.plist &#x4E2D;&#x6DFB;&#x52A0;&#x65B0;&#x5B57;&#x6BB5;</p>
+<h4 id="bluetooth-permission-changes">Bluetooth permission changes</h4>
+<p>If you use the SDK to develop an integrated Tuya Bluetooth device, you must pay attention to the new &quot;App Bluetooth permission&quot; added in iOS 13. In the iOS 13 system, in addition to the system Bluetooth permission, each App will have its own Bluetooth permission. If Bluetooth is used in the app, each app will ask <strong>whether to allow the app to use Bluetooth permission</strong> before launching for the first time.</p>
+<p>In iOS 13, the original Apple Bluetooth application for permission to use the <code>NSBluetoothPeripheralUsageDescription</code> field, replaced by <code>NSBluetoothAlwaysUsageDescription</code> fields. Add new fields in info.plist.</p>
 <p><img src="https://tuyainc.github.io/tuyasmart_home_ios_sdk_doc/zh-hans/resource/images/ios-sdk-demo-ios13-ble.png" alt=""></p>
-<p><strong>&#x5982;&#x679C;&#x60A8;&#x6B63;&#x5728; Xcode 11 &#x7F16;&#x8BD1;&#x4F7F;&#x7528; SDK &#x5F00;&#x53D1; mesh &#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x51FA;&#x73B0;&#x641C;&#x7D22;&#x4E0D;&#x5230;&#x8BBE;&#x5907;&#x7684;&#x60C5;&#x51B5;&#x3002;&#x9700;&#x8981;&#x5C06; <code>TuyaSmartBLEMeshKit</code> &#x5347;&#x7EA7;&#x81F3; 2.12.47 &#x4EE5;&#x4E0A;&#x7248;&#x672C;&#xFF0C;&#x8BE5;&#x7248;&#x672C;&#x5DF2;&#x4F5C;&#x9002;&#x914D;&#xFF1B;&#x82E5;&#x4F7F;&#x7528;&#x5176;&#x4ED6; Xcode &#x7248;&#x672C;&#xFF0C;&#x65E0;&#x9700;&#x66F4;&#x65B0;</strong></p>
-<p>&#x5F53;&#x7528;&#x6237;&#x9009;&#x62E9;&#x4E0D;&#x5141;&#x8BB8;&#x65F6;&#xFF0C;&#x4F1A;&#x5F71;&#x54CD;&#x84DD;&#x7259;&#x529F;&#x80FD;&#x7684;&#x4F7F;&#x7528;&#x3002;&#x6B64;&#x65F6;&#x5EFA;&#x8BAE;&#x5F15;&#x5BFC;&#x7528;&#x6237;&#x8FDB;&#x884C;&#x5F00;&#x542F;&#x84DD;&#x7259;&#x6743;&#x9650;&#xFF08;&#x6B64;&#x65F6;&#x84DD;&#x7259;&#x4E2D;&#x5FC3;&#x7684;&#x72B6;&#x6001;&#x4E3A; <code>CBCentralManagerStateUnauthorized</code>&#xFF09;
+<p><strong>If you are compiling and using SDK to develop mesh functions in Xcode 11, the device may not be searched. You need to <code>TuyaSmartBLEMeshKitupgrade</code> to 2.12.47 or later, this version has been made fit; if other Xcode version, no update</strong></p>
+<p>When the user chooses not to allow it, it will affect the use of the Bluetooth function. At this time, it is recommended to guide the user to turn on the Bluetooth permission (the status of the Bluetooth center at this time is <code>CBCentralManagerStateUnauthorized</code> )
 <img src="https://tuyainc.github.io/tuyasmart_home_ios_sdk_doc/zh-hans/resource/images/ios-ble-guide-cn.png" alt=""></p>
-<h3 id="ios-12-&#x9002;&#x914D;">iOS 12 &#x9002;&#x914D;</h3>
-<p>iOS 12 &#x4F7F;&#x7528; <code>[[TuyaSmartActivator sharedInstance] currentWifiSSID]</code> &#x65E0;&#x6CD5;&#x83B7;&#x53D6;&#x5230;SSID</p>
-<p>&#x5728; Xcode 10 &#x4E2D;&#x83B7;&#x53D6;WiFi&#x4FE1;&#x606F;&#x9700;&#x8981;&#x5F00;&#x542F;&#x76F8;&#x5173;&#x6743;&#x9650;&#xFF0C;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;</p>
+<h3 id="ios-12-adaptation">iOS 12 adaptation</h3>
+<p>iOS 12 use <code>[[TuyaSmartActivator sharedInstance] currentWifiSSID]</code> can not get to SSID</p>
+<p>To obtain WiFi information in Xcode 10, you need to enable relevant permissions. The solution:</p>
 <ul>
 <li><code>Xcode</code> -&gt; [Project Name] -&gt; <code>Targets</code> -&gt; [Target Name] -&gt; <code>Capabilities</code> -&gt; <code>Access WiFi Information</code> -&gt; <code>ON</code></li>
 </ul>
-<p>&#x6253;&#x5F00;&#x4E0A;&#x8FF0;&#x6743;&#x9650;&#x5373;&#x53EF;&#x3002;</p>
+<p>Just open the above permissions.</p>
 <p><img src="https://tuyainc.github.io/tuyasmart_home_ios_sdk_doc/zh-hans/resource/images/ios-sdk-wifi-access.png" alt=""></p>
 
                                 
@@ -517,7 +516,7 @@ BSSID: &quot;00:00:00:00:00:00&quot;
                 </a>
                 
                 
-                <a href="User/" class="navigation navigation-next " aria-label="Next page: 安防用户">
+                <a href="User/" class="navigation navigation-next " aria-label="Next page: Security Users">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -528,7 +527,7 @@ BSSID: &quot;00:00:00:00:00:00&quot;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"iOS 版本适配","level":"1.6","depth":1,"next":{"title":"安防用户","level":"1.7","depth":1,"path":"User/README.md","ref":"User/README.md","articles":[{"title":"注册服务","level":"1.7.1","depth":2,"path":"User/securityUser.md","ref":"User/securityUser.md","articles":[]}]},"previous":{"title":"Demo App","level":"1.5","depth":1,"path":"Demo.md","ref":"Demo.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"iOSAdaptation.md","mtime":"2020-07-28T07:44:46.232Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-30T03:12:14.641Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"iOS Version Adaptation","level":"1.6","depth":1,"next":{"title":"Security Users","level":"1.7","depth":1,"path":"User/README.md","ref":"User/README.md","articles":[{"title":"Register & Service","level":"1.7.1","depth":2,"path":"User/securityUser.md","ref":"User/securityUser.md","articles":[]}]},"previous":{"title":"Demo App","level":"1.5","depth":1,"path":"Demo.md","ref":"Demo.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"iOSAdaptation.md","mtime":"2020-07-30T07:17:37.338Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-30T07:21:27.130Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

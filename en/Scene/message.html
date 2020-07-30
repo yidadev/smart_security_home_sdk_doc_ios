@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>安防消息 · GitBook</title>
+        <title>News · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -92,7 +92,7 @@
                 <a href="../">
             
                     
-                    前言
+                    Preface
             
                 </a>
             
@@ -105,7 +105,7 @@
                 <a href="../Overview.html">
             
                     
-                    功能描述
+                    Features Overview
             
                 </a>
             
@@ -118,7 +118,7 @@
                 <a href="../Preparation.html">
             
                     
-                    准备工作
+                    Preparation for Integration
             
                 </a>
             
@@ -131,7 +131,7 @@
                 <a href="../Integrated.html">
             
                     
-                    集成SDK
+                    Integrate SDK
             
                 </a>
             
@@ -157,7 +157,7 @@
                 <a href="../iOSAdaptation.html">
             
                     
-                    iOS 版本适配
+                    iOS Version Adaptation
             
                 </a>
             
@@ -170,7 +170,7 @@
                 <a href="../User/">
             
                     
-                    安防用户
+                    Security Users
             
                 </a>
             
@@ -184,7 +184,7 @@
                 <a href="../User/securityUser.html">
             
                     
-                    注册服务
+                    Register & Service
             
                 </a>
             
@@ -202,7 +202,7 @@
                 <a href="../Home/">
             
                     
-                    涂鸦基础能力
+                    Tuya Basical Skills
             
                 </a>
             
@@ -216,7 +216,7 @@
                 <a href="../Home/family.html">
             
                     
-                    家庭管理
+                    Family Management
             
                 </a>
             
@@ -229,7 +229,7 @@
                 <a href="../Home/deviceActivator.html">
             
                     
-                    设备配网
+                    Device Configuration & Management
             
                 </a>
             
@@ -242,7 +242,7 @@
                 <a href="../Home/group.html">
             
                     
-                    群组管理
+                    Group Management
             
                 </a>
             
@@ -255,7 +255,7 @@
                 <a href="../Home/Push.html">
             
                     
-                    集成Push
+                    Integrated Push
             
                 </a>
             
@@ -273,7 +273,7 @@
                 <a href="../Arm/">
             
                     
-                    安防基础能力
+                    Tuya Basical Skills
             
                 </a>
             
@@ -287,7 +287,7 @@
                 <a href="../Arm/armOperation.html">
             
                     
-                    布撤防
+                    Arm & disarm
             
                 </a>
             
@@ -300,7 +300,7 @@
                 <a href="../Arm/modeSetting.html">
             
                     
-                    模式设置
+                    Mode settings
             
                 </a>
             
@@ -313,7 +313,7 @@
                 <a href="../Arm/emContact.html">
             
                     
-                    紧急联系人
+                    Emergency Contact
             
                 </a>
             
@@ -331,7 +331,7 @@
                 <a href="./">
             
                     
-                    安防场景&消息
+                    Security Scene & News
             
                 </a>
             
@@ -345,7 +345,7 @@
                 <a href="securityScene.html">
             
                     
-                    安防场景
+                    Scene
             
                 </a>
             
@@ -358,7 +358,7 @@
                 <a href="geofence.html">
             
                     
-                    地理围栏
+                    Geofence
             
                 </a>
             
@@ -371,7 +371,7 @@
                 <a href="eventRecording.html">
             
                     
-                    事件绑定
+                    Event Recording
             
                 </a>
             
@@ -384,7 +384,7 @@
                 <a href="armReminder.html">
             
                     
-                    布防提醒
+                    Arm Reminder
             
                 </a>
             
@@ -397,7 +397,7 @@
                 <a href="message.html">
             
                     
-                    安防消息
+                    News
             
                 </a>
             
@@ -440,7 +440,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >安防消息</a>
+        <a href=".." >News</a>
     </h1>
 </div>
 
@@ -455,12 +455,12 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x5B89;&#x9632;&#x6D88;&#x606F;&#x6A21;&#x5757;sdk-ios">&#x5B89;&#x9632;&#x6D88;&#x606F;&#x6A21;&#x5757;SDK-iOS</h2>
-<h5 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</h5>
-<h6 id="&#x521D;&#x59CB;&#x5316;">&#x521D;&#x59CB;&#x5316;</h6>
-<pre><code>/// &#x5355;&#x4F8B;&#x521D;&#x59CB;&#x5316;
-+ (instancetype)sharedInstance;
-</code></pre><h6 id="&#x83B7;&#x53D6;&#x6D88;&#x606F;&#x5217;&#x8868;">&#x83B7;&#x53D6;&#x6D88;&#x606F;&#x5217;&#x8868;</h6>
+                                <h2 id="security-news">Security news</h2>
+<h3 id="11-initialization">1.1 Initialization</h3>
+<pre><code>+ (instancetype)sharedInstance;
+</code></pre><h3 id="12-get-the-message-list">1.2 Get the message list</h3>
+<h4 id="interface-description">Interface Description:</h4>
+<p>Message center message list</p>
 <pre><code>- (void)getCenterMessagesWithHomeId:(long long)homeId
                         messageType:(TYSecurityArmedMsgType)messageType
                    isBatchesCollect:(BOOL)isBatchesCollect
@@ -469,53 +469,167 @@
                              offset:(NSInteger)offset
                             success:(nullable TYSecurityMessageListBlcok)success
                             failure:(nullable void(^)(NSError *error))failure;
-</code></pre><h6 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+</code></pre><h4 id="parameter-description">Parameter Description</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;id</td>
+<td>Family id</td>
 </tr>
 <tr>
 <td>messageType</td>
-<td>&#x6D88;&#x606F;&#x7C7B;&#x578B;(&#x679A;&#x4E3E;&#x503C;)</td>
+<td>Message type (enumeration value)</td>
 </tr>
 <tr>
 <td>isBatchesCollect</td>
-<td>&#x662F;&#x5426;&#x662F;&#x6536;&#x85CF;&#x5217;&#x8868;&#x7684;&#x6D88;&#x606F;</td>
+<td>Is it a favorite list message</td>
 </tr>
 <tr>
 <td>startDate</td>
-<td>&#x5F00;&#x59CB;&#x65F6;&#x95F4;(&#x6BEB;&#x79D2;)</td>
+<td>Start time (ms)</td>
 </tr>
 <tr>
 <td>endDate</td>
-<td>&#x5F00;&#x59CB;&#x65F6;&#x95F4;(&#x6BEB;&#x79D2;)</td>
+<td>Start time (ms)</td>
 </tr>
 <tr>
 <td>offset</td>
-<td>&#x9875;&#x7801;</td>
+<td>page number</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<h6 id="&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
-<table class="wrapped confluenceTable" style="text-decoration: none;"><colgroup><col><col><col></colgroup><thead><tr><th class="confluenceTh">&#x5B57;&#x6BB5;</th><th class="confluenceTh">&#x7C7B;&#x578B;</th><th class="confluenceTh">&#x63CF;&#x8FF0;</th></tr></thead><tbody><tr><td class="confluenceTd">attachPics</td><td class="confluenceTd">String</td><td class="confluenceTd">&#x56FE;&#x7247;&#x5730;&#x5740;</td></tr><tr><td class="confluenceTd">deviceIds</td><td class="confluenceTd">List&lt;String&gt;</td><td class="confluenceTd">&#x8BBE;&#x5907;ID&#x96C6;&#x5408;</td></tr><tr><td class="confluenceTd">gmtCreate</td><td class="confluenceTd">long</td><td class="confluenceTd">&#x65F6;&#x95F4;&#x6233;</td></tr><tr><td class="confluenceTd">id</td><td class="confluenceTd">long</td><td class="confluenceTd">id&#x6807;&#x8BC6;</td></tr><tr><td class="confluenceTd">homeId</td><td class="confluenceTd">String</td><td class="confluenceTd">&#x5BB6;&#x5EAD;ID</td></tr><tr><td class="confluenceTd">msgId</td><td class="confluenceTd">String</td><td class="confluenceTd">&#x6D88;&#x606F;ID</td></tr><tr><td class="confluenceTd">msgContent</td><td class="confluenceTd">String</td><td class="confluenceTd">&#x6D88;&#x606F;&#x5185;&#x5BB9;</td></tr><tr><td class="confluenceTd">msgTitle</td><td class="confluenceTd">String</td><td class="confluenceTd">&#x6D88;&#x606F;&#x6807;&#x9898;</td></tr><tr><td class="confluenceTd">productType</td><td class="confluenceTd">String</td><td class="confluenceTd">&#x54C1;&#x7C7B;&#x7C7B;&#x522B;</td></tr><tr><td class="confluenceTd">productId</td><td class="confluenceTd">String</td><td class="confluenceTd">&#x54C1;&#x7C7B;ID</td></tr><tr><td class="confluenceTd">icon</td><td class="confluenceTd">String</td><td class="confluenceTd">&#x8BBE;&#x5907;&#x56FE;&#x6807;&#x5730;&#x5740;</td></tr><tr><td class="confluenceTd">readStatus</td><td class="confluenceTd">int</td><td class="confluenceTd">&#x6D88;&#x606F;&#x5DF2;&#x8BFB;&#x72B6;&#x6001;</td></tr><tr><td class="confluenceTd">msgSrcId</td><td class="confluenceTd">String</td><td class="confluenceTd">&#x6D88;&#x606F;&#x8D44;&#x6E90;ID</td></tr><tr><td class="confluenceTd">actionURL</td><td class="confluenceTd">String</td><td class="confluenceTd">&#x8BBE;&#x5907;&#x9762;&#x677F;&#x8DEF;&#x7531;</td></tr><tr><td class="confluenceTd">msgTypeContent</td><td class="confluenceTd">String</td><td class="confluenceTd">&#x6D88;&#x606F;&#x5185;&#x5BB9;</td></tr><tr><td class="confluenceTd">deviceName</td><td class="confluenceTd">String</td><td class="confluenceTd">&#x8BBE;&#x5907;&#x540D;&#x79F0;</td></tr><tr><td class="confluenceTd">deviceCustomName</td><td class="confluenceTd">String</td><td class="confluenceTd">&#x8BBE;&#x5907;&#x81EA;&#x5B9A;&#x4E49;&#x540D;&#x79F0;</td></tr><tr><td class="confluenceTd">favorite</td><td class="confluenceTd">int</td><td class="confluenceTd">&#x6536;&#x85CF;&#x72B6;&#x6001;</td></tr><tr><td class="confluenceTd">msgCategory</td><td class="confluenceTd">int</td><td class="confluenceTd">&#x6D88;&#x606F;&#x5206;&#x7C7B;</td></tr><tr><td class="confluenceTd">attachType</td><td class="confluenceTd">int</td><td class="confluenceTd">&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x7C7B;&#x522B;</td></tr><tr><td class="confluenceTd">msgType</td><td class="confluenceTd">int</td><td class="confluenceTd">&#x6D88;&#x606F;&#x7C7B;&#x578B;</td></tr></tbody></table>
-
-<h6 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
+<h4 id="return-parameter-description">Return parameter description</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Types of</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>attachPics</td>
+<td>String</td>
+<td>The map&apos;s address</td>
+</tr>
+<tr>
+<td>deviceIds</td>
+<td>List<string></string></td>
+<td>Device ID collection</td>
+</tr>
+<tr>
+<td>gmtCreate</td>
+<td>long</td>
+<td>Timestamp</td>
+</tr>
+<tr>
+<td>id</td>
+<td>long</td>
+<td>id identification</td>
+</tr>
+<tr>
+<td>homeId</td>
+<td>String</td>
+<td>Family ID</td>
+</tr>
+<tr>
+<td>msgId</td>
+<td>String</td>
+<td>Message ID</td>
+</tr>
+<tr>
+<td>msgContent</td>
+<td>String</td>
+<td>Message content</td>
+</tr>
+<tr>
+<td>msgTitle</td>
+<td>String</td>
+<td>Message title</td>
+</tr>
+<tr>
+<td>productType</td>
+<td>String</td>
+<td>Category</td>
+</tr>
+<tr>
+<td>productId</td>
+<td>String</td>
+<td>Category ID</td>
+</tr>
+<tr>
+<td>icon</td>
+<td>String</td>
+<td>Device icon address</td>
+</tr>
+<tr>
+<td>readStatus</td>
+<td>int</td>
+<td>Message read status</td>
+</tr>
+<tr>
+<td>msgSrcId</td>
+<td>String</td>
+<td>Message resource ID</td>
+</tr>
+<tr>
+<td>actionURL</td>
+<td>String</td>
+<td>Device panel routing</td>
+</tr>
+<tr>
+<td>msgTypeContent</td>
+<td>String</td>
+<td>Message content</td>
+</tr>
+<tr>
+<td>deviceName</td>
+<td>String</td>
+<td>Equipment name</td>
+</tr>
+<tr>
+<td>deviceCustomName</td>
+<td>String</td>
+<td>Device custom name</td>
+</tr>
+<tr>
+<td>favorite</td>
+<td>int</td>
+<td>Collection status</td>
+</tr>
+<tr>
+<td>msgCategory</td>
+<td>int</td>
+<td>Message classification</td>
+</tr>
+<tr>
+<td>attachType</td>
+<td>int</td>
+<td>Message type category</td>
+</tr>
+<tr>
+<td>msgType</td>
+<td>int</td>
+<td>Message type</td>
+</tr>
+</tbody>
+</table>
+<h4 id="code-example">Code example</h4>
 <pre><code>[[TuyaSecurityMessageManager sharedInstance] getCenterMessagesWithHomeId:123
                                                              messageType:TYSecurityArmedMsgTypeAll
                                                         isBatchesCollect:YES
@@ -524,459 +638,562 @@
                                                                   offset:0
                                                                  success:^(NSArray&lt;TYActivityMsgModel *&gt; * _Nonnull
 dataArray) {
-    //&#x6D88;&#x606F;&#x5217;&#x8868;
 }
                                                                  failure:^(NSError * _Nonnull error) {
-    //&#x9519;&#x8BEF;&#x4FE1;&#x606F;
 }];
-</code></pre><h6 id="&#x6536;&#x85CF;&#x6D88;&#x606F;&#x53D6;&#x6D88;&#x6536;&#x85CF;&#x6D88;&#x606F;">&#x6536;&#x85CF;&#x6D88;&#x606F;/&#x53D6;&#x6D88;&#x6536;&#x85CF;&#x6D88;&#x606F;</h6>
+</code></pre><h3 id="13-favorite-messageunfavorite-message">1.3 Favorite message/unfavorite message</h3>
+<h4 id="interface-description">Interface Description:</h4>
+<p>Favorite and unfavorite messages</p>
 <pre><code>- (void)updateFavoriteMessageStateWithHomeId:(long long) homeId
                                   messageIds:(NSString *)messageIds
                                favoriteState:(TYSecurityMessageFavoriteState)favoriteState
                                      success:(nullable void(^)(BOOL success))success
                                      failure:(nullable void(^)(NSError *error))failure;
-</code></pre><h6 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+</code></pre><h4 id="parameter-description">Parameter Description</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;id</td>
+<td>Family id</td>
 </tr>
 <tr>
 <td>messageIds</td>
-<td>&#x6D88;&#x606F;id(json&#x5B57;&#x7B26;&#x4E32;)</td>
+<td>Message id (json string)</td>
 </tr>
 <tr>
 <td>favoriteState</td>
-<td>&#x662F;&#x5426;&#x662F;&#x6536;&#x85CF;(&#x679A;&#x4E3E;)</td>
+<td>Is it a collection (enumeration)</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<h6 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
+<h4 id="code-example">Code example</h4>
 <pre><code>[[TuyaSecurityMessageManager sharedInstance] updateFavoriteMessageStateWithHomeId:123
                                                                        messageIds:@&quot;[123,123]&quot;
                                                                     favoriteState:TYSecurityMessageSetFavorite
                                                                           success:^(BOOL success) {
-    //&#x6210;&#x529F;&#x56DE;&#x8C03;
+
 }
                                                                           failure:^(NSError * _Nonnull error) {
-    //&#x5931;&#x8D25;&#x56DE;&#x8C03;
+
 }];
-</code></pre><h6 id="&#x6279;&#x91CF;&#x5220;&#x9664;&#x6D88;&#x606F;&#x5217;&#x8868;">&#x6279;&#x91CF;&#x5220;&#x9664;&#x6D88;&#x606F;&#x5217;&#x8868;</h6>
+</code></pre><h3 id="14-batch-delete-message-list">1.4 Batch delete message list</h3>
+<h4 id="interface-description">Interface Description:</h4>
+<p>Delete messages in bulk</p>
 <pre><code>- (void)removeCenterMessagesWithHomeId:(long long)homeId
                              messageId:(NSString *)messageId
                            withMsgType:(NSString *)messageType
                                success:(nullable void(^)(BOOL success))success
                                failure:(nullable void(^)(NSError *error))failure;
-</code></pre><pre><code>[[TYSecurityModeBaseKit sharedInstance] querySecurityArmModeWithHomeId:111];
-</code></pre><h6 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+[[TYSecurityModeBaseKit sharedInstance] querySecurityArmModeWithHomeId:111];
+</code></pre><h4 id="parameter-description">Parameter Description</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;id</td>
+<td>Family id</td>
 </tr>
 <tr>
 <td>messageId</td>
-<td>&#x6D88;&#x606F;id(json&#x5B57;&#x7B26;&#x4E32;)</td>
+<td>Message id (json string)</td>
 </tr>
 <tr>
 <td>messageType</td>
-<td>&#x6D88;&#x606F;&#x7C7B;&#x578B;(1-CAMERA,2-SECURITY,3-GENERAL)</td>
+<td>Message type (1-CAMERA, 2-SECURITY, 3-GENERAL)</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<h6 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
+<h4 id="code-example">Code example</h4>
 <pre><code>[[TuyaSecurityMessageManager sharedInstance] removeCenterMessagesWithHomeId:123
                                                                   messageId:@&quot;11&quot;
                                                                 withMsgType:@&quot;1&quot;
                                                                     success:^(BOOL success) {
-    //&#x64CD;&#x4F5C;&#x6210;&#x529F;
 }
                                                                     failure:^(NSError * _Nonnull error) {
-    //&#x64CD;&#x4F5C;&#x5931;&#x8D25;
 }];
-</code></pre><h6 id="&#x66F4;&#x65B0;&#x6D88;&#x606F;&#x5DF2;&#x8BFB;&#x72B6;&#x6001;">&#x66F4;&#x65B0;&#x6D88;&#x606F;&#x5DF2;&#x8BFB;&#x72B6;&#x6001;</h6>
+</code></pre><h3 id="15-update-message-read-status">1.5 Update message read status</h3>
+<h4 id="interface-description">Interface Description:</h4>
+<p>Update message read status</p>
 <pre><code>- (void)updateMessageStateWithHomeId:(long long)homeId
                            messageId:(NSString *)messageId
                          messageType:(NSString *)messageType
                              success:(nullable void(^)(BOOL success))success
                              failure:(nullable void(^)(NSError *error))failure;
-</code></pre><h6 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+</code></pre><h4 id="parameter-description">Parameter Description</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;id</td>
+<td>Family id</td>
 </tr>
 <tr>
 <td>messageId</td>
-<td>&#x6D88;&#x606F;id(json&#x5B57;&#x7B26;&#x4E32;)</td>
+<td>Message id (json string)</td>
 </tr>
 <tr>
 <td>messageType</td>
-<td>&#x6D88;&#x606F;&#x7C7B;&#x578B;(1-CAMERA,2-SECURITY,3-GENERAL)</td>
+<td>Message type (1-CAMERA, 2-SECURITY, 3-GENERAL)</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<h6 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
+<h4 id="code-example">Code example</h4>
 <pre><code>[[TuyaSecurityMessageManager sharedInstance] updateMessageStateWithHomeId:123
                                                                 messageId:@&quot;123&quot;
                                                               messageType:@&quot;1&quot;
                                                                   success:^(BOOL success) {
-    //&#x64CD;&#x4F5C;&#x6210;&#x529F;
+
 }
                                                                   failure:^(NSError * _Nonnull error) {
-    //&#x64CD;&#x4F5C;&#x5931;&#x8D25;&#x5427;
 }];
-</code></pre><h6 id="&#x83B7;&#x53D6;&#x901A;&#x77E5;&#x8BBE;&#x7F6E;&#x9875;&#x9762;&#x9ED8;&#x8BA4;&#x4FE1;&#x606F;">&#x83B7;&#x53D6;&#x901A;&#x77E5;&#x8BBE;&#x7F6E;&#x9875;&#x9762;&#x9ED8;&#x8BA4;&#x4FE1;&#x606F;</h6>
+</code></pre><h3 id="16-get-the-default-information-of-the-notification-settings-page">1.6 Get the default information of the notification settings page</h3>
+<h4 id="interface-description">Interface Description:</h4>
+<p>Know the default information of the settings page</p>
 <pre><code>- (void)getNotificationCategoryListWithHomeId:(long long)homeId
                                       success:(nullable void(^)(NSDictionary *resultDictionary))success
                                       failure:(nullable void(^)(NSError *error))failure;
-</code></pre><h6 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+</code></pre><h4 id="parameter-description">Parameter Description</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;id</td>
+<td>Family id</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<h6 id="&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x5B57;&#x6BB5;">&#x8FD4;&#x56DE;&#x6570;&#x636E;(&#x5B57;&#x6BB5;)</h6>
+<h4 id="return-data-field">Return data (field)</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Types of</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>email</td>
 <td>int</td>
-<td>&#x6D88;&#x606F;&#x63A8;&#x9001;&#x90AE;&#x4EF6;&#x5F00;&#x5173;</td>
+<td>Message push mail switch</td>
 </tr>
 <tr>
 <td>push</td>
 <td>int</td>
-<td>APP push&#x63A8;&#x9001;&#x5F00;&#x5173;</td>
+<td>APP push push switch</td>
 </tr>
 <tr>
 <td>sms</td>
 <td>int</td>
-<td>&#x77ED;&#x4FE1;&#x63A8;&#x9001;&#x5F00;&#x5173;</td>
+<td>SMS push switch</td>
 </tr>
 <tr>
 <td>voicecall</td>
 <td>int</td>
-<td>&#x8BED;&#x97F3;&#x63A8;&#x9001;&#x5F00;&#x5173;</td>
+<td>Voice push switch</td>
 </tr>
 </tbody>
 </table>
-<h6 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
+<h4 id="code-example">Code example</h4>
 <pre><code>[[TuyaSecurityMessageManager sharedInstance] getNotificationCategoryListWithHomeId:123
                                                                            success:^(NSDictionary * _Nonnull resultDictionary) {
-    //&#x6210;&#x529F;&#x56DE;&#x8C03;
 }
                                                                            failure:^(NSError * _Nonnull error) {
-    //&#x5931;&#x8D25;&#x56DE;&#x8C03;
 }];
-</code></pre><h6 id="&#x66F4;&#x65B0;&#x901A;&#x77E5;&#x5F00;&#x5173;&#x67DC;">&#x66F4;&#x65B0;&#x901A;&#x77E5;&#x5F00;&#x5173;&#x67DC;</h6>
+</code></pre><h3 id="17-update-notification-switch-status">1.7 Update notification switch status</h3>
+<h4 id="interface-description">Interface Description:</h4>
+<p>Update notification switch status</p>
 <pre><code>- (void)updateNotificationCategoryWithHomeId:(long long)homeId
                                        bizId:(NSString *)bizId
                                     bizValue:(BOOL)bizValue
                                      success:(nullable void(^)(BOOL success))success
                                      failure:(nullable void(^)(NSError *error))failure;
-</code></pre><h6 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+</code></pre><h4 id="parameter-description">Parameter Description</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;id</td>
+<td>Family id</td>
 </tr>
 <tr>
 <td>bizId</td>
-<td>&#x901A;&#x77E5;&#x7C7B;&#x522B;(push,email,sms,voicecall)</td>
+<td>Notification category (push, email, sms, voicecall)</td>
 </tr>
 <tr>
 <td>bizValue</td>
-<td>&#x5F00;&#x5173;&#x72B6;&#x6001;</td>
+<td>switch status</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<h6 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
+<h4 id="code-example">Code example</h4>
 <pre><code>[[TuyaSecurityMessageManager sharedInstance] updateNotificationCategoryWithHomeId:123
                                                                             bizId:@&quot;&quot;
                                                                          bizValue:NO
                                                                           success:^(BOOL success) {
-    //&#x6210;&#x529F;&#x56DE;&#x8C03;
+
 }
                                                                           failure:^(NSError * _Nonnull error) {
-    //&#x5931;&#x8D25;&#x56DE;&#x8C03;
+
 }];
-</code></pre><h6 id="&#x62C9;&#x53D6;&#x901A;&#x77E5;&#x5355;&#x4E2A;&#x7C7B;&#x522B;&#x914D;&#x7F6E;&#x4FE1;&#x606F;">&#x62C9;&#x53D6;&#x901A;&#x77E5;&#x5355;&#x4E2A;&#x7C7B;&#x522B;&#x914D;&#x7F6E;&#x4FE1;&#x606F;</h6>
+</code></pre><h3 id="18-pull-notification-configuration-information-for-a-single-category">1.8 Pull notification configuration information for a single category</h3>
+<h4 id="interface-description">Interface Description:</h4>
+<p>Notify single category configuration information</p>
 <pre><code>- (void)getNotificationConfigListWithHomeId:(long long)homeId
                                       bizId:(NSString *)bizId
                                      bizKey:(NSString *)bizKey
                                     success:(nullable NotificationCategoryListBlock)success
                                     failure:(nullable void(^)(NSError *error))failure;
-</code></pre><h6 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+</code></pre><h4 id="parameter-description">Parameter Description</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;id</td>
+<td>Family id</td>
 </tr>
 <tr>
 <td>bizId</td>
-<td>&#x901A;&#x77E5;&#x7C7B;&#x522B;(push,email,sms,voicecall)</td>
+<td>Notification category (push, email, sms, voicecall)</td>
 </tr>
 <tr>
 <td>bizKey</td>
-<td>&#x4E1A;&#x52A1;&#x5B50;&#x7C7B;&#x522B;(alarmAlerts, cameraAlerts, homeAutomationAlerts, bulletins)&#xFF0C;&#x975E;&#x6BD5;&#x4F20;</td>
+<td>Business sub-categories (alarmAlerts, cameraAlerts, homeAutomationAlerts, bulletins), non-biography</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<h6 id="&#x8FD4;&#x56DE;&#x5B57;&#x6BB5;">&#x8FD4;&#x56DE;&#x5B57;&#x6BB5;</h6>
-<table class="confluenceTable wrapped" style="text-decoration: none;"><colgroup><col><col><col></colgroup><thead><tr><th class="confluenceTh">&#x5B57;&#x6BB5;</th><th class="confluenceTh">&#x7C7B;&#x578B;</th><th class="confluenceTh">&#x63CF;&#x8FF0;</th></tr></thead><tbody><tr><td class="confluenceTd">isDefault</td><td class="confluenceTd">boolean</td><td class="confluenceTd">&#x662F;&#x591F;&#x9ED8;&#x8BA4;&#x663E;&#x793A;</td></tr><tr><td class="confluenceTd">bizKey</td><td class="confluenceTd">String</td><td class="confluenceTd">&#x63A8;&#x9001;&#x8BBE;&#x7F6E;&#x4E1A;&#x52A1;&#x5B50;&#x7C7B;</td></tr><tr><td class="confluenceTd">name</td><td class="confluenceTd">String</td><td class="confluenceTd">&#x540D;&#x79F0;</td></tr><tr><td class="confluenceTd">switchList</td><td class="confluenceTd">List&lt;PushSwitchBean&gt;</td><td class="confluenceTd">&#x63A8;&#x9001;&#x5F00;&#x5173;&#x5217;&#x8868;&#x96C6;&#x5408;</td></tr></tbody></table>
-
-<h6 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
+<h6 id="return-field">Return field</h6>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Types of</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isDefault</td>
+<td>boolean</td>
+<td>Is enough to show by default</td>
+</tr>
+<tr>
+<td>bizKey</td>
+<td>String</td>
+<td>Push settings business subclass</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>name</td>
+</tr>
+<tr>
+<td>switchList</td>
+<td>List<pushswitchbean></pushswitchbean></td>
+<td>Push switch list collection</td>
+</tr>
+</tbody>
+</table>
+<h4 id="code-example">Code example</h4>
 <pre><code>[[TuyaSecurityMessageManager sharedInstance] getNotificationConfigListWithHomeId:123 bizId:@&quot;&quot; bizKey:@&quot;&quot;
 success:^(NSArray&lt;TYNotificationCategoryListModel *&gt; * _Nonnull dataArray) {
-    //&#x6210;&#x529F;&#x56DE;&#x8C03;
+
 } failure:^(NSError * _Nonnull error) {
-    //&#x5931;&#x8D25;&#x56DE;&#x8C03;
+
 }];
-</code></pre><h6 id="&#x66F4;&#x65B0;&#x901A;&#x77E5;&#x5355;&#x4E2A;&#x7C7B;&#x522B;&#x914D;&#x7F6E;&#x5F00;&#x5173;">&#x66F4;&#x65B0;&#x901A;&#x77E5;&#x5355;&#x4E2A;&#x7C7B;&#x522B;&#x914D;&#x7F6E;&#x5F00;&#x5173;</h6>
+</code></pre><h3 id="19-update-notification-single-category-configuration-switch">1.9 Update notification single category configuration switch</h3>
+<h4 id="interface-description">Interface Description:</h4>
+<p>Notification of a single category configuration switch</p>
 <pre><code>- (void)updateNotificationConfigWithHomeId:(long long)homeId
                                      bizId:(NSString *)bizId
                                messageType:(NSInteger)messageType
                                   bizValue:(BOOL)bizValue
                                    success:(nullable void(^)(BOOL success))success
                                    failure:(nullable void(^)(NSError *error))failure;
-</code></pre><h6 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+</code></pre><h4 id="parameter-description">Parameter Description</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;id</td>
+<td>Family id</td>
 </tr>
 <tr>
 <td>bizId</td>
-<td>&#x901A;&#x77E5;&#x7C7B;&#x522B;(push,email,sms,voicecall)</td>
+<td>Notification category (push, email, sms, voicecall)</td>
 </tr>
 <tr>
 <td>messageType</td>
-<td>item&#x7C7B;&#x578B;</td>
+<td>item type</td>
 </tr>
 <tr>
 <td>bizValue</td>
-<td>&#x5F00;&#x5173;&#x72B6;&#x6001;</td>
+<td>switch status</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<h6 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
+<h4 id="code-example">Code example</h4>
 <pre><code>[[TuyaSecurityMessageManager sharedInstance] updateNotificationConfigWithHomeId:123 bizId:@&quot;&quot; messageType:1 bizValue:NO
 success:^(BOOL success) {
-    //&#x6210;&#x529F;&#x56DE;&#x8C03;
+
 } failure:^(NSError * _Nonnull error) {
-    //&#x5931;&#x8D25;&#x56DE;&#x8C03;
+
 }];
-</code></pre><h6 id="&#x91CD;&#x7F6E;&#x901A;&#x77E5;&#x914D;&#x7F6E;&#x72B6;&#x6001;">&#x91CD;&#x7F6E;&#x901A;&#x77E5;&#x914D;&#x7F6E;&#x72B6;&#x6001;</h6>
+</code></pre><h3 id="20-reset-notification-configuration-status">2.0 Reset notification configuration status</h3>
+<h4 id="interface-description">Interface Description:</h4>
+<p>Reset notification configuration status</p>
 <pre><code>- (void)resetNotificationConfigDefaultWithHomeId:(long long)homeId
                                            bizId:(NSString *)bizId
                                           bizKey:(NSString *)bizKey
                                          success:(nullable void(^)(BOOL success))success
                                          failure:(nullable void(^)(NSError *error))failure;
-</code></pre><h6 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+</code></pre><h4 id="parameter-description">Parameter Description</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;id</td>
+<td>Family id</td>
 </tr>
 <tr>
 <td>bizId</td>
-<td>&#x901A;&#x77E5;&#x7C7B;&#x522B;(push,email,sms,voicecall)</td>
+<td>Notification category (push, email, sms, voicecall)</td>
 </tr>
 <tr>
 <td>bizKey</td>
-<td>&#x4E1A;&#x52A1;&#x5B50;&#x7C7B;&#x522B;&#xFF08;alarmAlerts, cameraAlerts, homeAutomationAlerts, bulletins&#xFF09;&#x975E;&#x5FC5;&#x4F20;</td>
+<td>Business sub-categories (alarmAlerts, cameraAlerts, homeAutomationAlerts, bulletins) are optional</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<h6 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
+<h4 id="code-example">Code example</h4>
 <pre><code>[[TuyaSecurityMessageManager sharedInstance] resetNotificationConfigDefaultWithHomeId:123 bizId:@&quot;&quot; bizKey:@&quot;&quot; success:^(BOOL
 success) {
-    //&#x6210;&#x529F;&#x56DE;&#x8C03;
+
 } failure:^(NSError * _Nonnull error) {
-    //&#x5931;&#x8D25;&#x56DE;&#x8C03;
+
 }];
-</code></pre><h6 id="&#x83B7;&#x53D6;push&#x514D;&#x6253;&#x6270;&#x6570;&#x636E;">&#x83B7;&#x53D6;push&#x514D;&#x6253;&#x6270;&#x6570;&#x636E;</h6>
+</code></pre><h3 id="21-get-push-dnd-data">2.1 Get push DND data</h3>
+<h4 id="interface-description">Interface Description:</h4>
+<p>push do not disturb data</p>
 <pre><code>- (void)getNotDisturbConfigListWithHomeId:(long long)homeId
                                     bizId:(NSString *)bizId
                                    bizKey:(NSString *)bizKey
                                   success:(nullable NotificationCategoryListBlock)success
                                   failure:(nullable void(^)(NSError *error))failure;
-</code></pre><h6 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+</code></pre><h4 id="parameter-description">Parameter Description</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;id</td>
+<td>Family id</td>
 </tr>
 <tr>
 <td>bizId</td>
-<td>&#x901A;&#x77E5;&#x7C7B;&#x522B;(push,email,sms,voicecall)</td>
+<td>Notification category (push, email, sms, voicecall)</td>
 </tr>
 <tr>
 <td>bizKey</td>
-<td>&#x4E1A;&#x52A1;&#x5B50;&#x7C7B;&#x522B;&#xFF08;customizeConfig&#xFF09;</td>
+<td>Business sub-categories (customizeConfig)</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<h6 id="&#x8FD4;&#x56DE;&#x5B57;&#x6BB5;">&#x8FD4;&#x56DE;&#x5B57;&#x6BB5;</h6>
-<table class="confluenceTable wrapped" style="text-decoration: none;"><colgroup><col><col><col></colgroup><thead><tr><th class="confluenceTh">&#x5B57;&#x6BB5;</th><th class="confluenceTh">&#x7C7B;&#x578B;</th><th class="confluenceTh">&#x63CF;&#x8FF0;</th></tr></thead><tbody><tr><td class="confluenceTd">isDefault</td><td class="confluenceTd">boolean</td><td class="confluenceTd">&#x662F;&#x591F;&#x9ED8;&#x8BA4;&#x663E;&#x793A;</td></tr><tr><td class="confluenceTd">bizKey</td><td class="confluenceTd">String</td><td class="confluenceTd">&#x63A8;&#x9001;&#x8BBE;&#x7F6E;&#x4E1A;&#x52A1;&#x5B50;&#x7C7B;</td></tr><tr><td class="confluenceTd">name</td><td class="confluenceTd">String</td><td class="confluenceTd">&#x540D;&#x79F0;</td></tr><tr><td class="confluenceTd">switchList</td><td class="confluenceTd">Array&lt;TYNotificationCategoryListModel *&gt;disturbList *</td><td class="confluenceTd">&#x63A8;&#x9001;&#x5F00;&#x5173;&#x5217;&#x8868;&#x96C6;&#x5408;</td></tr></tbody></table>
-
-<table class="confluenceTable wrapped" style="text-decoration: none;"><colgroup><col><col><col></colgroup><thead><tr><th class="confluenceTh">&#x5B57;&#x6BB5;</th><th class="confluenceTh">&#x7C7B;&#x578B;</th><th class="confluenceTh">&#x63CF;&#x8FF0;</th></tr></thead><tbody><tr><td class="confluenceTd">sortOrder</td><td class="confluenceTd">int</td><td class="confluenceTd">&#x6392;&#x5E8F;&#x7F16;&#x53F7;</td></tr><tr><td class="confluenceTd">type</td><td class="confluenceTd">int</td><td class="confluenceTd">&#x63A8;&#x9001;&#x8BBE;&#x7F6E;&#x7C7B;&#x578B;</td></tr><tr><td class="confluenceTd">value</td><td class="confluenceTd">int</td><td class="confluenceTd">&#x63A8;&#x9001;&#x5F00;&#x5173;&#x663E;&#x793A;</td></tr><tr><td class="confluenceTd">name</td><td class="confluenceTd">String</td><td class="confluenceTd">&#x540D;&#x79F0;</td></tr><tr><td class="confluenceTd">disturbList</td><td class="confluenceTd">List&lt;DisturbBean&gt;</td><td class="confluenceTd">&#x63A8;&#x9001;&#x514D;&#x6253;&#x6270;&#x96C6;&#x5408;</td></tr></tbody></table>
-
-
-
-<h6 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h6>
+<h4 id="return-field">Return field</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Types of</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isDefault</td>
+<td>boolean</td>
+<td>Is enough to show by default</td>
+</tr>
+<tr>
+<td>bizKey</td>
+<td>String</td>
+<td>Push settings business subclass</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>name</td>
+</tr>
+<tr>
+<td>switchList</td>
+<td>Array<tynotificationcategorylistmodel *="">disturbList *</tynotificationcategorylistmodel></td>
+<td>Push switch list collection</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Types of</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sortOrder</td>
+<td>int</td>
+<td>Sort number</td>
+</tr>
+<tr>
+<td>type</td>
+<td>int</td>
+<td>Push setting type</td>
+</tr>
+<tr>
+<td>value</td>
+<td>int</td>
+<td>Push switch display</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>name</td>
+</tr>
+<tr>
+<td>disturbList</td>
+<td>List<disturbbean></disturbbean></td>
+<td>Push Do Not Disturb Collection</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sample-code">Sample code</h4>
 <pre><code>[[TuyaSecurityMessageManager sharedInstance] getNotDisturbConfigListWithHomeId:123 bizId:@&quot;&quot; bizKey:@&quot;&quot;
 success:^(NSArray&lt;TYNotificationCategoryListModel *&gt; * _Nonnull dataArray) {
-    //&#x6210;&#x529F;&#x56DE;&#x8C03;
+
 } failure:^(NSError * _Nonnull error) {
-    //&#x5931;&#x8D25;&#x56DE;&#x8C03;
+
 }];
-</code></pre><h6 id="&#x66F4;&#x65B0;&#x514D;&#x6253;&#x6270;&#x65F6;&#x95F4;">&#x66F4;&#x65B0;&#x514D;&#x6253;&#x6270;&#x65F6;&#x95F4;</h6>
+</code></pre><h3 id="22-update-do-not-disturb-time">2.2 Update Do Not Disturb Time</h3>
+<h4 id="interface-description">Interface Description:</h4>
+<p>Update Do Not Disturb Time</p>
 <pre><code> - (void)updateNotDisturbTimeWithHomeId:(long long)homeId
                                   bizId:(NSString *)bizId
                                targetId:(NSString *)targetId
@@ -984,66 +1201,66 @@ success:^(NSArray&lt;TYNotificationCategoryListModel *&gt; * _Nonnull dataArray)
                                 endTime:(NSString *)endTime
                                 success:(nullable void(^)(NSString *result))success
                                 failure:(nullable void(^)(NSError *error))failure;
-</code></pre><h6 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+</code></pre><h4 id="parameter-description">Parameter Description</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;id</td>
+<td>Family id</td>
 </tr>
 <tr>
 <td>bizId</td>
-<td>&#x901A;&#x77E5;&#x7C7B;&#x522B;(push)</td>
+<td>Notification category (push)</td>
 </tr>
 <tr>
 <td>targetId</td>
-<td>&#x514D;&#x6253;&#x6270;id(&#x975E;&#x5FC5;&#x4F20;)</td>
+<td>Do not disturb id (not required)</td>
 </tr>
 <tr>
 <td>startTime</td>
-<td>&#x5F00;&#x59CB;&#x65F6;&#x95F4;</td>
+<td>Starting time</td>
 </tr>
 <tr>
 <td>endTime</td>
-<td>&#x7ED3;&#x675F;&#x65F6;&#x95F4;</td>
+<td>End Time</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<h6 id="&#x8FD4;&#x56DE;&#x53C2;&#x6570;">&#x8FD4;&#x56DE;&#x53C2;&#x6570;</h6>
+<h4 id="return-parameter">Return parameter</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>result</td>
-<td>&#x5F53;&#x524D;&#x514D;&#x6253;&#x6270;&#x4E8B;&#x4EF6;id</td>
+<td>The id of the current DND event</td>
 </tr>
 </tbody>
 </table>
-<h6 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
+<h4 id="code-example">Code example</h4>
 <pre><code>[[TuyaSecurityMessageManager sharedInstance] updateNotDisturbTimeWithHomeId:123 bizId:@&quot;&quot; targetId:@&quot;&quot; startTime:@&quot;&quot;
 endTime:@&quot;&quot; success:^(NSString * _Nonnull result) {
-    //&#x6210;&#x529F;&#x56DE;&#x8C03;
+
 } failure:^(NSError * _Nonnull error) {
-    //&#x9519;&#x8BEF;&#x4FE1;&#x606F;
+
 }];
 </code></pre>
                                 
@@ -1072,7 +1289,7 @@ endTime:@&quot;&quot; success:^(NSString * _Nonnull result) {
 
             
                 
-                <a href="armReminder.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 布防提醒">
+                <a href="armReminder.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Arm Reminder">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -1084,7 +1301,7 @@ endTime:@&quot;&quot; success:^(NSString * _Nonnull result) {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"安防消息","level":"1.10.5","depth":2,"previous":{"title":"布防提醒","level":"1.10.4","depth":2,"path":"Scene/armReminder.md","ref":"Scene/armReminder.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Scene/message.md","mtime":"2020-05-19T02:22:02.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-30T03:12:14.641Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"News","level":"1.10.5","depth":2,"previous":{"title":"Arm Reminder","level":"1.10.4","depth":2,"path":"Scene/armReminder.md","ref":"Scene/armReminder.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Scene/message.md","mtime":"2020-07-30T07:17:37.303Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-30T07:21:27.130Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

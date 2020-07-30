@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>紧急联系人 · GitBook</title>
+        <title>Emergency Contact · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -94,7 +94,7 @@
                 <a href="../">
             
                     
-                    前言
+                    Preface
             
                 </a>
             
@@ -107,7 +107,7 @@
                 <a href="../Overview.html">
             
                     
-                    功能描述
+                    Features Overview
             
                 </a>
             
@@ -120,7 +120,7 @@
                 <a href="../Preparation.html">
             
                     
-                    准备工作
+                    Preparation for Integration
             
                 </a>
             
@@ -133,7 +133,7 @@
                 <a href="../Integrated.html">
             
                     
-                    集成SDK
+                    Integrate SDK
             
                 </a>
             
@@ -159,7 +159,7 @@
                 <a href="../iOSAdaptation.html">
             
                     
-                    iOS 版本适配
+                    iOS Version Adaptation
             
                 </a>
             
@@ -172,7 +172,7 @@
                 <a href="../User/">
             
                     
-                    安防用户
+                    Security Users
             
                 </a>
             
@@ -186,7 +186,7 @@
                 <a href="../User/securityUser.html">
             
                     
-                    注册服务
+                    Register & Service
             
                 </a>
             
@@ -204,7 +204,7 @@
                 <a href="../Home/">
             
                     
-                    涂鸦基础能力
+                    Tuya Basical Skills
             
                 </a>
             
@@ -218,7 +218,7 @@
                 <a href="../Home/family.html">
             
                     
-                    家庭管理
+                    Family Management
             
                 </a>
             
@@ -231,7 +231,7 @@
                 <a href="../Home/deviceActivator.html">
             
                     
-                    设备配网
+                    Device Configuration & Management
             
                 </a>
             
@@ -244,7 +244,7 @@
                 <a href="../Home/group.html">
             
                     
-                    群组管理
+                    Group Management
             
                 </a>
             
@@ -257,7 +257,7 @@
                 <a href="../Home/Push.html">
             
                     
-                    集成Push
+                    Integrated Push
             
                 </a>
             
@@ -275,7 +275,7 @@
                 <a href="./">
             
                     
-                    安防基础能力
+                    Tuya Basical Skills
             
                 </a>
             
@@ -289,7 +289,7 @@
                 <a href="armOperation.html">
             
                     
-                    布撤防
+                    Arm & disarm
             
                 </a>
             
@@ -302,7 +302,7 @@
                 <a href="modeSetting.html">
             
                     
-                    模式设置
+                    Mode settings
             
                 </a>
             
@@ -315,7 +315,7 @@
                 <a href="emContact.html">
             
                     
-                    紧急联系人
+                    Emergency Contact
             
                 </a>
             
@@ -333,7 +333,7 @@
                 <a href="../Scene/">
             
                     
-                    安防场景&消息
+                    Security Scene & News
             
                 </a>
             
@@ -347,7 +347,7 @@
                 <a href="../Scene/securityScene.html">
             
                     
-                    安防场景
+                    Scene
             
                 </a>
             
@@ -360,7 +360,7 @@
                 <a href="../Scene/geofence.html">
             
                     
-                    地理围栏
+                    Geofence
             
                 </a>
             
@@ -373,7 +373,7 @@
                 <a href="../Scene/eventRecording.html">
             
                     
-                    事件绑定
+                    Event Recording
             
                 </a>
             
@@ -386,7 +386,7 @@
                 <a href="../Scene/armReminder.html">
             
                     
-                    布防提醒
+                    Arm Reminder
             
                 </a>
             
@@ -399,7 +399,7 @@
                 <a href="../Scene/message.html">
             
                     
-                    安防消息
+                    News
             
                 </a>
             
@@ -442,7 +442,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >紧急联系人</a>
+        <a href=".." >Emergency Contact</a>
     </h1>
 </div>
 
@@ -457,223 +457,214 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x5B89;&#x9632;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;sdk-ios">&#x5B89;&#x9632;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;SDK-iOS</h2>
-<h5 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</h5>
-<h6 id="&#x521D;&#x59CB;&#x5316;">&#x521D;&#x59CB;&#x5316;</h6>
-<pre><code>/// &#x5355;&#x4F8B;&#x521D;&#x59CB;&#x5316;
-+ (instancetype)sharedInstance;
-</code></pre><h6 id="&#x62C9;&#x53D6;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;">&#x62C9;&#x53D6;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;</h6>
+                                <h2 id="security-emergency-contact-sdk-ios">Security emergency contact SDK-iOS</h2>
+<h5 id="11-initialization">1.1 Initialization</h5>
+<pre><code>+ (instancetype)sharedInstance;
+</code></pre><h5 id="12-pull-emergency-contacts">1.2 Pull emergency contacts</h5>
 <pre><code>- (void)getLocationEmergencyConnectWithHomeId:(long long)homeId
                                       success:(nullable TYEmergencyConnectListBlock)success
                                       failure:(nullable void(^)(NSError *error))failure;
-</code></pre><h6 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+</code></pre><h6 id="121-parameter-description">1.2.1 Parameter description</h6>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;id</td>
+<td>Family id</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<h6 id="&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x5B9E;&#x4F53;&#x7C7B;&#x5B57;&#x6BB5;">&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x5B9E;&#x4F53;&#x7C7B;&#x5B57;&#x6BB5;</h6>
+<h6 id="122-return-data-entity-class-field">1.2.2 Return data entity class field</h6>
 <table>
 <thead>
 <tr>
-<th>&#x5B57;&#x6BB5;</th>
-<th>&#x63CF;&#x8FF0;</th>
+<th>Field</th>
+<th>description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>areaCode</td>
-<td>&#x5730;&#x533A;&#x7F16;&#x7801;</td>
+<td>Area code</td>
 </tr>
 <tr>
 <td>areaName</td>
-<td>&#x5730;&#x533A;&#x540D;&#x79F0;</td>
+<td>Area name</td>
 </tr>
 <tr>
 <td>phone</td>
-<td>&#x8054;&#x7CFB;&#x65B9;&#x5F0F;</td>
+<td>Contact information</td>
 </tr>
 <tr>
 <td>gmtCreate</td>
-<td>&#x521B;&#x5EFA;&#x65F6;&#x95F4;</td>
+<td>Creation time</td>
 </tr>
 <tr>
 <td>id</td>
-<td>&#x8054;&#x7CFB;&#x4EBA;id</td>
+<td>Contact id</td>
 </tr>
 <tr>
 <td>sequence</td>
-<td>&#x5E8F;&#x5217;</td>
+<td>sequence</td>
 </tr>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;id</td>
+<td>Family id</td>
 </tr>
 <tr>
 <td>name</td>
-<td>&#x59D3;&#x540D;</td>
+<td>Name</td>
 </tr>
 <tr>
 <td>firstName</td>
-<td>&#x59D3;</td>
+<td>name</td>
 </tr>
 <tr>
 <td>lastName</td>
-<td>&#x540D;</td>
+<td>name</td>
 </tr>
 </tbody>
 </table>
-<h6 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
+<h6 id="123-code-example">1.2.3 Code example</h6>
 <pre><code>[[TuyaSecurityConnectManager sharedInstance] getLocationEmergencyConnectWithHomeId:1111
 
 success:
 (NSArray&lt;TYEmergencyListModel *&gt;
 * _Nonnull dataArray) {
-    //&#x8054;&#x7CFB;&#x4EBA;&#x4FE1;&#x606F;
+
 }
                                                                            failure:^(NSError *
 _Nonnull error) {
-    //&#x9519;&#x8BEF;&#x4FE1;&#x606F;
 }];
-</code></pre><h6 id="&#x6DFB;&#x52A0;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;">&#x6DFB;&#x52A0;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;</h6>
+</code></pre><h5 id="13-add-emergency-contact">1.3 Add emergency contact</h5>
 <pre><code>- (void)addNewConnectWithHomeId:(long long)homeId
                    connectModel:(TYEmergencyListModel *)infoModel
                         success:(nullable void(^)(BOOL success))success
                         failure:(nullable void(^)(NSError *error))failure;
-</code></pre><h6 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+</code></pre><h6 id="131-parameter-description">1.3.1 Parameter description</h6>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;id</td>
+<td>Family id</td>
 </tr>
 <tr>
 <td>infoModel</td>
-<td>&#x8054;&#x7CFB;&#x4EBA;&#x4FE1;&#x606F;(&#x59D3;&#x540D;&#x3001;&#x8054;&#x7CFB;&#x65B9;&#x5F0F;&#x3001;&#x5730;&#x533A;&#x7F16;&#x7801;)</td>
+<td>Contact information (name, contact information, area code)</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<h6 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
+<h6 id="132-code-example">1.3.2 Code Example</h6>
 <pre><code>[[TuyaSecurityConnectManager sharedInstance] addNewConnectWithHomeId:123
                                                         connectModel:[TYEmergencyListModel new]
                                                              success:^(BOOL success) {
-    //&#x6210;&#x529F;&#x56DE;&#x8C03;
 }
                                                              failure:^(NSError * _Nonnull error) {
-    //&#x9519;&#x8BEF;&#x4FE1;&#x606F;
 }];
-</code></pre><h6 id="&#x7F16;&#x8F91;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;&#x7F16;&#x8F91;&#x3001;&#x6392;&#x5E8F;">&#x7F16;&#x8F91;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;(&#x7F16;&#x8F91;&#x3001;&#x6392;&#x5E8F;)</h6>
+</code></pre><h5 id="14-edit-emergency-contacts-edit-sort">1.4 Edit emergency contacts (edit, sort)</h5>
 <pre><code>- (void)editConnectWithHomeId:(long long)homeId
                   connectInfo:(NSString *)infoString
                       success:(nullable void(^)(BOOL success))success
                       failure:(nullable void(^)(NSError *error))failure;
-</code></pre><h6 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+</code></pre><h6 id="141-parameter-description">1.4.1 Parameter description</h6>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;id</td>
+<td>Family id</td>
 </tr>
 <tr>
 <td>infoString</td>
-<td>&#x8054;&#x7CFB;&#x4EBA;&#x4FE1;&#x606F;(json&#x5B57;&#x7B26;&#x4E32;)</td>
+<td>Contact information (json string)</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<h6 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
+<h6 id="142-code-example">1.4.2 Code Example</h6>
 <pre><code>[[TuyaSecurityConnectManager sharedInstance] editConnectWithHomeId:123
                                                        connectInfo:@&quot;&quot;
                                                            success:^(BOOL success) {
-    //&#x6210;&#x529F;&#x56DE;&#x8C03;
 }
                                                            failure:^(NSError * _Nonnull error) {
-    //&#x9519;&#x8BEF;&#x4FE1;&#x606F;
 }];
-</code></pre><h6 id="&#x5220;&#x9664;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;">&#x5220;&#x9664;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;</h6>
+</code></pre><h5 id="15-delete-emergency-contact">1.5 Delete emergency contact</h5>
 <pre><code>- (void)deleteConnectWithHomeId:(long long)homeId
                  withConnectIds:(NSString *)ids
                         success:(nullable void(^)(BOOL success))success
                         failure:(nullable void(^)(NSError *error))failure;
-</code></pre><h6 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+</code></pre><h6 id="151-parameter-description">1.5.1 Parameter description</h6>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;id</td>
+<td>Family id</td>
 </tr>
 <tr>
 <td>ids</td>
-<td>&#x8054;&#x7CFB;&#x4EBA;&#x4FE1;&#x606F;(&#x683C;&#x5F0F;: &quot;[id]&quot;)</td>
+<td>Contact information (format: &quot;[id]&quot;)</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<h6 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
+<h6 id="152-code-example">1.5.2 Code example</h6>
 <pre><code>[[TuyaSecurityConnectManager sharedInstance] deleteConnectWithHomeId:123
                                                       withConnectIds:@&quot;&quot;
                                                              success:^(BOOL success) {
-    //&#x6210;&#x529F;&#x56DE;&#x8C03;
 }
                                                              failure:^(NSError * _Nonnull error) {
-    //&#x9519;&#x8BEF;&#x4FE1;&#x606F;
 }];
 </code></pre>
                                 
@@ -702,12 +693,12 @@ _Nonnull error) {
 
             
                 
-                <a href="modeSetting.html" class="navigation navigation-prev " aria-label="Previous page: 模式设置">
+                <a href="modeSetting.html" class="navigation navigation-prev " aria-label="Previous page: Mode settings">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../Scene/" class="navigation navigation-next " aria-label="Next page: 安防场景&消息">
+                <a href="../Scene/" class="navigation navigation-next " aria-label="Next page: Security Scene & News">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -718,7 +709,7 @@ _Nonnull error) {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"紧急联系人","level":"1.9.3","depth":2,"next":{"title":"安防场景&消息","level":"1.10","depth":1,"path":"Scene/README.md","ref":"Scene/README.md","articles":[{"title":"安防场景","level":"1.10.1","depth":2,"path":"Scene/securityScene.md","ref":"Scene/securityScene.md","articles":[]},{"title":"地理围栏","level":"1.10.2","depth":2,"path":"Scene/geofence.md","ref":"Scene/geofence.md","articles":[]},{"title":"事件绑定","level":"1.10.3","depth":2,"path":"Scene/eventRecording.md","ref":"Scene/eventRecording.md","articles":[]},{"title":"布防提醒","level":"1.10.4","depth":2,"path":"Scene/armReminder.md","ref":"Scene/armReminder.md","articles":[]},{"title":"安防消息","level":"1.10.5","depth":2,"path":"Scene/message.md","ref":"Scene/message.md","articles":[]}]},"previous":{"title":"模式设置","level":"1.9.2","depth":2,"path":"Arm/modeSetting.md","ref":"Arm/modeSetting.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Arm/emContact.md","mtime":"2020-05-19T02:22:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-30T03:12:14.641Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Emergency Contact","level":"1.9.3","depth":2,"next":{"title":"Security Scene & News","level":"1.10","depth":1,"path":"Scene/README.md","ref":"Scene/README.md","articles":[{"title":"Scene","level":"1.10.1","depth":2,"path":"Scene/securityScene.md","ref":"Scene/securityScene.md","articles":[]},{"title":"Geofence","level":"1.10.2","depth":2,"path":"Scene/geofence.md","ref":"Scene/geofence.md","articles":[]},{"title":"Event Recording","level":"1.10.3","depth":2,"path":"Scene/eventRecording.md","ref":"Scene/eventRecording.md","articles":[]},{"title":"Arm Reminder","level":"1.10.4","depth":2,"path":"Scene/armReminder.md","ref":"Scene/armReminder.md","articles":[]},{"title":"News","level":"1.10.5","depth":2,"path":"Scene/message.md","ref":"Scene/message.md","articles":[]}]},"previous":{"title":"Mode settings","level":"1.9.2","depth":2,"path":"Arm/modeSetting.md","ref":"Arm/modeSetting.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Arm/emContact.md","mtime":"2020-07-30T07:17:37.296Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-30T07:21:27.130Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

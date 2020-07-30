@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>事件绑定 · GitBook</title>
+        <title>Event Recording · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -94,7 +94,7 @@
                 <a href="../">
             
                     
-                    前言
+                    Preface
             
                 </a>
             
@@ -107,7 +107,7 @@
                 <a href="../Overview.html">
             
                     
-                    功能描述
+                    Features Overview
             
                 </a>
             
@@ -120,7 +120,7 @@
                 <a href="../Preparation.html">
             
                     
-                    准备工作
+                    Preparation for Integration
             
                 </a>
             
@@ -133,7 +133,7 @@
                 <a href="../Integrated.html">
             
                     
-                    集成SDK
+                    Integrate SDK
             
                 </a>
             
@@ -159,7 +159,7 @@
                 <a href="../iOSAdaptation.html">
             
                     
-                    iOS 版本适配
+                    iOS Version Adaptation
             
                 </a>
             
@@ -172,7 +172,7 @@
                 <a href="../User/">
             
                     
-                    安防用户
+                    Security Users
             
                 </a>
             
@@ -186,7 +186,7 @@
                 <a href="../User/securityUser.html">
             
                     
-                    注册服务
+                    Register & Service
             
                 </a>
             
@@ -204,7 +204,7 @@
                 <a href="../Home/">
             
                     
-                    涂鸦基础能力
+                    Tuya Basical Skills
             
                 </a>
             
@@ -218,7 +218,7 @@
                 <a href="../Home/family.html">
             
                     
-                    家庭管理
+                    Family Management
             
                 </a>
             
@@ -231,7 +231,7 @@
                 <a href="../Home/deviceActivator.html">
             
                     
-                    设备配网
+                    Device Configuration & Management
             
                 </a>
             
@@ -244,7 +244,7 @@
                 <a href="../Home/group.html">
             
                     
-                    群组管理
+                    Group Management
             
                 </a>
             
@@ -257,7 +257,7 @@
                 <a href="../Home/Push.html">
             
                     
-                    集成Push
+                    Integrated Push
             
                 </a>
             
@@ -275,7 +275,7 @@
                 <a href="../Arm/">
             
                     
-                    安防基础能力
+                    Tuya Basical Skills
             
                 </a>
             
@@ -289,7 +289,7 @@
                 <a href="../Arm/armOperation.html">
             
                     
-                    布撤防
+                    Arm & disarm
             
                 </a>
             
@@ -302,7 +302,7 @@
                 <a href="../Arm/modeSetting.html">
             
                     
-                    模式设置
+                    Mode settings
             
                 </a>
             
@@ -315,7 +315,7 @@
                 <a href="../Arm/emContact.html">
             
                     
-                    紧急联系人
+                    Emergency Contact
             
                 </a>
             
@@ -333,7 +333,7 @@
                 <a href="./">
             
                     
-                    安防场景&消息
+                    Security Scene & News
             
                 </a>
             
@@ -347,7 +347,7 @@
                 <a href="securityScene.html">
             
                     
-                    安防场景
+                    Scene
             
                 </a>
             
@@ -360,7 +360,7 @@
                 <a href="geofence.html">
             
                     
-                    地理围栏
+                    Geofence
             
                 </a>
             
@@ -373,7 +373,7 @@
                 <a href="eventRecording.html">
             
                     
-                    事件绑定
+                    Event Recording
             
                 </a>
             
@@ -386,7 +386,7 @@
                 <a href="armReminder.html">
             
                     
-                    布防提醒
+                    Arm Reminder
             
                 </a>
             
@@ -399,7 +399,7 @@
                 <a href="message.html">
             
                     
-                    安防消息
+                    News
             
                 </a>
             
@@ -442,7 +442,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >事件绑定</a>
+        <a href=".." >Event Recording</a>
     </h1>
 </div>
 
@@ -457,296 +457,341 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="tuyasecurityeventrecording--&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;">TuyaSecurityEventRecording  &#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;</h3>
-<h4 id="&#x83B7;&#x53D6;&#x4F20;&#x611F;&#x8BBE;&#x5907;&#x5217;&#x8868;">&#x83B7;&#x53D6;&#x4F20;&#x611F;&#x8BBE;&#x5907;&#x5217;&#x8868;</h4>
+                                <h2 id="1--event-binding">1  Event binding</h2>
+<h3 id="11-get-the-list-of-sensing-devices">1.1 Get the list of sensing devices</h3>
+<h4 id="interface-description">Interface Description</h4>
+<p>Get a list of sensing devices</p>
+<pre><code class="lang-objective-c">/// Gets a list of sensing devices
+/// @param homeId  Home ID
+/// @param success Success Callback
+/// @param failure Fauilre Callback
+- (void)getSensorList:(long long)homeId
+              success:(EventRecordingSensorList)success
+              failure:(TYFailureError)failure;
+</code></pre>
+<h4 id="parameter-description">Parameter Description</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;Id</td>
+<td>Family Id</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<p>&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;&#x6444;&#x50CF;&#x5934;&#x7684;&#x6A21;&#x578B;
-TYEventRecordingBindCameraModel</p>
+<p>Event binding camera model TYEventRecordingBindCameraModel</p>
 <table>
 <thead>
 <tr>
-<th>&#x6570;&#x636E;&#x5B57;&#x6BB5;</th>
-<th>&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>Data field</th>
+<th>Field Type</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>entityId</td>
 <td>NSString *</td>
-<td>&#x8BBE;&#x5907;Id</td>
+<td>Device Id</td>
 </tr>
 <tr>
 <td>type</td>
 <td>enum(TYEventRecordingCameraBindingType)</td>
-<td>&#x5E03;&#x9632;&#x7C7B;&#x578B;</td>
+<td>Arming type</td>
 </tr>
 </tbody>
 </table>
-<p>&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;&#x4F20;&#x611F;&#x5668;&#x7684;&#x6A21;&#x578B;
-TYEventRecordingSensorModel</p>
+<p>Event binding sensor model TYEventRecordingSensorModel</p>
 <table>
 <thead>
 <tr>
-<th>&#x6570;&#x636E;&#x5B57;&#x6BB5;</th>
-<th>&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>Data field</th>
+<th>Field Type</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>deviceId</td>
 <td>NSString *</td>
-<td>&#x8BBE;&#x5907;Id</td>
+<td>Device Id</td>
 </tr>
 <tr>
 <td>actionInfos</td>
 <td>NSArray *</td>
-<td>&#x7ED1;&#x5B9A;&#x7684;&#x6444;&#x50CF;&#x5934;&#x5217;&#x8868;</td>
+<td>List of bound cameras</td>
 </tr>
 <tr>
 <td>linked</td>
 <td>BOOL</td>
-<td>&#x662F;&#x5426;&#x7ED1;&#x5B9A;&#x8FC7;&#x6444;&#x50CF;&#x5934;</td>
+<td>Whether to bind the camera</td>
 </tr>
 </tbody>
 </table>
-<pre><code class="lang-objective-c">
-/// &#x83B7;&#x53D6;&#x5E03;&#x9632;&#x63D0;&#x9192;&#x7684;&#x5217;&#x8868;
-/// Get ArmReminder list
-/// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
-/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
-/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
-- (void)getArmReminderStatus:(long long)homeId
-                     success:(ArmReminderList)success
-                     failure:(TYFailureError)failure;
+<h4 id="code-example">Code example</h4>
+<p>Objc</p>
+<pre><code class="lang-objective-c">[[TuyaSmartSecurityEventRecording sharedInstance] getSensorList:123123 success:^(NSArray&lt;TuyaSmartSecurityEventRecordingSensorModel *&gt; * _Nullable sensorList) {
+
+} failure:^(NSError *error) {
+
+}];
 </code></pre>
-<h4 id="&#x83B7;&#x53D6;&#x4F20;&#x611F;&#x5668;&#x7ED1;&#x5B9A;&#x7684;&#x6444;&#x50CF;&#x5934;&#x5217;&#x8868;">&#x83B7;&#x53D6;&#x4F20;&#x611F;&#x5668;&#x7ED1;&#x5B9A;&#x7684;&#x6444;&#x50CF;&#x5934;&#x5217;&#x8868;</h4>
+<h3 id="12-get-the-list-of-cameras-bound-to-the-sensor">1.2 Get the list of cameras bound to the sensor</h3>
+<h4 id="interface-description">Interface Description</h4>
+<p>Get the list of cameras bound to the sensor</p>
+<pre><code class="lang-objective-c">/// Gets a list of cameras for the specified sensor bindings
+///
+/// @param homeId  Home ID
+/// @param deviceId device Id
+/// @param success Success Callback
+/// @param failure Fauilre Callback
+- (void)getLinkedCameras:(long long)homeId
+                deviceId:(NSString *)deviceId
+                 success:(EventRecordingCameraLink)success
+                 failure:(TYFailureError)failure;
+</code></pre>
+<h4 id="parameter-description">Parameter Description</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;ID</td>
+<td>Family ID</td>
 </tr>
 <tr>
 <td>deviceId</td>
-<td>&#x4F20;&#x611F;&#x5668;&#x7684;&#x8BBE;&#x5907;ID</td>
+<td>The device ID of the sensor</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<p>&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;&#x6444;&#x50CF;&#x5934;&#x7684;&#x89C4;&#x5219;&#x6A21;&#x578B;
-TYEventRecordingLinkRuleModel</p>
+<p>Event binding camera rule model TYEventRecordingLinkRuleModel</p>
 <table>
 <thead>
 <tr>
-<th>&#x6570;&#x636E;&#x5B57;&#x6BB5;</th>
-<th>&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>Data field</th>
+<th>Field Type</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>ruleId</td>
 <td>NSString *</td>
-<td>&#x89C4;&#x5219;ID</td>
+<td>Rule ID</td>
 </tr>
 <tr>
 <td>deviceId</td>
 <td>NSString *</td>
-<td>&#x4F20;&#x611F;&#x5668;&#x7684;&#x8BBE;&#x5907;ID</td>
+<td>The device ID of the sensor</td>
 </tr>
 <tr>
 <td>actionInfos</td>
 <td>NSArray *</td>
-<td>&#x7ED1;&#x5B9A;&#x7684;&#x6444;&#x50CF;&#x5934;&#x5217;&#x8868;</td>
+<td>List of bound cameras</td>
 </tr>
 </tbody>
 </table>
-<pre><code class="lang-objective-c">
-/// &#x83B7;&#x53D6;&#x4F20;&#x611F;&#x5668;&#x7ED1;&#x5B9A;&#x7684;&#x6444;&#x50CF;&#x5934;&#x5217;&#x8868;
-/// Gets a list of cameras for the specified sensor bindings
-/// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
-/// @param deviceId &#x4F20;&#x611F;&#x5668;&#x8BBE;&#x5907;Id
-/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
-/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Fauilre Callback
-- (void)getLinkedCameras:(long long)homeId
-                deviceId:(NSString *)deviceId
-                 success:(EventRecordingCameraLink)success
-                 failure:(TYFailureError)failure;
+<h4 id="code-example">Code example:</h4>
+<p>Objc</p>
+<pre><code class="lang-objective-c">[[TuyaSmartSecurityEventRecording sharedInstance] getLinkedCameras:123123 deviceId:@&quot;sensor Id&quot; success:^(TuyaSmartSecurityEventRecordingLinkRuleModel * _Nullable linkRuleModel) {
+
+} failure:^(NSError *error) {
+
+}];
 </code></pre>
-<h4 id="&#x7ED1;&#x5B9A;&#x6444;&#x50CF;&#x5934;">&#x7ED1;&#x5B9A;&#x6444;&#x50CF;&#x5934;</h4>
+<p>Swift:</p>
+<pre><code class="lang-sw">
+
+</code></pre>
+<h3 id="13-binding-camera">1.3 Binding camera</h3>
+<h4 id="interface-description">Interface Description</h4>
+<p>Binding camera</p>
+<pre><code class="lang-objective-c">/// Bind Cameras
+///
+/// @param homeId Home ID
+/// @param taskModel 
+/// @param success Success Callback
+/// @param failure  Fauilre Callback
+- (void)linkCamera:(long long)homeId
+         taskModel:(TuyaSmartSecurityEventRecordingLinkTaskModel *)taskModel
+           success:(TYSuccessBOOL)success
+           failure:(TYFailureError)failure;
+</code></pre>
+<h4 id="parameter-description">Parameter Description</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;Id</td>
+<td>Family Id</td>
 </tr>
 <tr>
 <td>taskModel</td>
-<td>&#x7ED1;&#x5B9A;&#x6444;&#x50CF;&#x5934;&#x6570;&#x636E;&#x7684;&#x6A21;&#x578B;</td>
+<td>Model for binding camera data</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<p>&#x7ED1;&#x5B9A;&#x6444;&#x50CF;&#x5934;&#x7684;&#x4EFB;&#x52A1;&#x6A21;&#x578B;
-TYEventRecordingLinkTaskCameraModel</p>
+<p>The task model of the bound camera TYEventRecordingLinkTaskCameraModel</p>
 <table>
 <thead>
 <tr>
-<th>&#x6570;&#x636E;&#x5B57;&#x6BB5;</th>
-<th>&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>Data field</th>
+<th>Field Type</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>cameraId</td>
 <td>NSString *</td>
-<td>&#x8BBE;&#x5907;Id</td>
+<td>Device Id</td>
 </tr>
 <tr>
 <td>type</td>
 <td>NSInteger</td>
-<td>&#x7ED1;&#x5B9A;&#x7C7B;&#x578B;&#xFF08;1&#x662F;&#x56FE;&#x7247;&#xFF0C;2&#x662F;&#x89C6;&#x9891;&#xFF09;</td>
+<td>Binding type (1 is picture, 2 is video)</td>
 </tr>
 <tr>
 <td>isSelected</td>
 <td>BOOL</td>
-<td>&#x662F;&#x5426;&#x7ED1;&#x5B9A;</td>
+<td>Whether to bind</td>
 </tr>
 </tbody>
 </table>
-<p>&#x7ED1;&#x5B9A;&#x8BBE;&#x5907;&#x7684;&#x4EFB;&#x52A1;&#x6A21;&#x578B;
-TYEventRecordingLinkTaskModel</p>
+<p>The task model of the binding device TYEventRecordingLinkTaskModel</p>
 <table>
 <thead>
 <tr>
-<th>&#x6570;&#x636E;&#x5B57;&#x6BB5;</th>
-<th>&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>Data field</th>
+<th>Field Type</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>ruleId</td>
 <td>NSString *</td>
-<td>&#x89C4;&#x5219;ID</td>
+<td>Rule ID</td>
 </tr>
 <tr>
 <td>sensorId</td>
 <td>NSArray *</td>
-<td>&#x4F20;&#x611F;&#x5668;&#x7684;&#x8BBE;&#x5907;ID</td>
+<td>The device ID of the sensor</td>
 </tr>
 <tr>
 <td>productId</td>
 <td>BOOL</td>
-<td>&#x4F20;&#x611F;&#x5668;&#x7684;&#x4EA7;&#x54C1;ID</td>
+<td>Product ID of the sensor</td>
 </tr>
 <tr>
 <td>cameraModelList</td>
 <td>NSArray *</td>
-<td>&#x6444;&#x50CF;&#x5934;&#x5217;&#x8868;</td>
+<td>Camera list</td>
 </tr>
 </tbody>
 </table>
-<pre><code class="lang-objective-c">
-/// &#x7ED1;&#x5B9A;&#x6444;&#x50CF;&#x5934;
-/// Bind Cameras
-/// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
-/// @param taskModel &#x7ED1;&#x5B9A;&#x6444;&#x50CF;&#x5934;&#x6570;&#x636E;&#x7684;&#x6A21;&#x578B;
-/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
-/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Fauilre Callback
-- (void)linkCamera:(long long)homeId
-         taskModel:(TYEventRecordingLinkTaskModel *)taskModel
-           success:(TYSuccessBOOL)success
-           failure:(TYFailureError)failure;
+<h4 id="code-example">Code example</h4>
+<p>Objc</p>
+<pre><code class="lang-objective-c">TuyaSmartSecurityEventRecordingLinkTaskModel *taskModel = [TuyaSmartSecurityEventRecordingLinkTaskModel new];
+    taskModel.ruleId = @&quot;ruleId&quot;;
+    taskModel.sensorId = @&quot;sensor Id&quot;;
+    [[TuyaSmartSecurityEventRecording sharedInstance] linkCamera:123123 taskModel:taskModel success:^(BOOL result) {
+
+    } failure:^(NSError *error) {
+
+    }];
 </code></pre>
-<h4 id="&#x83B7;&#x53D6;&#x5DF2;&#x7ED1;&#x5B9A;&#x4E91;&#x5B58;&#x50A8;&#x7684;&#x6444;&#x50CF;&#x5934;&#x5217;&#x8868;">&#x83B7;&#x53D6;&#x5DF2;&#x7ED1;&#x5B9A;&#x4E91;&#x5B58;&#x50A8;&#x7684;&#x6444;&#x50CF;&#x5934;&#x5217;&#x8868;</h4>
+<p>Swift</p>
+<pre><code class="lang-Swi">
+
+</code></pre>
+<h3 id="14-get-the-list-of-cameras-bound-to-cloud-storage">1.4 Get the list of cameras bound to cloud storage</h3>
+<h4 id="interface-description">Interface Description</h4>
+<p>Get the list of cameras bound to cloud storage</p>
+<pre><code class="lang-objective-c">/// Gets the list of cameras that have been bound to the cloud storage
+///
+/// @param homeId  Home ID
+/// @param nCameraIdList camera device list
+/// @param success  Success Callback
+/// @param failure  Fauilre Callback
+- (void)getStorageBindCameraList:(long long)homeId
+                    cameraIdList:(NSArray&lt;NSString *&gt; *)nCameraIdList
+                         success:(EventRecordingStorageBindCameraList)success
+                         failure:(TYFailureError)failure;
+</code></pre>
+<h4 id="parameter-description">Parameter Description</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;Id</td>
+<td>Family Id</td>
 </tr>
 <tr>
 <td>nCameraIdList</td>
-<td>&#x6444;&#x50CF;&#x5934;&#x8BBE;&#x5907;&#x5217;&#x8868; </td>
+<td>Camera equipment list</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<pre><code class="lang-objective-c">
-/// &#x83B7;&#x53D6;&#x5DF2;&#x7ED1;&#x5B9A;&#x4E91;&#x5B58;&#x50A8;&#x7684;&#x6444;&#x50CF;&#x5934;&#x5217;&#x8868;
-/// Gets the list of cameras that have been bound to the cloud storage
-/// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
-/// @param nCameraIdList &#x6444;&#x50CF;&#x5934;&#x8BBE;&#x5907;&#x5217;&#x8868; 
-/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
-/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Fauilre Callback
-- (void)getStorageBindCameraList:(long long)homeId
-                    cameraIdList:(NSArray&lt;NSString *&gt; *)nCameraIdList
-                         success:(EventRecordingStorageBindCameraList)success
-                         failure:(TYFailureError)failure;
+<h4 id="code-example">Code example</h4>
+<p>Objc</p>
+<pre><code class="lang-objective-c">[[TuyaSmartSecurityEventRecording sharedInstance] getStorageBindCameraList:123123 cameraIdList:@[] success:^(NSArray&lt;NSString *&gt; * _Nullable cameraList) {
+
+    } failure:^(NSError *error) {
+
+    }];
 </code></pre>
 
                                 
@@ -775,12 +820,12 @@ TYEventRecordingLinkTaskModel</p>
 
             
                 
-                <a href="geofence.html" class="navigation navigation-prev " aria-label="Previous page: 地理围栏">
+                <a href="geofence.html" class="navigation navigation-prev " aria-label="Previous page: Geofence">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="armReminder.html" class="navigation navigation-next " aria-label="Next page: 布防提醒">
+                <a href="armReminder.html" class="navigation navigation-next " aria-label="Next page: Arm Reminder">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -791,7 +836,7 @@ TYEventRecordingLinkTaskModel</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"事件绑定","level":"1.10.3","depth":2,"next":{"title":"布防提醒","level":"1.10.4","depth":2,"path":"Scene/armReminder.md","ref":"Scene/armReminder.md","articles":[]},"previous":{"title":"地理围栏","level":"1.10.2","depth":2,"path":"Scene/geofence.md","ref":"Scene/geofence.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Scene/eventRecording.md","mtime":"2020-05-19T02:01:21.828Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-30T03:12:14.641Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Event Recording","level":"1.10.3","depth":2,"next":{"title":"Arm Reminder","level":"1.10.4","depth":2,"path":"Scene/armReminder.md","ref":"Scene/armReminder.md","articles":[]},"previous":{"title":"Geofence","level":"1.10.2","depth":2,"path":"Scene/geofence.md","ref":"Scene/geofence.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Scene/eventRecording.md","mtime":"2020-07-30T07:17:37.302Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-30T07:21:27.130Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

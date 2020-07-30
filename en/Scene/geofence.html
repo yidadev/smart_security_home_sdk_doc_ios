@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>地理围栏 · GitBook</title>
+        <title>Geofence · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -94,7 +94,7 @@
                 <a href="../">
             
                     
-                    前言
+                    Preface
             
                 </a>
             
@@ -107,7 +107,7 @@
                 <a href="../Overview.html">
             
                     
-                    功能描述
+                    Features Overview
             
                 </a>
             
@@ -120,7 +120,7 @@
                 <a href="../Preparation.html">
             
                     
-                    准备工作
+                    Preparation for Integration
             
                 </a>
             
@@ -133,7 +133,7 @@
                 <a href="../Integrated.html">
             
                     
-                    集成SDK
+                    Integrate SDK
             
                 </a>
             
@@ -159,7 +159,7 @@
                 <a href="../iOSAdaptation.html">
             
                     
-                    iOS 版本适配
+                    iOS Version Adaptation
             
                 </a>
             
@@ -172,7 +172,7 @@
                 <a href="../User/">
             
                     
-                    安防用户
+                    Security Users
             
                 </a>
             
@@ -186,7 +186,7 @@
                 <a href="../User/securityUser.html">
             
                     
-                    注册服务
+                    Register & Service
             
                 </a>
             
@@ -204,7 +204,7 @@
                 <a href="../Home/">
             
                     
-                    涂鸦基础能力
+                    Tuya Basical Skills
             
                 </a>
             
@@ -218,7 +218,7 @@
                 <a href="../Home/family.html">
             
                     
-                    家庭管理
+                    Family Management
             
                 </a>
             
@@ -231,7 +231,7 @@
                 <a href="../Home/deviceActivator.html">
             
                     
-                    设备配网
+                    Device Configuration & Management
             
                 </a>
             
@@ -244,7 +244,7 @@
                 <a href="../Home/group.html">
             
                     
-                    群组管理
+                    Group Management
             
                 </a>
             
@@ -257,7 +257,7 @@
                 <a href="../Home/Push.html">
             
                     
-                    集成Push
+                    Integrated Push
             
                 </a>
             
@@ -275,7 +275,7 @@
                 <a href="../Arm/">
             
                     
-                    安防基础能力
+                    Tuya Basical Skills
             
                 </a>
             
@@ -289,7 +289,7 @@
                 <a href="../Arm/armOperation.html">
             
                     
-                    布撤防
+                    Arm & disarm
             
                 </a>
             
@@ -302,7 +302,7 @@
                 <a href="../Arm/modeSetting.html">
             
                     
-                    模式设置
+                    Mode settings
             
                 </a>
             
@@ -315,7 +315,7 @@
                 <a href="../Arm/emContact.html">
             
                     
-                    紧急联系人
+                    Emergency Contact
             
                 </a>
             
@@ -333,7 +333,7 @@
                 <a href="./">
             
                     
-                    安防场景&消息
+                    Security Scene & News
             
                 </a>
             
@@ -347,7 +347,7 @@
                 <a href="securityScene.html">
             
                     
-                    安防场景
+                    Scene
             
                 </a>
             
@@ -360,7 +360,7 @@
                 <a href="geofence.html">
             
                     
-                    地理围栏
+                    Geofence
             
                 </a>
             
@@ -373,7 +373,7 @@
                 <a href="eventRecording.html">
             
                     
-                    事件绑定
+                    Event Recording
             
                 </a>
             
@@ -386,7 +386,7 @@
                 <a href="armReminder.html">
             
                     
-                    布防提醒
+                    Arm Reminder
             
                 </a>
             
@@ -399,7 +399,7 @@
                 <a href="message.html">
             
                     
-                    安防消息
+                    News
             
                 </a>
             
@@ -442,7 +442,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >地理围栏</a>
+        <a href=".." >Geofence</a>
     </h1>
 </div>
 
@@ -457,74 +457,71 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="1-&#x5730;&#x7406;&#x56F4;&#x680F;">1 &#x5730;&#x7406;&#x56F4;&#x680F;</h3>
-<h3 id="11-&#x4E0A;&#x4F20;&#x624B;&#x673A;&#x8BBE;&#x5907;&#x4FE1;&#x606F;">1.1 &#x4E0A;&#x4F20;&#x624B;&#x673A;&#x8BBE;&#x5907;&#x4FE1;&#x606F;</h3>
-<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</h4>
-<p>&#x5728;&#x767B;&#x5F55;&#x6210;&#x529F;&#x65F6;&#xFF0C;&#x6536;&#x96C6;&#x8BBE;&#x5907;&#x4FE1;&#x606F;&#x7ED9;&#x4E91;&#x7AEF;</p>
-<pre><code class="lang-objective-c">
-/// &#x4E0A;&#x4F20;&#x624B;&#x673A;&#x8BBE;&#x5907;&#x4FE1;&#x606F;
-/// Upload mobile device information
+                                <h3 id="1-geofence">1 Geofence</h3>
+<h3 id="11-upload-mobile-device-information">1.1 Upload mobile device information</h3>
+<h4 id="interface-description">Interface Description</h4>
+<p>Upon successful login, collect device information to the cloud</p>
+<pre><code class="lang-objective-c">/// Upload mobile device information
 ///
-/// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
-/// @param deviceModel &#x8BBE;&#x5907;&#x4FE1;&#x606F;Model / Mobile phone information
-/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
-/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
+/// @param homeId Home ID
+/// @param deviceModel  Mobile phone information
+/// @param success Success Callback
+/// @param failure Failure Callback
 - (void)uploadMobileInfo:(long long)homeId
              deviceModel:(TYGeofenceMobileInfoModel *)deviceModel
                  success:(TYSuccessDict)success
                  failure:(TYFailureError)failure;
 </code></pre>
-<h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;">&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</h4>
+<h4 id="parameter-description">Parameter Description:</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;Id</td>
+<td>Family Id</td>
 </tr>
 <tr>
 <td>deviceModel</td>
-<td>&#x8BBE;&#x5907;&#x4FE1;&#x606F;Model</td>
+<td>Equipment information Model</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<p>&#x5730;&#x7406;&#x56F4;&#x680F;&#x8BBE;&#x5907; &#x6570;&#x636E;&#x6A21;&#x578B;
-TYGeofenceMobileInfoModel</p>
+<p>Geofence equipment data model TYGeofenceMobileInfoModel</p>
 <table>
 <thead>
 <tr>
-<th>&#x6570;&#x636E;&#x5B57;&#x6BB5;</th>
-<th>&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>Data field</th>
+<th>Field Type</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>deviceId</td>
 <td>NSString *</td>
-<td>&#x79FB;&#x52A8;&#x8BBE;&#x5907;id</td>
+<td>Mobile device id</td>
 </tr>
 <tr>
 <td>deviceName</td>
 <td>NSString *</td>
-<td>&#x79FB;&#x52A8;&#x8BBE;&#x5907;&#x540D;&#x79F0;</td>
+<td>Mobile device name</td>
 </tr>
 </tbody>
 </table>
-<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</h4>
+<h4 id="code-example">Code example:</h4>
 <p>Objc</p>
 <pre><code class="lang-objective-c">TuyaSmartSecurityGeofenceMobileInfoModel *model = [TuyaSmartSecurityGeofenceMobileInfoModel new];
 model.deviceId = @&quot;1111111111111111&quot;;
@@ -549,81 +546,79 @@ TuyaSmartSecurityGeofence.sharedInstance().uploadMobileInfo(231231231, deviceMod
       }
 }
 </code></pre>
-<h3 id="12-&#x67E5;&#x8BE2;&#x5F53;&#x524D;&#x5BB6;&#x5EAD;&#x7684;&#x8BBE;&#x5907;&#x5217;&#x8868;">1.2 &#x67E5;&#x8BE2;&#x5F53;&#x524D;&#x5BB6;&#x5EAD;&#x7684;&#x8BBE;&#x5907;&#x5217;&#x8868;</h3>
-<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</h4>
-<p>&#x67E5;&#x8BE2;&#x767B;&#x5F55;&#x8FC7;&#x5F53;&#x524D;&#x5BB6;&#x5EAD;&#x7684;&#x8BBE;&#x5907;&#x5217;&#x8868;</p>
-<pre><code class="lang-objective-c">/// &#x67E5;&#x8BE2;&#x767B;&#x5F55;&#x8FC7;&#x5F53;&#x524D;&#x5BB6;&#x5EAD;&#x7684;&#x8BBE;&#x5907;&#x5217;&#x8868;
-/// Query the list of devices logged into the current home
+<h3 id="12-query-the-device-list-of-the-current-family">1.2 Query the device list of the current family</h3>
+<h4 id="interface-description">Interface Description</h4>
+<p>Query the list of devices that have logged in to the current family</p>
+<pre><code class="lang-objective-c">/// Query the list of devices logged into the current home
 ///
-/// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
-/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
-/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
+/// @param homeId  Home ID
+/// @param success Success Callback
+/// @param failure Failure Callback
 - (void)getMobileList:(long long)homeId
               success:(GeofenceMobileList)success
               failure:(TYFailureError)failure;
 </code></pre>
-<h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;">&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</h4>
+<h4 id="parameter-description">Parameter Description:</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;Id</td>
+<td>Family Id</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<p>&#x5730;&#x7406;&#x56F4;&#x680F;&#x5E38;&#x7528;&#x8BBE;&#x5907;&#x6570;&#x636E;&#x6A21;&#x578B;
-TYGeofenceCommonlyUsedMobileModel</p>
+<p>Geofence commonly used equipment data model TYGeofenceCommonlyUsedMobileModel</p>
 <table>
 <thead>
 <tr>
-<th>&#x6570;&#x636E;&#x5B57;&#x6BB5;</th>
-<th>&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>Data field</th>
+<th>Field Type</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>uuid</td>
 <td>NSString *</td>
-<td>&#x7528;&#x6237;&#x8BBE;&#x5907;&#x7684;UUID&#xFF08;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#xFF09;</td>
+<td>UUID (Unique ID) of the user device</td>
 </tr>
 <tr>
 <td>name</td>
 <td>NSString *</td>
-<td>&#x7528;&#x6237;&#x540D;&#x79F0;</td>
+<td>user name</td>
 </tr>
 <tr>
 <td>uid</td>
 <td>NSString *</td>
-<td>&#x7528;&#x6237;Id</td>
+<td>UserId</td>
 </tr>
 <tr>
 <td>active</td>
 <td>NSNumber *</td>
-<td>&#x9009;&#x4E2D;&#x7684;&#x8BBE;&#x5907;</td>
+<td>Selected device</td>
 </tr>
 <tr>
 <td>lastLoginTime</td>
 <td>NSTimeInterval</td>
-<td>&#x7528;&#x6237;&#x6700;&#x540E;&#x767B;&#x5F55;&#x65F6;&#x95F4;</td>
+<td>User last login time</td>
 </tr>
 </tbody>
 </table>
-<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</h4>
+<h4 id="code-example">Code example:</h4>
 <p>Objc</p>
 <pre><code class="lang-objective-c">[[TuyaSmartSecurityGeofence sharedInstance] getMobileList:smartHome.homeModel.homeId success:^(NSArray&lt;TuyaSmartSecurityGeofenceCommonlyUsedMobileModel *&gt; * _Nullable mobileList) {
 
@@ -640,50 +635,48 @@ TYGeofenceCommonlyUsedMobileModel</p>
    }
 })
 </code></pre>
-<h3 id="13-&#x8BBE;&#x7F6E;&#x5E38;&#x7528;&#x624B;&#x673A;">1.3 &#x8BBE;&#x7F6E;&#x5E38;&#x7528;&#x624B;&#x673A;</h3>
-<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;</h4>
-<p>&#x5728;&#x5F53;&#x524D;&#x7684;&#x79FB;&#x52A8;&#x8BBE;&#x5907;&#x5217;&#x8868;&#x4E2D;&#xFF0C;&#x52FE;&#x9009;&#x8BBE;&#x7F6E;&#x5E38;&#x7528;&#x7684;&#x79FB;&#x52A8;&#x8BBE;&#x5907;&#x5F53;&#x505A;&#x5730;&#x7406;&#x56F4;&#x680F;&#x89E6;&#x53D1;&#x7684;&#x8BBE;&#x5907;</p>
-<pre><code class="lang-objective-c">
-/// &#x8BBE;&#x7F6E;&#x5E38;&#x7528;&#x624B;&#x673A;
-/// Set up commonly used mobile phone
+<h3 id="13-set-frequently-used-mobile-phones">1.3 Set frequently used mobile phones</h3>
+<h4 id="interface-description">Interface Description:</h4>
+<p>In the current mobile device list, tick to set frequently used mobile devices as geofence trigger devices</p>
+<pre><code class="lang-objective-c">/// Set up commonly used mobile phone
 ///
-/// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
-/// @param deviceId &#x8BBE;&#x5907;Id / Device ID
-/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
-/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
+/// @param homeId  Home ID
+/// @param deviceId  Device ID
+/// @param success  Success Callback
+/// @param failure  Failure Callback
 - (void)setCommonlyUsedMobile:(long long)homeId
                      deviceId:(NSString *)deviceId
                       success:(TYSuccessBOOL)success
                       failure:(TYFailureError)failure;
 </code></pre>
-<h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;">&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</h4>
+<h4 id="parameter-description">Parameter Description:</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;Id</td>
+<td>Family Id</td>
 </tr>
 <tr>
 <td>deviceId</td>
-<td>&#x8BBE;&#x5907;ID&#xFF08;&#x79FB;&#x52A8;&#x8BBE;&#x5907;&#x7684;&#x552F;&#x4E00;&#x8BC6;&#x522B;&#x7801;&#xFF09;</td>
+<td>Device ID (unique identification code of mobile device)</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</h4>
+<h4 id="code-example">Code example:</h4>
 <p>Objc</p>
 <pre><code class="lang-objective-c">[[TuyaSmartSecurityGeofence sharedInstance] setCommonlyUsedMobile:smartHome.homeModel.homeId deviceId:@&quot;Unique ID&quot; success:^(BOOL result) {
   NSLog(@&quot;%ld&quot;, result);
@@ -695,49 +688,48 @@ TYGeofenceCommonlyUsedMobileModel</p>
 <pre><code class="lang-sw">
 
 </code></pre>
-<h3 id="14-&#x5220;&#x9664;&#x7528;&#x6237;&#x8BBE;&#x5907;">1.4 &#x5220;&#x9664;&#x7528;&#x6237;&#x8BBE;&#x5907;</h3>
-<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;</h4>
-<p>&#x5728;&#x5F53;&#x524D;&#x7684;&#x79FB;&#x52A8;&#x8BBE;&#x5907;&#x5217;&#x8868;&#x4E2D;&#xFF0C;&#x5220;&#x9664;&#x65E0;&#x7528;&#x7684;&#x8BBE;&#x5907;&#x6570;&#x636E;</p>
-<pre><code class="lang-objective-c">/// &#x5220;&#x9664;&#x7528;&#x6237;&#x624B;&#x673A;
-/// Delete user&apos;s phone
+<h3 id="14-delete-user-device">1.4 Delete user device</h3>
+<h4 id="interface-description">Interface Description:</h4>
+<p>In the current mobile device list, delete useless device data</p>
+<pre><code class="lang-objective-c">/// Delete user&apos;s phone
 ///
-/// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
-/// @param deviceId &#x8BBE;&#x5907;Id / Device ID
-/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
-/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
+/// @param homeId  Home ID
+/// @param deviceId  Device ID
+/// @param success Success Callback
+/// @param failure Failure Callback
 - (void)deleteMobile:(long long)homeId
             deviceId:(NSString *)deviceId
              success:(TYSuccessBOOL)success
              failure:(TYFailureError)failure;
 </code></pre>
-<h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h4>
+<h4 id="parameter-description">Parameter Description</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;Id</td>
+<td>Family Id</td>
 </tr>
 <tr>
 <td>deviceId</td>
-<td>&#x8BBE;&#x5907;ID&#xFF08;&#x79FB;&#x52A8;&#x8BBE;&#x5907;&#x7684;&#x552F;&#x4E00;&#x8BC6;&#x522B;&#x7801;&#xFF09;</td>
+<td>Device ID (unique identification code of mobile device)</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</h4>
+<h4 id="code-example">Code example:</h4>
 <p>Objc</p>
 <pre><code class="lang-objective-c">[[TuyaSmartSecurityGeofence sharedInstance] deleteMobile:123132123 deviceId:@&quot;Unique ID&quot; success:^(BOOL result) {
        NSLog(@&quot;%ld&quot;, result);
@@ -749,43 +741,42 @@ TYGeofenceCommonlyUsedMobileModel</p>
 <pre><code class="lang-Swift">
 
 </code></pre>
-<h3 id="15--&#x83B7;&#x53D6;&#x4E2A;&#x4EBA;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x72B6;&#x6001;">1.5  &#x83B7;&#x53D6;&#x4E2A;&#x4EBA;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x72B6;&#x6001;</h3>
-<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;</h4>
-<p> &#x83B7;&#x53D6;&#x4E2A;&#x4EBA;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x670D;&#x52A1;&#x5904;&#x4E8E;&#x5F00;&#x542F;&#x6216;&#x8005;&#x5173;&#x95ED;&#x7684;&#x72B6;&#x6001;</p>
-<pre><code class="lang-objective-c">/// &#x83B7;&#x53D6;&#x4E2A;&#x4EBA;&#x5730;&#x7406;&#x56F4;&#x680F;&#x670D;&#x52A1;&#x72B6;&#x6001;
-/// Get the status of personal geographic fence service
+<h3 id="15-get-the-status-of-a-personal-geofence">1.5 Get the status of a personal geofence</h3>
+<h4 id="interface-description">Interface Description:</h4>
+<p>The service of obtaining personal geofence is on or off</p>
+<pre><code class="lang-objective-c">/// Get the status of personal geographic fence service
 ///
-/// @param homeId &#x5BB6;&#x5EAD;ID / Home ID
-/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
-/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
+/// @param homeId Home ID
+/// @param success  Success Callback
+/// @param failure  Failure Callback
 - (void)getGeoServiceStatus:(long long)homeId
                     success:(TYSuccessBOOL)success
                     failure:(TYFailureError)failure;
 </code></pre>
-<h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;">&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</h4>
+<h4 id="parameter-description">Parameter Description:</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;Id</td>
+<td>Family Id</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</h4>
+<h4 id="code-example">Code example:</h4>
 <p>Objc</p>
 <pre><code class="lang-objective-c">[[TuyaSmartSecurityGeofence sharedInstance] getGeoServiceStatus:12122 success:^(BOOL result) {
      NSLog(@&quot;%ld&quot;, result);
@@ -797,48 +788,47 @@ TYGeofenceCommonlyUsedMobileModel</p>
 <pre><code class="lang-Sw">
 
 </code></pre>
-<h3 id="16-&#x5207;&#x6362;&#x4E2A;&#x4EBA;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x670D;&#x52A1;&#x72B6;&#x6001;">1.6 &#x5207;&#x6362;&#x4E2A;&#x4EBA;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x670D;&#x52A1;&#x72B6;&#x6001;</h3>
-<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;:</h4>
-<p>&#x5207;&#x6362;&#x4E2A;&#x4EBA;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x670D;&#x52A1;&#x72B6;&#x6001;&#xFF08;&#x5F00;/&#x5173;&#xFF09;</p>
-<pre><code class="lang-objective-c">/// &#x5207;&#x6362;&#x4E2A;&#x4EBA;&#x5730;&#x7406;&#x56F4;&#x680F;&#x670D;&#x52A1;&#x72B6;&#x6001;
-/// Toggle individual geographic fence service status
-/// @param homeId &#x5BB6;&#x5EAD;id / Home ID
-/// @param geoStatus &#x5730;&#x7406;&#x56F4;&#x680F;&#x5F00;&#x5173; / Geofence status
-/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
-/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
+<h3 id="16-switch-the-service-status-of-personal-geofence">1.6 Switch the service status of personal geofence</h3>
+<h4 id="interface-description">Interface Description:</h4>
+<p>Switch the service status of personal geofencing (on/off)</p>
+<pre><code class="lang-objective-c">/// Toggle individual geographic fence service status
+/// @param homeId Home ID
+/// @param geoStatus Geofence status
+/// @param success Success Callback
+/// @param failure Failure Callback
 - (void)switchGeoService:(long long)homeId
                geoStatus:(BOOL)geoStatus
                  success:(TYSuccessBOOL)success
                  failure:(TYFailureError)failure;
 </code></pre>
-<h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;">&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</h4>
+<h4 id="parameter-description">Parameter Description:</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;Id</td>
+<td>Family Id</td>
 </tr>
 <tr>
 <td>geoStatus</td>
-<td>&#x72B6;&#x6001;&#xFF08;&#x5F00;/&#x5173;&#xFF09;</td>
+<td>Status (on/off)</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</h4>
+<h4 id="code-example">Code example:</h4>
 <p>Objc</p>
 <pre><code class="lang-objective-c">[[TuyaSmartSecurityGeofence sharedInstance] switchGeoService:12313123 geoStatus:YES success:^(BOOL result) {
      NSLog(@&quot;%ld&quot;, result);
@@ -850,47 +840,45 @@ TYGeofenceCommonlyUsedMobileModel</p>
 <pre><code class="lang-sw">
 
 </code></pre>
-<h3 id="17-&#x83B7;&#x53D6;&#x5BB6;&#x5EAD;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x5F00;&#x5173;&#x72B6;&#x6001;">1.7 &#x83B7;&#x53D6;&#x5BB6;&#x5EAD;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x5F00;&#x5173;&#x72B6;&#x6001;</h3>
-<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;</h4>
-<p>&#x83B7;&#x53D6;&#x5BB6;&#x5EAD;&#x7EA7;&#x522B;&#x7684;&#x5730;&#x7406;&#x56F4;&#x680F;&#x72B6;&#x6001;</p>
-<pre><code class="lang-objective-c">
-/// &#x83B7;&#x53D6;&#x5BB6;&#x5EAD;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x5F00;&#x5173;&#x72B6;&#x6001;
-/// Gets the on-off status of the home geographic fence
-/// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
-/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
-/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
+<h3 id="17-get-the-switch-status-of-home-geofence">1.7 Get the switch status of home geofence</h3>
+<h4 id="interface-description">Interface Description:</h4>
+<p>Get home-level geofencing status</p>
+<pre><code class="lang-objective-c">/// Gets the on-off status of the home geographic fence
+/// @param homeId Home ID
+/// @param success Success Callback
+/// @param failure Failure Callback
 - (void)getGeoFenceStatus:(long long)homeId
                   success:(TYSuccessBOOL)success
                   failure:(TYFailureError)failure;
 </code></pre>
-<h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;">&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</h4>
+<h4 id="parameter-description">Parameter Description:</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;Id</td>
+<td>Family Id</td>
 </tr>
 <tr>
 <td>geoStatus</td>
-<td>&#x72B6;&#x6001;&#xFF08;&#x5F00;/&#x5173;&#xFF09;</td>
+<td>Status (on/off)</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<p>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<p>Code example:</p>
 <p>Objc</p>
 <pre><code class="lang-objective-c">[[TuyaSmartSecurityGeofence sharedInstance] getGeoFenceStatus:1212313 success:^(BOOL result) {
         NSLog(@&quot;%ld&quot;, result);
@@ -898,53 +886,48 @@ TYGeofenceCommonlyUsedMobileModel</p>
         NSLog(@&quot;%@&quot;, error.localizedDescription);
 }];
 </code></pre>
-<p>Swift</p>
-<pre><code class="lang-objective-c">
-
-</code></pre>
-<h3 id="18-&#x5207;&#x6362;&#x5BB6;&#x5EAD;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x5F00;&#x5173;">1.8 &#x5207;&#x6362;&#x5BB6;&#x5EAD;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x5F00;&#x5173;</h3>
-<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;</h4>
-<p>&#x5207;&#x6362;&#x5BB6;&#x5EAD;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x5F00;&#x5173;&#x72B6;&#x6001;</p>
-<pre><code class="lang-objective-c">/// &#x5207;&#x6362;&#x5BB6;&#x5EAD;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x5F00;&#x5173;
-/// Switch the home geographic fence switch
+<h3 id="18-switch-to-switch-home-geofence">1.8 Switch to switch home geofence</h3>
+<h4 id="interface-description">Interface Description:</h4>
+<p>Toggle the on-off state of home geofence</p>
+<pre><code class="lang-objective-c">/// Switch the home geographic fence switch
 /// 
-/// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
-/// @param fenceStatus &#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x72B6;&#x6001;
-/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
-/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
+/// @param homeId Home ID
+/// @param fenceStatus geofence state
+/// @param success Success Callback
+/// @param failure Failure Callback
 - (void)switchGeoFence:(long long)homeId
          fenceStatus:(BOOL)fenceStatus
                success:(TYSuccessBOOL)success
                failure:(TYFailureError)failure;
 </code></pre>
-<h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;">&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</h4>
+<h4 id="parameter-description">Parameter Description:</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;Id</td>
+<td>Family Id</td>
 </tr>
 <tr>
 <td>fenceStatus</td>
-<td>&#x72B6;&#x6001;&#xFF08;&#x5F00;/&#x5173;&#xFF09;</td>
+<td>Status (on/off)</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</h4>
+<h4 id="code-example">Code example:</h4>
 <p>Objc</p>
 <pre><code class="lang-objective-c">[[TuyaSmartSecurityGeofence sharedInstance] switchGeoFence:123123 fenceStatus:YES success:^(BOOL result) {
         NSLog(@&quot;%ld&quot;, result);
@@ -956,100 +939,98 @@ TYGeofenceCommonlyUsedMobileModel</p>
 <pre><code class="lang-Sw">
 
 </code></pre>
-<h3 id="19-&#x67E5;&#x8BE2;&#x53EF;&#x4EE5;&#x53C2;&#x4E0E;&#x5BB6;&#x5EAD;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x5BB6;&#x5EAD;&#x6210;&#x5458;">1.9 &#x67E5;&#x8BE2;&#x53EF;&#x4EE5;&#x53C2;&#x4E0E;&#x5BB6;&#x5EAD;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x5BB6;&#x5EAD;&#x6210;&#x5458;</h3>
-<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;</h4>
-<p>&#x67E5;&#x770B;&#x6240;&#x6709;&#x53C2;&#x4E0E;&#x5BB6;&#x5EAD;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x6210;&#x5458;</p>
-<pre><code class="lang-objective-c">/// &#x67E5;&#x8BE2;&#x53EF;&#x4EE5;&#x53C2;&#x4E0E;&#x5BB6;&#x5EAD;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x5BB6;&#x5EAD;&#x6210;&#x5458;
-/// Search for family members who can participate in the family geographic fence
+<h3 id="19-inquire-about-family-members-who-can-participate-in-family-geofencing">1.9 Inquire about family members who can participate in family geofencing</h3>
+<h4 id="interface-description">Interface Description:</h4>
+<p>View all members participating in family geofencing</p>
+<pre><code class="lang-objective-c">/// Search for family members who can participate in the family geographic fence
 ///
-/// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
-/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
-/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
+/// @param homeId  Home ID
+/// @param success Success Callback
+/// @param failure Failure Callback
 - (void)getGeoFenceMemberList:(long long)homeId
                       success:(GeofenceMemberList)success
                       failure:(TYFailureError)failure;
 </code></pre>
-<h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h4>
+<h4 id="parameter-description">Parameter Description</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;Id</td>
+<td>Family Id</td>
 </tr>
 <tr>
 <td>geoStatus</td>
-<td>&#x72B6;&#x6001;&#xFF08;&#x5F00;/&#x5173;&#xFF09;</td>
+<td>Status (on/off)</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<p>&#x5730;&#x7406;&#x56F4;&#x680F;&#x6210;&#x5458;&#x6570;&#x636E;&#x6A21;&#x578B;
-TYGeofenceMemberModel</p>
+<p>Geofence member data model TYGeofenceMemberModel</p>
 <table>
 <thead>
 <tr>
-<th>&#x6570;&#x636E;&#x5B57;&#x6BB5;</th>
-<th>&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>Data field</th>
+<th>Field Type</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>mobile</td>
 <td>NSString *</td>
-<td>&#x7528;&#x6237;&#x624B;&#x673A;&#x53F7;</td>
+<td>User phone number</td>
 </tr>
 <tr>
 <td>email</td>
 <td>NSString *</td>
-<td>&#x7528;&#x6237;&#x90AE;&#x7BB1;</td>
+<td>User mailbox</td>
 </tr>
 <tr>
 <td>nickname</td>
 <td>NSString *</td>
-<td>&#x7528;&#x6237;&#x6635;&#x79F0;</td>
+<td>User&apos;s Nickname</td>
 </tr>
 <tr>
 <td>uid</td>
 <td>NSString *</td>
-<td>&#x7528;&#x6237;ID</td>
+<td>User ID</td>
 </tr>
 <tr>
 <td>username</td>
 <td>NSString *</td>
-<td>&#x7528;&#x6237;&#x540D;&#x79F0;</td>
+<td>user name</td>
 </tr>
 <tr>
 <td>deviceId</td>
 <td>NSString *</td>
-<td>&#x8BBE;&#x5907;Id&#xFF08;&#x552F;&#x4E00;&#x8BC6;&#x522B;&#x7801;&#xFF09;</td>
+<td>Device Id (unique identification code)</td>
 </tr>
 <tr>
 <td>isEffective</td>
 <td>NSInteger</td>
-<td>&#x662F;&#x5426;&#x53C2;&#x4E0E; </td>
+<td>Whether to participate</td>
 </tr>
 <tr>
 <td>headerUrl</td>
 <td>NSString *</td>
-<td>&#x7528;&#x6237;&#x5934;&#x50CF;</td>
+<td>profile picture</td>
 </tr>
 </tbody>
 </table>
-<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</h4>
+<h4 id="code-example">Code example:</h4>
 <p>Objc</p>
 <pre><code class="lang-objective-c">[[TuyaSmartSecurityGeofence sharedInstance] getGeoFenceMemberList:123123 success:^(NSArray&lt;TuyaSmartSecurityGeofenceMemberModel *&gt; * _Nullable memberList) {
       NSLog(@&quot;%ld&quot;, memberList);
@@ -1061,123 +1042,120 @@ TYGeofenceMemberModel</p>
 <pre><code class="lang-sw">
 
 </code></pre>
-<h3 id="110-&#x67E5;&#x8BE2;&#x5730;&#x7406;&#x56F4;&#x680F;&#x8BE6;&#x60C5;">1.10 &#x67E5;&#x8BE2;&#x5730;&#x7406;&#x56F4;&#x680F;&#x8BE6;&#x60C5;</h3>
-<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;</h4>
-<p>&#x67E5;&#x770B;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x4F4D;&#x7F6E;&#x8BE6;&#x60C5;</p>
-<pre><code class="lang-objective-c">/// &#x67E5;&#x8BE2;&#x5730;&#x7406;&#x56F4;&#x680F;&#x8BE6;&#x60C5;
-/// For details of geographical fencing
-/// @param homeId &#x5BB6;&#x5EAD;id / Home ID
-/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
-/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
+<h3 id="110-query-geofence-details">1.10 Query geofence details</h3>
+<h4 id="interface-description">Interface Description:</h4>
+<p>View location details of a geofence</p>
+<pre><code class="lang-objective-c">/// For details of geographical fencing
+/// @param homeId Home ID
+/// @param success Success Callback
+/// @param failure Failure Callback
 - (void)getHomeGeoFencingData:(long long)homeId
                       success:(GeofenceRegionData)success
                       failure:(TYFailureError)failure;
 </code></pre>
-<h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;">&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</h4>
+<h4 id="parameter-description">Parameter Description:</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;Id</td>
+<td>Family Id</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<p>&#x5730;&#x7406;&#x56F4;&#x680F;&#x4F4D;&#x7F6E;&#x6570;&#x636E;&#x6A21;&#x578B;
-TYGeofenceRegionItemModel</p>
+<p>Geofence location data model TYGeofenceRegionItemModel</p>
 <table>
 <thead>
 <tr>
-<th>&#x6570;&#x636E;&#x5B57;&#x6BB5;</th>
-<th>&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>Data field</th>
+<th>Field Type</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>lat</td>
+<td>years</td>
 <td>double</td>
-<td>&#x7EAC;&#x5EA6;</td>
+<td>latitude</td>
 </tr>
 <tr>
-<td>lon</td>
+<td>can</td>
 <td>double</td>
-<td>&#x7ECF;&#x5EA6;</td>
+<td>longitude</td>
 </tr>
 <tr>
 <td>radius</td>
 <td>double</td>
-<td>&#x534A;&#x5F84;</td>
+<td>radius</td>
 </tr>
 <tr>
 <td>title</td>
 <td>NSString *</td>
-<td>&#x4F4D;&#x7F6E;&#x540D;&#x79F0;</td>
+<td>Location name</td>
 </tr>
 <tr>
 <td>isSettedLocation</td>
 <td>BOOL</td>
-<td>&#x662F;&#x5426;&#x8BBE;&#x7F6E;&#x8FC7;&#x5BB6;&#x5EAD;&#x4F4D;&#x7F6E; </td>
+<td>Have you set a home location</td>
 </tr>
 </tbody>
 </table>
-<p>&#x5730;&#x7406;&#x56F4;&#x680F;&#x6570;&#x636E;&#x6A21;&#x578B;
-TYGeofenceRegionDataModel</p>
+<p>Geofence data model TYGeofenceRegionDataModel</p>
 <table>
 <thead>
 <tr>
-<th>&#x6570;&#x636E;&#x5B57;&#x6BB5;</th>
-<th>&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>Data field</th>
+<th>Field Type</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>fenceId</td>
 <td>NSString *</td>
-<td>&#x5730;&#x7406;&#x56F4;&#x680F;&#x552F;&#x4E00;&#x8BC6;&#x522B;ID</td>
+<td>Geo-fence unique identification ID</td>
 </tr>
 <tr>
 <td>homeId</td>
 <td>long long</td>
-<td>&#x5BB6;&#x5EAD;Id </td>
+<td>Family Id</td>
 </tr>
 <tr>
 <td>gmtCreate</td>
 <td>NSTimeInterval</td>
-<td>&#x521B;&#x5EFA;&#x65F6;&#x95F4;</td>
+<td>Creation time</td>
 </tr>
 <tr>
 <td>gmtModified</td>
 <td>NSTimeInterval</td>
-<td>&#x4FEE;&#x6539;&#x65F6;&#x95F4;</td>
+<td>Change the time</td>
 </tr>
 <tr>
 <td>enable</td>
 <td>NSInteger</td>
-<td>&#x662F;&#x5426;&#x53C2;&#x4E0E;&#x5730;&#x7406;&#x56F4;&#x680F; </td>
+<td>Whether to participate in geofencing</td>
 </tr>
 <tr>
 <td>data</td>
 <td>TYGeofenceRegionItemModel *</td>
-<td>&#x5730;&#x7406;&#x56F4;&#x680F;&#x4F4D;&#x7F6E;&#x6570;&#x636E;</td>
+<td>Geofence location data</td>
 </tr>
 </tbody>
 </table>
-<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</h4>
+<h4 id="code-example">Code example:</h4>
 <p>Objc</p>
 <pre><code class="lang-objective-c">[[TuyaSmartSecurityGeofence sharedInstance] getHomeGeoFencingData:123123 success:^(TuyaSmartSecurityGeofenceRegionDataModel * _Nullable dataModel) {
      NSLog(@&quot;%ld&quot;, dataModel);
@@ -1189,49 +1167,48 @@ TYGeofenceRegionDataModel</p>
 <pre><code class="lang-Sw">
 
 </code></pre>
-<h3 id="111-&#x67E5;&#x8BE2;&#x5F53;&#x524D;&#x8BBE;&#x5907;&#x4E0B;&#xFF0C;&#x5F00;&#x542F;&#x7684;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x5BB6;&#x5EAD;&#x53CA;&#x4FE1;&#x606F;">1.11 &#x67E5;&#x8BE2;&#x5F53;&#x524D;&#x8BBE;&#x5907;&#x4E0B;&#xFF0C;&#x5F00;&#x542F;&#x7684;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x5BB6;&#x5EAD;&#x53CA;&#x4FE1;&#x606F;</h3>
-<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</h4>
-<p>&#x67E5;&#x8BE2;&#x5F53;&#x524D;&#x8BBE;&#x5907;&#x4E0B;&#xFF0C;&#x5F00;&#x542F;&#x7684;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x5BB6;&#x5EAD;&#x53CA;&#x4FE1;&#x606F;</p>
-<pre><code class="lang-objective-c">/// &#x67E5;&#x8BE2;&#x5F53;&#x524D;&#x8BBE;&#x5907;&#x4E0B;&#xFF0C;&#x5F00;&#x542F;&#x7684;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x5BB6;&#x5EAD;&#x53CA;&#x4FE1;&#x606F;
-/// Inquire the home and information of the geographical fence opened under the current equipment
+<h3 id="111-query-the-family-and-information-of-the-geofence-opened-under-the-current-device">1.11 Query the family and information of the geofence opened under the current device</h3>
+<h4 id="interface-description">Interface Description</h4>
+<p>Query the family and information of the geofence opened under the current device</p>
+<pre><code class="lang-objective-c">/// Inquire the home and information of the geographical fence opened under the current equipment
 ///
-/// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
-/// @param deviceId &#x672C;&#x5730;&#x8BBE;&#x5907;&#x552F;&#x4E00;&#x503C; / Local device Unique identification ID
-/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
-/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
+/// @param homeId Home ID
+/// @param deviceId Local device Unique identification ID
+/// @param success Success Callback
+/// @param failure Failure Callback
 - (void)getAllHomeGeoFence:(long long)homeId
                   deviceId:(NSString *)deviceId
                    success:(AllHomeGeofenceList)success
                    failure:(TYFailureError)failure;
 </code></pre>
-<h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;">&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</h4>
+<h4 id="parameter-description">Parameter Description:</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;Id</td>
+<td>Family Id</td>
 </tr>
 <tr>
 <td>deviceId</td>
-<td>&#x8BBE;&#x5907;&#x552F;&#x4E00;&#x503C;</td>
+<td>Device unique value</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</h4>
+<h4 id="code-example">Code example:</h4>
 <p>Objc</p>
 <pre><code class="lang-objective-c">[[TuyaSmartSecurityGeofence sharedInstance] getAllHomeGeoFence:123123 deviceId:@&quot;unique ID&quot; success:^(NSArray&lt;TuyaSmartSecurityGeofenceRegionDataModel *&gt; * _Nullable geofenceList) {
      NSLog(@&quot;%ld&quot;, geofenceList);
@@ -1240,87 +1217,85 @@ TYGeofenceRegionDataModel</p>
 }];
 </code></pre>
 <p>Swift</p>
-<h3 id="112-&#x4FDD;&#x5B58;&#x5730;&#x7406;&#x56F4;&#x680F;&#x4FE1;&#x606F;">1.12 &#x4FDD;&#x5B58;&#x5730;&#x7406;&#x56F4;&#x680F;&#x4FE1;&#x606F;</h3>
-<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;</h4>
-<p>&#x4FDD;&#x5B58;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x4FE1;&#x606F;</p>
-<pre><code class="lang-objective-c">/// &#x4FDD;&#x5B58;&#x5730;&#x7406;&#x56F4;&#x680F;&#x4FE1;&#x606F;
-/// Save the information from geofence
+<h3 id="112-save-geofence-information">1.12 Save geofence information</h3>
+<h4 id="interface-description">Interface Description:</h4>
+<p>Save geofence information</p>
+<pre><code class="lang-objective-c">/// Save the information from geofence
 ///
-/// @param homeId &#x5BB6;&#x5EAD;id / Home ID
-/// @param recordModel &#x5730;&#x7406;&#x56F4;&#x680F;&#x4FE1;&#x606F; / Geofence information
-/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
-/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
+/// @param homeId Home ID
+/// @param recordModel Geofence information
+/// @param success  Success Callback
+/// @param failure  Failure Callback
 - (void)recordInitialDeviceStatus:(long long)homeId
                       recordModel:(TuyaSmartSecurityGeofenceRegionRecordModel *)recordModel
                           success:(TYSuccessBOOL)success
                           failure:(TYFailureError)failure;
 </code></pre>
-<h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;">&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</h4>
+<h4 id="parameter-description">Parameter Description:</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;Id</td>
+<td>Family Id</td>
 </tr>
 <tr>
 <td>recordModel</td>
-<td>&#x5730;&#x7406;&#x56F4;&#x680F;&#x4FE1;&#x606F;</td>
+<td>Geofencing information</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<p>&#x5730;&#x7406;&#x56F4;&#x680F;&#x6570;&#x636E;&#x6A21;&#x578B;
-TYGeofenceRegionRecordModel</p>
+<p>Geofence data model TYGeofenceRegionRecordModel</p>
 <table>
 <thead>
 <tr>
-<th>&#x6570;&#x636E;&#x5B57;&#x6BB5;</th>
-<th>&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>Data field</th>
+<th>Field Type</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>deviceId</td>
 <td>NSString *</td>
-<td>&#x5730;&#x7406;&#x56F4;&#x680F;&#x552F;&#x4E00;&#x8BC6;&#x522B;ID</td>
+<td>Geo-fence unique identification ID</td>
 </tr>
 <tr>
-<td>lon</td>
+<td>can</td>
 <td>NSString *</td>
-<td>&#x7ECF;&#x5EA6;(&#x7CBE;&#x5EA6;&#x5230;&#x5C0F;&#x6570;&#x70B9;10&#x4F4D;)</td>
+<td>Longitude (precision to 10 decimal places)</td>
 </tr>
 <tr>
-<td>lat</td>
+<td>years</td>
 <td>NSString *</td>
-<td>&#x7EAC;&#x5EA6;(&#x7CBE;&#x5EA6;&#x5230;&#x5C0F;&#x6570;&#x70B9;10&#x4F4D;)</td>
+<td>Latitude (precision to 10 decimal places)</td>
 </tr>
 <tr>
 <td>radius</td>
 <td>NSString *</td>
-<td>&#x534A;&#x5F84;(&#x7CBE;&#x5EA6;&#x5230;&#x5C0F;&#x6570;&#x70B9;2&#x4F4D;)</td>
+<td>Radius (accuracy to 2 decimal places)</td>
 </tr>
 <tr>
 <td>title</td>
 <td>NSString *</td>
-<td>&#x4F4D;&#x7F6E;&#x540D;&#x79F0; </td>
+<td>Location name</td>
 </tr>
 </tbody>
 </table>
-<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</h4>
+<h4 id="code-example">Code example:</h4>
 <p>Objc</p>
 <pre><code class="lang-objective-c">[[TuyaSmartSecurityGeofence sharedInstance] recordInitialDeviceStatus:smartHome.homeModel.homeId recordModel:recordInfoModel success:^(BOOL result) {
      NSLog(@&quot;result  %@&quot;, result);
@@ -1329,17 +1304,16 @@ TYGeofenceRegionRecordModel</p>
 }];
 </code></pre>
 <p>Swift</p>
-<h3 id="113-&#x624B;&#x673A;&#x79BB;&#x5F00;&#x6216;&#x8005;&#x8FDB;&#x5165;&#x5730;&#x7406;&#x56F4;&#x680F;&#x533A;&#x57DF;">1.13 &#x624B;&#x673A;&#x79BB;&#x5F00;&#x6216;&#x8005;&#x8FDB;&#x5165;&#x5730;&#x7406;&#x56F4;&#x680F;&#x533A;&#x57DF;</h3>
-<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;</h4>
-<p>&#x76D1;&#x63A7;&#x8BBE;&#x5907;&#x79BB;&#x5F00;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x533A;&#x57DF;&#xFF0C;&#x89E6;&#x53D1;&#x8FDB;&#x5165;&#x6216;&#x8005;&#x79BB;&#x5F00;&#x7684;&#x4E8B;&#x4EF6;</p>
-<pre><code class="lang-objective-c">/// &#x624B;&#x673A;&#x79BB;&#x5F00;&#x6216;&#x8005;&#x8FDB;&#x5165;&#x5730;&#x7406;&#x56F4;&#x680F;&#x533A;&#x57DF;
-
-/// @param homeId &#x5BB6;&#x5EAD;id / Home ID
-/// @param geofenceHomeId &#x89E6;&#x53D1;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;homeId / The homeId that triggered the geographic fence
-/// @param deviceId &#x624B;&#x673A;&#x7684;&#x552F;&#x4E00;&#x6807;&#x8BC6; / Unique identification of mobile phone
-/// @param isLeaving &#x662F;&#x5426;&#x662F;&#x79BB;&#x5BB6; / Leave home or not
-/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
-/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
+<h3 id="113-mobile-phone-leaves-or-enters-a-geofenced-area">1.13 Mobile phone leaves or enters a geofenced area</h3>
+<h4 id="interface-description">Interface Description:</h4>
+<p>Monitoring equipment leaves the geo-fenced area and triggers entry or exit events</p>
+<pre><code class="lang-objective-c">
+/// @param homeId  Home ID
+/// @param geofenceHomeId  The homeId that triggered the geographic fence
+/// @param deviceId Unique identification of mobile phone
+/// @param isLeaving  Leave home or not
+/// @param success Success Callback
+/// @param failure Failure Callback
 - (void)processMobileInfo:(long long)homeId
            geofenceHomeId:(long long)geofenceHomeId
                  deviceId:(NSString *)deviceId
@@ -1347,42 +1321,42 @@ TYGeofenceRegionRecordModel</p>
                   success:(TYSuccessBOOL)success
                   failure:(TYFailureError)failure;
 </code></pre>
-<h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;">&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</h4>
+<h4 id="parameter-description">Parameter Description:</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>homeId</td>
-<td>&#x5BB6;&#x5EAD;Id</td>
+<td>Family Id</td>
 </tr>
 <tr>
 <td>geofenceHomeId</td>
-<td>&#x89E6;&#x53D1;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x5BB6;&#x5EAD;ID</td>
+<td>Home ID that triggered the geofence</td>
 </tr>
 <tr>
 <td>deviceId</td>
-<td>&#x624B;&#x673A;&#x7684;&#x552F;&#x4E00;&#x6807;&#x8BC6; </td>
+<td>Unique identification of mobile phone</td>
 </tr>
 <tr>
 <td>isLeaving</td>
-<td>&#x662F;&#x5426;&#x662F;&#x79BB;&#x5BB6; </td>
+<td>Is it away from home</td>
 </tr>
 <tr>
 <td>success</td>
-<td>&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>Success callback</td>
 </tr>
 <tr>
 <td>failure</td>
-<td>&#x5931;&#x8D25;&#x56DE;&#x8C03;</td>
+<td>Failure callback</td>
 </tr>
 </tbody>
 </table>
-<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</h4>
+<h4 id="code-example">Code example:</h4>
 <p>Objc</p>
 <pre><code class="lang-objective-c">TuyaSmartHome *smartHome = [TYSmartHomeManager sharedInstance].currentHome;
 [[TuyaSmartSecurityGeofence sharedInstance]
@@ -1401,9 +1375,6 @@ TYGeofenceRegionRecordModel</p>
     }];
 </code></pre>
 <p>Swift</p>
-<pre><code class="lang-sw">
-
-</code></pre>
 
                                 
                                 </section>
@@ -1431,12 +1402,12 @@ TYGeofenceRegionRecordModel</p>
 
             
                 
-                <a href="securityScene.html" class="navigation navigation-prev " aria-label="Previous page: 安防场景">
+                <a href="securityScene.html" class="navigation navigation-prev " aria-label="Previous page: Scene">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="eventRecording.html" class="navigation navigation-next " aria-label="Next page: 事件绑定">
+                <a href="eventRecording.html" class="navigation navigation-next " aria-label="Next page: Event Recording">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1447,7 +1418,7 @@ TYGeofenceRegionRecordModel</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"地理围栏","level":"1.10.2","depth":2,"next":{"title":"事件绑定","level":"1.10.3","depth":2,"path":"Scene/eventRecording.md","ref":"Scene/eventRecording.md","articles":[]},"previous":{"title":"安防场景","level":"1.10.1","depth":2,"path":"Scene/securityScene.md","ref":"Scene/securityScene.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Scene/geofence.md","mtime":"2020-07-30T03:06:08.562Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-30T03:12:14.641Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Geofence","level":"1.10.2","depth":2,"next":{"title":"Event Recording","level":"1.10.3","depth":2,"path":"Scene/eventRecording.md","ref":"Scene/eventRecording.md","articles":[]},"previous":{"title":"Scene","level":"1.10.1","depth":2,"path":"Scene/securityScene.md","ref":"Scene/securityScene.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Scene/geofence.md","mtime":"2020-07-30T07:17:37.303Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-30T07:21:27.130Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
