@@ -457,8 +457,23 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="&#x6A21;&#x5F0F;&#x8BBE;&#x7F6E;">&#x6A21;&#x5F0F;&#x8BBE;&#x7F6E;</h3>
-<h4 id="&#x83B7;&#x53D6;&#x6240;&#x6709;&#x6A21;&#x5F0F;&#x7684;&#x5EF6;&#x65F6;&#x89C4;&#x5219;&#x5217;&#x8868;">&#x83B7;&#x53D6;&#x6240;&#x6709;&#x6A21;&#x5F0F;&#x7684;&#x5EF6;&#x65F6;&#x89C4;&#x5219;&#x5217;&#x8868;</h4>
+                                <h2 id="1-&#x6A21;&#x5F0F;&#x8BBE;&#x7F6E;">1. &#x6A21;&#x5F0F;&#x8BBE;&#x7F6E;</h2>
+<h3 id="11-&#x83B7;&#x53D6;&#x6240;&#x6709;&#x6A21;&#x5F0F;&#x7684;&#x5EF6;&#x65F6;&#x89C4;&#x5219;&#x5217;&#x8868;">1.1 &#x83B7;&#x53D6;&#x6240;&#x6709;&#x6A21;&#x5F0F;&#x7684;&#x5EF6;&#x65F6;&#x89C4;&#x5219;&#x5217;&#x8868;</h3>
+<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;</h4>
+<p>&#x83B7;&#x53D6;&#x6240;&#x6709;&#x6A21;&#x5F0F;&#x7684;&#x5EF6;&#x65F6;&#x89C4;&#x5219;&#x5217;&#x8868;</p>
+<pre><code class="lang-objective-c">/// &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x5E03;&#x9632;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x8BBE;&#x5907;
+/// Gets the device in the specified deployment mode
+///
+/// @param modeStatus &#x5E03;&#x9632;&#x6A21;&#x5F0F;&#xFF08;&#x5728;&#x5BB6;&#x5E03;&#x9632;&#xFF0C;&#x79BB;&#x5BB6;&#x5E03;&#x9632;&#xFF09;/ arm mode(stay, away)
+/// @param homeId &#x5BB6;&#x5EAD;id / Home ID
+/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
+/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
+- (void)getDeviceListWithMode:(ArmModeStatus)modeStatus
+                       homeId:(long long)homeId
+                      success:(GetArmedRuleDeviceList)success
+                      failure:(TYFailureError)failure;
+</code></pre>
+<h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;">&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</h4>
 <table>
 <thead>
 <tr>
@@ -508,15 +523,8 @@
 </tr>
 </tbody>
 </table>
-<pre><code class="lang-objective-c">/// &#x83B7;&#x53D6;&#x6240;&#x6709;&#x6A21;&#x5F0F;&#x7684;&#x5EF6;&#x8FDF;&#x89C4;&#x5219;&#xFF0C;&#x76EE;&#x524D;&#x53EA;&#x6709;2&#x4E2D;&#x5E03;&#x9632;&#x6A21;&#x5F0F;&#xFF08;&#x5728;&#x5BB6;&#x5E03;&#x9632;&#xFF0C;&#x79BB;&#x5BB6;&#x5E03;&#x9632;&#xFF09;
-/// @param homeId &#x5BB6;&#x5EAD;Id
-/// @param success Success Block
-/// @param failure Failure Block
-- (void)getAllModeDelayRuleWithHomeId:(long long)homeId
-                              success:(GetArmedRuleDelayDataList)success
-                              failure:(TYFailureError)failure;
-</code></pre>
-<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;:</p>
+<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h4>
+<p>Objc</p>
 <pre><code class="lang-objective-c">[[TuyaSecurityArmedRuleSetting sharedInstance]
      getAllModeDelayRuleWithHomeId:[self getHomeId]
      success:^(NSArray&lt;TYArmedRuleDelayTimeModel *&gt; * _Nullable delayTimeList) {
@@ -525,7 +533,26 @@
 
     }];
 </code></pre>
-<h4 id="&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x5EF6;&#x8FDF;&#x89C4;&#x5219;">&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x5EF6;&#x8FDF;&#x89C4;&#x5219;</h4>
+<p>Swift:</p>
+<pre><code class="lang-sw">
+
+</code></pre>
+<h3 id="12-&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x5EF6;&#x8FDF;&#x89C4;&#x5219;">1.2 &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x5EF6;&#x8FDF;&#x89C4;&#x5219;</h3>
+<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;</h4>
+<p>&#x83B7;&#x53D6;&#x6A21;&#x5F0F;&#x4E0B;(&#x5728;&#x5BB6;&#x5E03;&#x9632;/&#x79BB;&#x5BB6;&#x5E03;&#x9632;)&#x7684;&#x5EF6;&#x8FDF;&#x89C4;&#x5219;</p>
+<pre><code class="lang-objective-c">/// &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x7684;&#x5EF6;&#x8FDF;&#x89C4;&#x5219;
+/// Gets the delay rule for the specified schema
+///
+/// @param modeStatus &#x5E03;&#x9632;&#x6A21;&#x5F0F;&#xFF08;&#x5728;&#x5BB6;&#x5E03;&#x9632;&#xFF0C;&#x79BB;&#x5BB6;&#x5E03;&#x9632;&#xFF09;/ arm mode(stay, away)
+/// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
+/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
+/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
+- (void)getDelayTimeWithMode:(ArmModeStatus)modeStatus
+                      homeId:(long long)homeId
+                     success:(GetArmedRuleDelayData)success
+                     failure:(TYFailureError)failure;
+</code></pre>
+<h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;">&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</h4>
 <table>
 <thead>
 <tr>
@@ -569,18 +596,37 @@ ownerId | NSInteger  | &#x62A5;&#x8B66;&#x5EF6;&#x8FDF;&#x65F6;&#x95F4;</p>
                      success:(GetArmedRuleDelayData)success
                      failure:(TYFailureError)failure;
 </code></pre>
-<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;:</p>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;:</h4>
+<p>Objc</p>
 <pre><code class="lang-objective-c"> [[TuyaSecurityArmedRuleSetting sharedInstance]
      getDelayTimeWithMode:self.currentMode
      homeId:homeId
      success:^(TYArmedRuleDelayTimeModel * _Nullable delayTime) {
 
-
     } failure:^(NSError *error) {
 
     }];
 </code></pre>
-<h4 id="&#x4FDD;&#x5B58;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x5EF6;&#x8FDF;&#x89C4;&#x5219;">&#x4FDD;&#x5B58;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x5EF6;&#x8FDF;&#x89C4;&#x5219;</h4>
+<p>Swift</p>
+<pre><code class="lang-swift">
+
+</code></pre>
+<h3 id="13-&#x4FDD;&#x5B58;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x5EF6;&#x8FDF;&#x89C4;&#x5219;">1.3 &#x4FDD;&#x5B58;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x5EF6;&#x8FDF;&#x89C4;&#x5219;</h3>
+<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;</h4>
+<p>&#x4FDD;&#x5B58;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x5EF6;&#x8FDF;&#x89C4;&#x5219;</p>
+<pre><code class="lang-objective-c">/// &#x83B7;&#x4FDD;&#x5B58;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x7684;&#x5EF6;&#x8FDF;&#x89C4;&#x5219;
+/// Holds a delay rule for the specified schema
+///
+/// @param delayTimeModel &#x5EF6;&#x8FDF;&#x6A21;&#x578B; / delaytimeModel
+/// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
+/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
+/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
+- (void)saveDelayTimeWithDelayRule:(TuyaSmartSecurityArmedRuleDelayTimeModel *)delayTimeModel
+                            homeId:(long long)homeId
+                           success:(TYSuccessBOOL)success
+                           failure:(TYFailureError)failure;
+</code></pre>
+<h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;">&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</h4>
 <table>
 <thead>
 <tr>
@@ -607,30 +653,36 @@ ownerId | NSInteger  | &#x62A5;&#x8B66;&#x5EF6;&#x8FDF;&#x65F6;&#x95F4;</p>
 </tr>
 </tbody>
 </table>
-<pre><code class="lang-objective-c">
-/// &#x83B7;&#x4FDD;&#x5B58;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x7684;&#x5EF6;&#x8FDF;&#x89C4;&#x5219;
-/// @param delayTimeModel &#x5EF6;&#x8FDF;delayTimeModel
-/// @param homeId &#x5BB6;&#x5EAD;Id
-/// @param success Success Block
-/// @param failure Failure Block
-- (void)saveDelayTimeWithDelayRule:(TYArmedRuleDelayTimeModel *)delayTimeModel
-                            homeId:(long long)homeId
-                           success:(TYSuccessBOOL)success
-                           failure:(TYFailureError)failure;
-</code></pre>
-<p>&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;:</p>
-<pre><code class="lang-objective-c">
-[[TuyaSecurityArmedRuleSetting sharedInstance]
+<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</h4>
+<p>Objc:</p>
+<pre><code class="lang-objective-c">[[TuyaSecurityArmedRuleSetting sharedInstance]
      saveDelayTimeWithDelayRule:aServiceModel
      homeId:homeId
      success:^(BOOL result) {
-
 
     } failure:^(NSError *error) {
 
     }];
 </code></pre>
-<h4 id="&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x8BBE;&#x5907;&#x89C4;&#x5219;&#x5217;&#x8868;">&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x8BBE;&#x5907;&#x89C4;&#x5219;&#x5217;&#x8868;</h4>
+<p>Swift</p>
+<pre><code>
+
+</code></pre><h3 id="14-&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x8BBE;&#x5907;&#x89C4;&#x5219;&#x5217;&#x8868;">1.4 &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x8BBE;&#x5907;&#x89C4;&#x5219;&#x5217;&#x8868;</h3>
+<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;</h4>
+<p>&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x8BBE;&#x5907;&#x89C4;&#x5219;&#x5217;&#x8868;</p>
+<pre><code class="lang-objective-c">/// &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x5E03;&#x9632;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x8BBE;&#x5907;
+/// Gets the device in the specified deployment mode
+///
+/// @param modeStatus &#x5E03;&#x9632;&#x6A21;&#x5F0F;&#xFF08;&#x5728;&#x5BB6;&#x5E03;&#x9632;&#xFF0C;&#x79BB;&#x5BB6;&#x5E03;&#x9632;&#xFF09;/ arm mode(stay, away)
+/// @param homeId &#x5BB6;&#x5EAD;id / Home ID
+/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
+/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
+- (void)getDeviceListWithMode:(ArmModeStatus)modeStatus
+                       homeId:(long long)homeId
+                      success:(GetArmedRuleDeviceList)success
+                      failure:(TYFailureError)failure;
+</code></pre>
+<h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;">&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</h4>
 <table>
 <thead>
 <tr>
@@ -674,18 +726,8 @@ fixed | BOOL | &#x662F;&#x5426;&#x662F;&#x73AF;&#x5883;&#x8BBE;&#x5907;&#xFF08;&
 selected | BOOL | &#x662F;&#x5426;&#x9009;&#x4E2D;&#xFF0C;&#x5B89;&#x5168;&#x8BBE;&#x5907;&#x662F;&#x5426;&#x53C2;&#x4E0E;&#x5E03;&#x9632;&#x7C7B;&#x578B;&#x7684;&#x89C4;&#x5219;
 icon | NSString * | &#x8BBE;&#x5907;&#x7684;&#x56FE;&#x7247;
 activeTime | NSTimeInterval | &#x8BBE;&#x5907;&#x7684;&#x6FC0;&#x6D3B;&#x65F6;&#x95F4;</p>
-<pre><code class="lang-objective-c">
-/// &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x5E03;&#x9632;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x8BBE;&#x5907;
-/// @param modeStatus &#x5E03;&#x9632;&#x6A21;&#x5F0F;&#xFF08;&#x5728;&#x5BB6;&#x5E03;&#x9632;&#xFF0C;&#x79BB;&#x5BB6;&#x5E03;&#x9632;&#xFF09;
-/// @param homeId &#x5BB6;&#x5EAD;id
-/// @param success Success Block
-/// @param failure Failure Block
-- (void)getDeviceListWithMode:(ArmModeStatus)modeStatus
-                       homeId:(long long)homeId
-                      success:(GetArmedRuleDeviceList)success
-                      failure:(TYFailureError)failure;
-</code></pre>
-<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;:</p>
+<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</h4>
+<p>Objc</p>
 <pre><code class="lang-objective-c">
 [[TuyaSecurityArmedRuleSetting sharedInstance]
      getDeviceListWithMode:(ArmModeStatus)modeType
@@ -695,10 +737,30 @@ activeTime | NSTimeInterval | &#x8BBE;&#x5907;&#x7684;&#x6FC0;&#x6D3B;&#x65F6;&#
     }
      failure:^(NSError *error) {
 
-
     }];
 </code></pre>
-<h4 id="&#x4FDD;&#x5B58;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x8BBE;&#x5907;&#x89C4;&#x5219;&#x5217;&#x8868;">&#x4FDD;&#x5B58;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x8BBE;&#x5907;&#x89C4;&#x5219;&#x5217;&#x8868;</h4>
+<p>Swift</p>
+<pre><code class="lang-sw">
+
+</code></pre>
+<h3 id="15-&#x4FDD;&#x5B58;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x8BBE;&#x5907;&#x89C4;&#x5219;&#x5217;&#x8868;">1.5 &#x4FDD;&#x5B58;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x8BBE;&#x5907;&#x89C4;&#x5219;&#x5217;&#x8868;</h3>
+<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;</h4>
+<p>&#x4FDD;&#x5B58;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x8BBE;&#x5907;&#x89C4;&#x5219;&#x5217;&#x8868;</p>
+<pre><code class="lang-objective-c">/// &#x4FDD;&#x5B58;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x8054;&#x52A8;&#x8BBE;&#x5907;
+/// Saves the device in specified mode
+///
+/// @param modeStatus &#x5E03;&#x9632;&#x6A21;&#x5F0F;&#xFF08;&#x5728;&#x5BB6;&#x5E03;&#x9632;&#xFF0C;&#x79BB;&#x5BB6;&#x5E03;&#x9632;&#xFF09;/ arm mode(stay, away)
+/// @param homeId &#x5BB6;&#x5EAD;id / Home ID
+/// @param nDeviceRules &#x8BBE;&#x5907;&#x89C4;&#x5219; {&quot;gatewayId&quot;:gatewayId, &quot;deviceIds&quot;:[&quot;deviceId1&quot;,&quot;deviceId2&quot;]}
+/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
+/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
+- (void)saveDeviceListWithMode:(ArmModeStatus)modeStatus
+                        homeId:(long long)homeId
+                deviceRuleList:(NSArray *)nDeviceRules
+                       success:(TYSuccessID)success
+                       failure:(TYFailureError)failure;
+</code></pre>
+<h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;">&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</h4>
 <table>
 <thead>
 <tr>
@@ -729,23 +791,9 @@ activeTime | NSTimeInterval | &#x8BBE;&#x5907;&#x7684;&#x6FC0;&#x6D3B;&#x65F6;&#
 </tr>
 </tbody>
 </table>
-<pre><code class="lang-objective-c">
-
-/// &#x4FDD;&#x5B58;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x8054;&#x52A8;&#x8BBE;&#x5907;
-/// @param modeStatus &#x5E03;&#x9632;&#x6A21;&#x5F0F;&#xFF08;&#x5728;&#x5BB6;&#x5E03;&#x9632;&#xFF0C;&#x79BB;&#x5BB6;&#x5E03;&#x9632;&#xFF09;
-/// @param homeId &#x5BB6;&#x5EAD;id
-/// @param nDeviceRules &#x8BBE;&#x5907;&#x89C4;&#x5219;&#x5217;&#x8868; {&quot;gatewayId&quot;:gatewayId, &quot;deviceIds&quot;:[&quot;deviceId1&quot;,&quot;deviceId2&quot;]}
-/// @param success Success Block
-/// @param failure Failure Block
-- (void)saveDeviceListWithMode:(ArmModeStatus)modeStatus
-                        homeId:(long long)homeId
-                deviceRuleList:(NSArray *)nDeviceRules
-                       success:(TYSuccessID)success
-                       failure:(TYFailureError)failure;
-</code></pre>
-<p>&#x4EE3;&#x7801;&#x793A;&#x4F8B;:</p>
-<pre><code class="lang-objective-c">
-[[TuyaSecurityArmedRuleSetting sharedInstance]
+<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;:</h4>
+<p>Objc</p>
+<pre><code class="lang-objective-c">[[TuyaSecurityArmedRuleSetting sharedInstance]
      saveDeviceListWithMode:self.currentMode
      homeId:homeId
      deviceRuleList:ruleList
@@ -754,6 +802,10 @@ activeTime | NSTimeInterval | &#x8BBE;&#x5907;&#x7684;&#x6FC0;&#x6D3B;&#x65F6;&#
     } failure:^(NSError *error) {
 
     }];
+</code></pre>
+<p>Swift:</p>
+<pre><code class="lang-sw">
+
 </code></pre>
 
                                 
@@ -798,7 +850,7 @@ activeTime | NSTimeInterval | &#x8BBE;&#x5907;&#x7684;&#x6FC0;&#x6D3B;&#x65F6;&#
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"模式设置","level":"1.9.2","depth":2,"next":{"title":"紧急联系人","level":"1.9.3","depth":2,"path":"Arm/emContact.md","ref":"Arm/emContact.md","articles":[]},"previous":{"title":"布撤防","level":"1.9.1","depth":2,"path":"Arm/armOperation.md","ref":"Arm/armOperation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Arm/modeSetting.md","mtime":"2020-07-30T03:06:28.053Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-30T03:12:14.641Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"模式设置","level":"1.9.2","depth":2,"next":{"title":"紧急联系人","level":"1.9.3","depth":2,"path":"Arm/emContact.md","ref":"Arm/emContact.md","articles":[]},"previous":{"title":"布撤防","level":"1.9.1","depth":2,"path":"Arm/armOperation.md","ref":"Arm/armOperation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Arm/modeSetting.md","mtime":"2020-07-30T03:59:34.711Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-30T04:45:08.449Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -457,17 +457,18 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x573A;&#x666F;sdk--ios">&#x573A;&#x666F;SDK--iOS</h2>
-<h5 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</h5>
-<h6 id="&#x521D;&#x59CB;&#x5316;">&#x521D;&#x59CB;&#x5316;</h6>
+                                <h2 id="1-&#x5B89;&#x9632;&#x573A;&#x666F;">1. &#x5B89;&#x9632;&#x573A;&#x666F;</h2>
+<h3 id="11&#x521D;&#x59CB;&#x5316;">1.1&#x521D;&#x59CB;&#x5316;</h3>
 <pre><code>/// &#x5355;&#x4F8B;&#x521D;&#x59CB;&#x5316;
 + (instancetype)sharedInstance;
-</code></pre><h6 id="&#x62C9;&#x53D6;&#x573A;&#x666F;&#x5217;&#x8868;">&#x62C9;&#x53D6;&#x573A;&#x666F;&#x5217;&#x8868;</h6>
+</code></pre><h3 id="12-&#x62C9;&#x53D6;&#x573A;&#x666F;&#x5217;&#x8868;">1.2 &#x62C9;&#x53D6;&#x573A;&#x666F;&#x5217;&#x8868;</h3>
+<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;</h4>
+<p>&#x62C9;&#x53D6;&#x573A;&#x666F;&#x5217;&#x8868;</p>
 <pre><code>- (void)createSceneWithHomeId:(long long)homeId
                    sceneModel:(TuyaSmartSceneModel *)sceneModel
                       success:(nullable AddNewSceneSuccessBlock)success
                       failure:(nullable void(^)(NSError *error))failure;
-</code></pre><h6 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+</code></pre><h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h4>
 <table>
 <thead>
 <tr>
@@ -724,19 +725,21 @@
 </tr>
 </tbody>
 </table>
-<h6 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
+<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h4>
 <pre><code>[[TuyaSecuritySceneManager sharedInstance] getSceneListWithHomeId:123 success:^(NSArray&lt;TuyaSmartSceneModel *&gt; * _Nonnull
 list) {
     //&#x573A;&#x666F;&#x6570;&#x636E;
 } failure:^(NSError * _Nonnull error) {
     //&#x573A;&#x666F;&#x6570;&#x636E;
 }];
-</code></pre><h6 id="&#x521B;&#x5EFA;&#x573A;&#x666F;">&#x521B;&#x5EFA;&#x573A;&#x666F;</h6>
+</code></pre><h3 id="13-&#x521B;&#x5EFA;&#x573A;&#x666F;">1.3 &#x521B;&#x5EFA;&#x573A;&#x666F;</h3>
+<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;</h4>
+<p>&#x521B;&#x5EFA;&#x573A;&#x666F;</p>
 <pre><code>- (void)createSceneWithHomeId:(long long)homeId
                    sceneModel:(TuyaSmartSceneModel *)sceneModel
                       success:(nullable AddNewSceneSuccessBlock)success
                       failure:(nullable void(^)(NSError *error))failure;
-</code></pre><h6 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+</code></pre><h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h4>
 <table>
 <thead>
 <tr>
@@ -763,19 +766,21 @@ list) {
 </tr>
 </tbody>
 </table>
-<h6 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
+<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h4>
 <pre><code>[[TuyaSecuritySceneManager sharedInstance] createSceneWithHomeId:123 sceneModel:nil success:^(TuyaSmartSceneModel * _Nonnull
 sceneModel) {
 
 } failure:^(NSError * _Nonnull error) {
 
 }];
-</code></pre><h6 id="&#x5220;&#x9664;&#x573A;&#x666F;">&#x5220;&#x9664;&#x573A;&#x666F;</h6>
+</code></pre><h3 id="14-&#x5220;&#x9664;&#x573A;&#x666F;">1.4 &#x5220;&#x9664;&#x573A;&#x666F;</h3>
+<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;</h4>
+<p>&#x5220;&#x9664;&#x573A;&#x666F;</p>
 <pre><code>- (void)deleteSceneWithHomeId:(long long)homeId
                       sceneId:(NSString *)sceneId
                       success:(nullable void(^)(BOOL success))success
                       failure:(nullable void(^)(NSError *error))failure;
-</code></pre><h6 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+</code></pre><h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h4>
 <table>
 <thead>
 <tr>
@@ -802,18 +807,20 @@ sceneModel) {
 </tr>
 </tbody>
 </table>
-<h6 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
+<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h4>
 <pre><code>[[TuyaSecuritySceneManager sharedInstance] deleteSceneWithHomeId:13 sceneId:@&quot;&quot; success:^(BOOL success) {
 
     } failure:^(NSError * _Nonnull error) {
 
     }];
-</code></pre><h6 id="&#x7F16;&#x8F91;&#x573A;&#x666F;">&#x7F16;&#x8F91;&#x573A;&#x666F;</h6>
+</code></pre><h3 id="15-&#x7F16;&#x8F91;&#x573A;&#x666F;">1.5 &#x7F16;&#x8F91;&#x573A;&#x666F;</h3>
+<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;</h4>
+<p> &#x7F16;&#x8F91;&#x573A;&#x666F;</p>
 <pre><code>- (void)modifySceneWithHomeId:(long long)homeId
                    sceneModel:(TuyaSmartSceneModel *)sceneModel
                       success:(nullable void(^)(void))success
                       failure:(nullable void(^)(NSError *error))failure;
-</code></pre><h6 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+</code></pre><h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h4>
 <table>
 <thead>
 <tr>
@@ -840,17 +847,19 @@ sceneModel) {
 </tr>
 </tbody>
 </table>
-<h6 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
+<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h4>
 <pre><code>[[TuyaSecuritySceneManager sharedInstance] modifySceneWithHomeId:123 sceneModel:nil success:^{
 
 } failure:^(NSError * _Nonnull error) {
 
 }];
-</code></pre><h6 id="&#x83B7;&#x53D6;&#x5B89;&#x9632;&#x573A;&#x666F;&#x6761;&#x4EF6;&#x5BF9;&#x5E94;&#x7684;&#x8BBE;&#x5907;&#x5217;&#x8868;">&#x83B7;&#x53D6;&#x5B89;&#x9632;&#x573A;&#x666F;&#x6761;&#x4EF6;&#x5BF9;&#x5E94;&#x7684;&#x8BBE;&#x5907;&#x5217;&#x8868;</h6>
+</code></pre><h3 id="16&#x83B7;&#x53D6;&#x5B89;&#x9632;&#x573A;&#x666F;&#x6761;&#x4EF6;&#x5BF9;&#x5E94;&#x7684;&#x8BBE;&#x5907;&#x5217;&#x8868;">1.6&#x83B7;&#x53D6;&#x5B89;&#x9632;&#x573A;&#x666F;&#x6761;&#x4EF6;&#x5BF9;&#x5E94;&#x7684;&#x8BBE;&#x5907;&#x5217;&#x8868;</h3>
+<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;</h4>
+<p>&#x573A;&#x666F;&#x6761;&#x4EF6;&#x5BF9;&#x5E94;&#x7684;&#x8BBE;&#x5907;&#x5217;&#x8868;</p>
 <pre><code>- (void)getSceneConditionDeviceListWithHomeId:(long long)homeId
                                       success:(void(^)(NSArray&lt;TuyaSmartDeviceModel *&gt; *list,NSArray&lt;NSString *&gt; *deviceIds))success
                                       failure:(TYFailureError)failure;
-</code></pre><h6 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+</code></pre><h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h4>
 <table>
 <thead>
 <tr>
@@ -873,7 +882,7 @@ sceneModel) {
 </tr>
 </tbody>
 </table>
-<h6 id="&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+<p>&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;</p>
 <table>
 <thead>
 <tr>
@@ -892,18 +901,20 @@ sceneModel) {
 </tr>
 </tbody>
 </table>
-<h6 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
+<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h4>
 <pre><code>[[TuyaSecuritySceneManager sharedInstance] getSceneConditionDeviceListWithHomeId:123 success:^(NSArray&lt;TuyaSmartDeviceModel
 *&gt; * _Nonnull list, NSArray&lt;NSString *&gt; * _Nonnull deviceIds) {
 
 } failure:^(NSError *error) {
 
 }];
-</code></pre><h6 id="&#x83B7;&#x53D6;&#x5B89;&#x9632;&#x573A;&#x666F;&#x52A8;&#x4F5C;&#x5BF9;&#x5E94;&#x7684;&#x8BBE;&#x5907;&#x5217;&#x8868;">&#x83B7;&#x53D6;&#x5B89;&#x9632;&#x573A;&#x666F;&#x52A8;&#x4F5C;&#x5BF9;&#x5E94;&#x7684;&#x8BBE;&#x5907;&#x5217;&#x8868;</h6>
+</code></pre><h3 id="17-&#x83B7;&#x53D6;&#x5B89;&#x9632;&#x573A;&#x666F;&#x52A8;&#x4F5C;&#x5BF9;&#x5E94;&#x7684;&#x8BBE;&#x5907;&#x5217;&#x8868;">1.7 &#x83B7;&#x53D6;&#x5B89;&#x9632;&#x573A;&#x666F;&#x52A8;&#x4F5C;&#x5BF9;&#x5E94;&#x7684;&#x8BBE;&#x5907;&#x5217;&#x8868;</h3>
+<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;</h4>
+<p>&#x5B89;&#x9632;&#x573A;&#x666F;&#x52A8;&#x4F5C;&#x5BF9;&#x5E94;&#x7684;&#x8BBE;&#x5907;&#x5217;&#x8868;</p>
 <pre><code>- (void)getSceneActionDeviceListWithHomeId:(long long)homeId
                                       success:(void(^)(NSArray&lt;TuyaSmartDeviceModel *&gt; *list,NSArray&lt;NSString *&gt; *deviceIds))success
                                       failure:(TYFailureError)failure;
-</code></pre><h6 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+</code></pre><h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h4>
 <table>
 <thead>
 <tr>
@@ -926,7 +937,7 @@ sceneModel) {
 </tr>
 </tbody>
 </table>
-<h6 id="&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+<p>&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;</p>
 <table>
 <thead>
 <tr>
@@ -945,18 +956,20 @@ sceneModel) {
 </tr>
 </tbody>
 </table>
-<h6 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
+<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h4>
 <pre><code>[[TuyaSecuritySceneManager sharedInstance] getSceneActionDeviceListWithHomeId:123 success:^(NSArray&lt;TuyaSmartDeviceModel
 *&gt; * _Nonnull list, NSArray&lt;NSString *&gt; * _Nonnull deviceIds) {
 
 } failure:^(NSError *error) {
 
 }];
-</code></pre><h6 id="&#x83B7;&#x53D6;&#x573A;&#x666F;&#x6761;&#x4EF6;&#x62A5;&#x8B66;&#x7C7B;&#x578B;&#x5217;&#x8868;">&#x83B7;&#x53D6;&#x573A;&#x666F;&#x6761;&#x4EF6;&#x62A5;&#x8B66;&#x7C7B;&#x578B;&#x5217;&#x8868;</h6>
+</code></pre><h3 id="18-&#x83B7;&#x53D6;&#x573A;&#x666F;&#x6761;&#x4EF6;&#x62A5;&#x8B66;&#x7C7B;&#x578B;&#x5217;&#x8868;">1.8 &#x83B7;&#x53D6;&#x573A;&#x666F;&#x6761;&#x4EF6;&#x62A5;&#x8B66;&#x7C7B;&#x578B;&#x5217;&#x8868;</h3>
+<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;</h4>
+<p>&#x83B7;&#x53D6;&#x573A;&#x666F;&#x6761;&#x4EF6;&#x62A5;&#x8B66;&#x7C7B;&#x578B;&#x5217;&#x8868;</p>
 <pre><code>- (void)getSceneAlarmTypeListWithHomeId:(long long)homeId
                                  success:(AlarmTypeListBlock)success
                                  failure:(TYFailureError)failure;
-</code></pre><h6 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+</code></pre><h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h4>
 <table>
 <thead>
 <tr>
@@ -979,7 +992,7 @@ sceneModel) {
 </tr>
 </tbody>
 </table>
-<h6 id="&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+<p>&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;</p>
 <table>
 <thead>
 <tr>
@@ -1002,7 +1015,7 @@ sceneModel) {
 </tr>
 </tbody>
 </table>
-<h6 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
+<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h4>
 <pre><code>[[TuyaSecuritySceneManager sharedInstance] getSceneAlarmTypeListWithHomeId:123 success:^(NSArray&lt;TYSceneAlarmTypeModel *&gt; *
 _Nonnull dataArray) {
 
@@ -1052,7 +1065,7 @@ _Nonnull dataArray) {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"安防场景","level":"1.10.1","depth":2,"next":{"title":"地理围栏","level":"1.10.2","depth":2,"path":"Scene/geofence.md","ref":"Scene/geofence.md","articles":[]},"previous":{"title":"安防场景&消息","level":"1.10","depth":1,"path":"Scene/README.md","ref":"Scene/README.md","articles":[{"title":"安防场景","level":"1.10.1","depth":2,"path":"Scene/securityScene.md","ref":"Scene/securityScene.md","articles":[]},{"title":"地理围栏","level":"1.10.2","depth":2,"path":"Scene/geofence.md","ref":"Scene/geofence.md","articles":[]},{"title":"事件绑定","level":"1.10.3","depth":2,"path":"Scene/eventRecording.md","ref":"Scene/eventRecording.md","articles":[]},{"title":"布防提醒","level":"1.10.4","depth":2,"path":"Scene/armReminder.md","ref":"Scene/armReminder.md","articles":[]},{"title":"安防消息","level":"1.10.5","depth":2,"path":"Scene/message.md","ref":"Scene/message.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Scene/securityScene.md","mtime":"2020-05-19T02:20:48.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-30T03:12:14.641Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"安防场景","level":"1.10.1","depth":2,"next":{"title":"地理围栏","level":"1.10.2","depth":2,"path":"Scene/geofence.md","ref":"Scene/geofence.md","articles":[]},"previous":{"title":"安防场景&消息","level":"1.10","depth":1,"path":"Scene/README.md","ref":"Scene/README.md","articles":[{"title":"安防场景","level":"1.10.1","depth":2,"path":"Scene/securityScene.md","ref":"Scene/securityScene.md","articles":[]},{"title":"地理围栏","level":"1.10.2","depth":2,"path":"Scene/geofence.md","ref":"Scene/geofence.md","articles":[]},{"title":"事件绑定","level":"1.10.3","depth":2,"path":"Scene/eventRecording.md","ref":"Scene/eventRecording.md","articles":[]},{"title":"布防提醒","level":"1.10.4","depth":2,"path":"Scene/armReminder.md","ref":"Scene/armReminder.md","articles":[]},{"title":"安防消息","level":"1.10.5","depth":2,"path":"Scene/message.md","ref":"Scene/message.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Scene/securityScene.md","mtime":"2020-07-30T04:43:50.919Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-30T04:45:08.449Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -457,8 +457,21 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="tuyasecurityeventrecording--&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;">TuyaSecurityEventRecording  &#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;</h3>
-<h4 id="&#x83B7;&#x53D6;&#x4F20;&#x611F;&#x8BBE;&#x5907;&#x5217;&#x8868;">&#x83B7;&#x53D6;&#x4F20;&#x611F;&#x8BBE;&#x5907;&#x5217;&#x8868;</h4>
+                                <h2 id="1-&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;">1 &#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;</h2>
+<h3 id="11-&#x83B7;&#x53D6;&#x4F20;&#x611F;&#x8BBE;&#x5907;&#x5217;&#x8868;">1.1 &#x83B7;&#x53D6;&#x4F20;&#x611F;&#x8BBE;&#x5907;&#x5217;&#x8868;</h3>
+<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</h4>
+<p>&#x83B7;&#x53D6;&#x4F20;&#x611F;&#x8BBE;&#x5907;&#x5217;&#x8868;</p>
+<pre><code class="lang-objective-c">/// &#x83B7;&#x53D6;&#x4F20;&#x611F;&#x8BBE;&#x5907;&#x5217;&#x8868;
+/// Gets a list of sensing devices
+/// 
+/// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
+/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
+/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Fauilre Callback
+- (void)getSensorList:(long long)homeId
+              success:(EventRecordingSensorList)success
+              failure:(TYFailureError)failure;
+</code></pre>
+<h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h4>
 <table>
 <thead>
 <tr>
@@ -532,17 +545,34 @@ TYEventRecordingSensorModel</p>
 </tr>
 </tbody>
 </table>
-<pre><code class="lang-objective-c">
-/// &#x83B7;&#x53D6;&#x5E03;&#x9632;&#x63D0;&#x9192;&#x7684;&#x5217;&#x8868;
-/// Get ArmReminder list
-/// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
-/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
-/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
-- (void)getArmReminderStatus:(long long)homeId
-                     success:(ArmReminderList)success
-                     failure:(TYFailureError)failure;
+<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h4>
+<p>Objc</p>
+<pre><code class="lang-objective-c">[[TuyaSmartSecurityEventRecording sharedInstance] getSensorList:123123 success:^(NSArray&lt;TuyaSmartSecurityEventRecordingSensorModel *&gt; * _Nullable sensorList) {
+
+} failure:^(NSError *error) {
+
+}];
 </code></pre>
-<h4 id="&#x83B7;&#x53D6;&#x4F20;&#x611F;&#x5668;&#x7ED1;&#x5B9A;&#x7684;&#x6444;&#x50CF;&#x5934;&#x5217;&#x8868;">&#x83B7;&#x53D6;&#x4F20;&#x611F;&#x5668;&#x7ED1;&#x5B9A;&#x7684;&#x6444;&#x50CF;&#x5934;&#x5217;&#x8868;</h4>
+<p>Swift:</p>
+<pre><code class="lang-sw">
+
+</code></pre>
+<h3 id="12-&#x83B7;&#x53D6;&#x4F20;&#x611F;&#x5668;&#x7ED1;&#x5B9A;&#x7684;&#x6444;&#x50CF;&#x5934;&#x5217;&#x8868;">1.2 &#x83B7;&#x53D6;&#x4F20;&#x611F;&#x5668;&#x7ED1;&#x5B9A;&#x7684;&#x6444;&#x50CF;&#x5934;&#x5217;&#x8868;</h3>
+<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</h4>
+<p>&#x83B7;&#x53D6;&#x4F20;&#x611F;&#x5668;&#x7ED1;&#x5B9A;&#x7684;&#x6444;&#x50CF;&#x5934;&#x5217;&#x8868;</p>
+<pre><code class="lang-objective-c">/// &#x83B7;&#x53D6;&#x4F20;&#x611F;&#x5668;&#x7ED1;&#x5B9A;&#x7684;&#x6444;&#x50CF;&#x5934;&#x5217;&#x8868;
+/// Gets a list of cameras for the specified sensor bindings
+///
+/// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
+/// @param deviceId &#x4F20;&#x611F;&#x5668;&#x8BBE;&#x5907;Id
+/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
+/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Fauilre Callback
+- (void)getLinkedCameras:(long long)homeId
+                deviceId:(NSString *)deviceId
+                 success:(EventRecordingCameraLink)success
+                 failure:(TYFailureError)failure;
+</code></pre>
+<h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h4>
 <table>
 <thead>
 <tr>
@@ -597,19 +627,34 @@ TYEventRecordingLinkRuleModel</p>
 </tr>
 </tbody>
 </table>
-<pre><code class="lang-objective-c">
-/// &#x83B7;&#x53D6;&#x4F20;&#x611F;&#x5668;&#x7ED1;&#x5B9A;&#x7684;&#x6444;&#x50CF;&#x5934;&#x5217;&#x8868;
-/// Gets a list of cameras for the specified sensor bindings
+<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</h4>
+<p>Objc</p>
+<pre><code class="lang-objective-c">[[TuyaSmartSecurityEventRecording sharedInstance] getLinkedCameras:123123 deviceId:@&quot;sensor Id&quot; success:^(TuyaSmartSecurityEventRecordingLinkRuleModel * _Nullable linkRuleModel) {
+
+} failure:^(NSError *error) {
+
+}];
+</code></pre>
+<p>Swift:</p>
+<pre><code class="lang-sw">
+
+</code></pre>
+<h3 id="13-&#x7ED1;&#x5B9A;&#x6444;&#x50CF;&#x5934;">1.3 &#x7ED1;&#x5B9A;&#x6444;&#x50CF;&#x5934;</h3>
+<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</h4>
+<p>&#x7ED1;&#x5B9A;&#x6444;&#x50CF;&#x5934;</p>
+<pre><code class="lang-objective-c">/// &#x7ED1;&#x5B9A;&#x6444;&#x50CF;&#x5934;
+/// Bind Cameras
+///
 /// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
-/// @param deviceId &#x4F20;&#x611F;&#x5668;&#x8BBE;&#x5907;Id
+/// @param taskModel &#x7ED1;&#x5B9A;&#x6444;&#x50CF;&#x5934;&#x6570;&#x636E;&#x7684;&#x6A21;&#x578B;
 /// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
 /// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Fauilre Callback
-- (void)getLinkedCameras:(long long)homeId
-                deviceId:(NSString *)deviceId
-                 success:(EventRecordingCameraLink)success
-                 failure:(TYFailureError)failure;
+- (void)linkCamera:(long long)homeId
+         taskModel:(TuyaSmartSecurityEventRecordingLinkTaskModel *)taskModel
+           success:(TYSuccessBOOL)success
+           failure:(TYFailureError)failure;
 </code></pre>
-<h4 id="&#x7ED1;&#x5B9A;&#x6444;&#x50CF;&#x5934;">&#x7ED1;&#x5B9A;&#x6444;&#x50CF;&#x5934;</h4>
+<h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h4>
 <table>
 <thead>
 <tr>
@@ -697,19 +742,37 @@ TYEventRecordingLinkTaskModel</p>
 </tr>
 </tbody>
 </table>
-<pre><code class="lang-objective-c">
-/// &#x7ED1;&#x5B9A;&#x6444;&#x50CF;&#x5934;
-/// Bind Cameras
+<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h4>
+<p>Objc</p>
+<pre><code class="lang-objective-c">TuyaSmartSecurityEventRecordingLinkTaskModel *taskModel = [TuyaSmartSecurityEventRecordingLinkTaskModel new];
+    taskModel.ruleId = @&quot;ruleId&quot;;
+    taskModel.sensorId = @&quot;sensor Id&quot;;
+    [[TuyaSmartSecurityEventRecording sharedInstance] linkCamera:123123 taskModel:taskModel success:^(BOOL result) {
+
+    } failure:^(NSError *error) {
+
+    }];
+</code></pre>
+<p>Swift</p>
+<pre><code class="lang-Swi">
+
+</code></pre>
+<h3 id="14-&#x83B7;&#x53D6;&#x5DF2;&#x7ED1;&#x5B9A;&#x4E91;&#x5B58;&#x50A8;&#x7684;&#x6444;&#x50CF;&#x5934;&#x5217;&#x8868;">1.4 &#x83B7;&#x53D6;&#x5DF2;&#x7ED1;&#x5B9A;&#x4E91;&#x5B58;&#x50A8;&#x7684;&#x6444;&#x50CF;&#x5934;&#x5217;&#x8868;</h3>
+<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</h4>
+<p>&#x83B7;&#x53D6;&#x5DF2;&#x7ED1;&#x5B9A;&#x4E91;&#x5B58;&#x50A8;&#x7684;&#x6444;&#x50CF;&#x5934;&#x5217;&#x8868;</p>
+<pre><code class="lang-objective-c">/// &#x83B7;&#x53D6;&#x5DF2;&#x7ED1;&#x5B9A;&#x4E91;&#x5B58;&#x50A8;&#x7684;&#x6444;&#x50CF;&#x5934;&#x5217;&#x8868;
+/// Gets the list of cameras that have been bound to the cloud storage
+///
 /// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
-/// @param taskModel &#x7ED1;&#x5B9A;&#x6444;&#x50CF;&#x5934;&#x6570;&#x636E;&#x7684;&#x6A21;&#x578B;
+/// @param nCameraIdList &#x6444;&#x50CF;&#x5934;&#x8BBE;&#x5907;&#x5217;&#x8868; 
 /// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
 /// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Fauilre Callback
-- (void)linkCamera:(long long)homeId
-         taskModel:(TYEventRecordingLinkTaskModel *)taskModel
-           success:(TYSuccessBOOL)success
-           failure:(TYFailureError)failure;
+- (void)getStorageBindCameraList:(long long)homeId
+                    cameraIdList:(NSArray&lt;NSString *&gt; *)nCameraIdList
+                         success:(EventRecordingStorageBindCameraList)success
+                         failure:(TYFailureError)failure;
 </code></pre>
-<h4 id="&#x83B7;&#x53D6;&#x5DF2;&#x7ED1;&#x5B9A;&#x4E91;&#x5B58;&#x50A8;&#x7684;&#x6444;&#x50CF;&#x5934;&#x5217;&#x8868;">&#x83B7;&#x53D6;&#x5DF2;&#x7ED1;&#x5B9A;&#x4E91;&#x5B58;&#x50A8;&#x7684;&#x6444;&#x50CF;&#x5934;&#x5217;&#x8868;</h4>
+<h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h4>
 <table>
 <thead>
 <tr>
@@ -736,17 +799,17 @@ TYEventRecordingLinkTaskModel</p>
 </tr>
 </tbody>
 </table>
-<pre><code class="lang-objective-c">
-/// &#x83B7;&#x53D6;&#x5DF2;&#x7ED1;&#x5B9A;&#x4E91;&#x5B58;&#x50A8;&#x7684;&#x6444;&#x50CF;&#x5934;&#x5217;&#x8868;
-/// Gets the list of cameras that have been bound to the cloud storage
-/// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
-/// @param nCameraIdList &#x6444;&#x50CF;&#x5934;&#x8BBE;&#x5907;&#x5217;&#x8868; 
-/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
-/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Fauilre Callback
-- (void)getStorageBindCameraList:(long long)homeId
-                    cameraIdList:(NSArray&lt;NSString *&gt; *)nCameraIdList
-                         success:(EventRecordingStorageBindCameraList)success
-                         failure:(TYFailureError)failure;
+<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h4>
+<p>Objc</p>
+<pre><code class="lang-objective-c">[[TuyaSmartSecurityEventRecording sharedInstance] getStorageBindCameraList:123123 cameraIdList:@[] success:^(NSArray&lt;NSString *&gt; * _Nullable cameraList) {
+
+    } failure:^(NSError *error) {
+
+    }];
+</code></pre>
+<p>Swift:</p>
+<pre><code class="lang-sw">
+
 </code></pre>
 
                                 
@@ -791,7 +854,7 @@ TYEventRecordingLinkTaskModel</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"事件绑定","level":"1.10.3","depth":2,"next":{"title":"布防提醒","level":"1.10.4","depth":2,"path":"Scene/armReminder.md","ref":"Scene/armReminder.md","articles":[]},"previous":{"title":"地理围栏","level":"1.10.2","depth":2,"path":"Scene/geofence.md","ref":"Scene/geofence.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Scene/eventRecording.md","mtime":"2020-05-19T02:01:21.828Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-30T03:12:14.641Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"事件绑定","level":"1.10.3","depth":2,"next":{"title":"布防提醒","level":"1.10.4","depth":2,"path":"Scene/armReminder.md","ref":"Scene/armReminder.md","articles":[]},"previous":{"title":"地理围栏","level":"1.10.2","depth":2,"path":"Scene/geofence.md","ref":"Scene/geofence.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Scene/eventRecording.md","mtime":"2020-07-30T03:58:18.602Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-30T04:45:08.449Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

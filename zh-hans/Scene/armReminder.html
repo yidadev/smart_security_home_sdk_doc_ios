@@ -457,8 +457,21 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="tuyasecurityarmreminder--&#x5E03;&#x9632;&#x63D0;&#x9192;">TuyaSecurityArmReminder  &#x5E03;&#x9632;&#x63D0;&#x9192;</h3>
-<h4 id="&#x83B7;&#x53D6;&#x5E03;&#x9632;&#x63D0;&#x9192;&#x7684;&#x5217;&#x8868;">&#x83B7;&#x53D6;&#x5E03;&#x9632;&#x63D0;&#x9192;&#x7684;&#x5217;&#x8868;</h4>
+                                <h2 id="1-&#x5E03;&#x9632;&#x63D0;&#x9192;">1 &#x5E03;&#x9632;&#x63D0;&#x9192;</h2>
+<h3 id="11&#x83B7;&#x53D6;&#x5E03;&#x9632;&#x63D0;&#x9192;&#x7684;&#x5217;&#x8868;">1.1&#x83B7;&#x53D6;&#x5E03;&#x9632;&#x63D0;&#x9192;&#x7684;&#x5217;&#x8868;</h3>
+<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</h4>
+<p>&#x83B7;&#x53D6;&#x5E03;&#x9632;&#x63D0;&#x9192;&#x7684;&#x5217;&#x8868;</p>
+<pre><code class="lang-objective-c">/// &#x83B7;&#x53D6;&#x5E03;&#x9632;&#x63D0;&#x9192;&#x7684;&#x5217;&#x8868;
+/// Get ArmReminder list
+///
+/// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
+/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
+/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
+- (void)getArmReminderStatus:(long long)homeId
+                     success:(ArmReminderList)success
+                     failure:(TYFailureError)failure;
+</code></pre>
+<h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h4>
 <table>
 <thead>
 <tr>
@@ -509,17 +522,36 @@ TYArmReminderModel</p>
 </tr>
 </tbody>
 </table>
-<pre><code class="lang-objective-c">
-/// &#x83B7;&#x53D6;&#x5E03;&#x9632;&#x63D0;&#x9192;&#x7684;&#x5217;&#x8868;
-/// Get ArmReminder list
+<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h4>
+<p>Objc</p>
+<pre><code class="lang-objective-c">[[TuyaSmartSecurityArmReminder sharedInstance] getArmReminderStatus:123134 success:^(NSArray&lt;TuyaSmartSecurityArmReminderModel *&gt; * _Nullable armReminderList) {
+
+} failure:^(NSError *error) {
+
+}];
+</code></pre>
+<p>Swift:</p>
+<pre><code class="lang-swi">
+
+</code></pre>
+<h3 id="12-&#x4FEE;&#x6539;&#x5E03;&#x9632;&#x63D0;&#x9192;&#x72B6;&#x6001;">1.2 &#x4FEE;&#x6539;&#x5E03;&#x9632;&#x63D0;&#x9192;&#x72B6;&#x6001;</h3>
+<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</h4>
+<p>&#x4FEE;&#x6539;&#x5E03;&#x9632;&#x63D0;&#x9192;&#x72B6;&#x6001;</p>
+<pre><code class="lang-objective-c">/// &#x4FEE;&#x6539;&#x5E03;&#x9632;&#x63D0;&#x9192;
+/// Modify ArmReminder
+///
 /// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
+/// @param type &#x5E03;&#x9632;&#x7C7B;&#x578B;
+/// @param enable &#x5F00;/&#x5173;
 /// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
 /// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
-- (void)getArmReminderStatus:(long long)homeId
-                     success:(ArmReminderList)success
-                     failure:(TYFailureError)failure;
+- (void)updateArmReminderStatus:(long long)homeId
+                           type:(TYArmReminderType)type
+                         enable:(BOOL)enable
+                        success:(TYSuccessBOOL)success
+                        failure:(TYFailureError)failure;
 </code></pre>
-<h4 id="&#x4FEE;&#x6539;&#x5E03;&#x9632;&#x63D0;&#x9192;">&#x4FEE;&#x6539;&#x5E03;&#x9632;&#x63D0;&#x9192;</h4>
+<h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h4>
 <table>
 <thead>
 <tr>
@@ -550,21 +582,20 @@ TYArmReminderModel</p>
 </tr>
 </tbody>
 </table>
-<pre><code class="lang-objective-c">
-/// &#x4FEE;&#x6539;&#x5E03;&#x9632;&#x63D0;&#x9192;
-/// Modify ArmReminder
-/// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
-/// @param type &#x5E03;&#x9632;&#x7C7B;&#x578B;
-/// @param enable &#x5F00;/&#x5173;
-/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
-/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
-- (void)updateArmReminderStatus:(long long)homeId
-                           type:(TYArmReminderType)type
-                         enable:(BOOL)enable
-                        success:(TYSuccessBOOL)success
-                        failure:(TYFailureError)failure;
+<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h4>
+<p>Objc</p>
+<pre><code class="lang-objective-c">[[TuyaSmartSecurityArmReminder sharedInstance] updateArmReminderStatus:124 type:TYArmReminderTypeStay enable:YES success:^(BOOL result) {
+} failure:^(NSError *error) {
+}];
 </code></pre>
-<h4 id="&#x5FFD;&#x7565;&#x5E03;&#x9632;&#x63D0;&#x9192;">&#x5FFD;&#x7565;&#x5E03;&#x9632;&#x63D0;&#x9192;</h4>
+<p>Swift</p>
+<pre><code class="lang-swif">
+
+</code></pre>
+<h3 id="13-&#x5FFD;&#x7565;&#x5E03;&#x9632;&#x63D0;&#x9192;">1.3 &#x5FFD;&#x7565;&#x5E03;&#x9632;&#x63D0;&#x9192;</h3>
+<h4 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</h4>
+<p>&#x5FFD;&#x7565;&#x5E03;&#x9632;&#x63D0;&#x9192;</p>
+<h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h4>
 <table>
 <thead>
 <tr>
@@ -587,15 +618,15 @@ TYArmReminderModel</p>
 </tr>
 </tbody>
 </table>
-<pre><code class="lang-objective-c">
-/// &#x5FFD;&#x7565;&#x63D0;&#x9192;
-/// Ignore ArmReminder
-/// @param homeId &#x5BB6;&#x5EAD;Id / Home ID
-/// @param success &#x6210;&#x529F;&#x56DE;&#x8C03; / Success Callback
-/// @param failure &#x5931;&#x8D25;&#x56DE;&#x8C03; / Failure Callback
-- (void)ignoreArmReminder:(long long)homeId
-                  success:(TYSuccessBOOL)success
-                  failure:(TYFailureError)failure;
+<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h4>
+<p>Objc:</p>
+<pre><code class="lang-objective-c">[[TuyaSmartSecurityArmReminder sharedInstance] ignoreArmReminder:123124 success:^(BOOL result) {
+} failure:^(NSError *error) {
+}];
+</code></pre>
+<p>Swift:</p>
+<pre><code class="lang-Sw">
+
 </code></pre>
 
                                 
@@ -640,7 +671,7 @@ TYArmReminderModel</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"布防提醒","level":"1.10.4","depth":2,"next":{"title":"安防消息","level":"1.10.5","depth":2,"path":"Scene/message.md","ref":"Scene/message.md","articles":[]},"previous":{"title":"事件绑定","level":"1.10.3","depth":2,"path":"Scene/eventRecording.md","ref":"Scene/eventRecording.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Scene/armReminder.md","mtime":"2020-05-19T02:01:34.591Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-30T03:12:14.641Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"布防提醒","level":"1.10.4","depth":2,"next":{"title":"安防消息","level":"1.10.5","depth":2,"path":"Scene/message.md","ref":"Scene/message.md","articles":[]},"previous":{"title":"事件绑定","level":"1.10.3","depth":2,"path":"Scene/eventRecording.md","ref":"Scene/eventRecording.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Scene/armReminder.md","mtime":"2020-07-30T03:59:34.782Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-30T04:45:08.449Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

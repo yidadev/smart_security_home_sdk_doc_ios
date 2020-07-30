@@ -457,16 +457,15 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x5B89;&#x9632;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;sdk-ios">&#x5B89;&#x9632;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;SDK-iOS</h2>
-<h5 id="&#x63A5;&#x53E3;&#x8BF4;&#x660E;">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</h5>
-<h6 id="&#x521D;&#x59CB;&#x5316;">&#x521D;&#x59CB;&#x5316;</h6>
+                                <h2 id="&#x5B89;&#x9632;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;">&#x5B89;&#x9632;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;</h2>
+<h5 id="11-&#x521D;&#x59CB;&#x5316;">1.1 &#x521D;&#x59CB;&#x5316;</h5>
 <pre><code>/// &#x5355;&#x4F8B;&#x521D;&#x59CB;&#x5316;
 + (instancetype)sharedInstance;
-</code></pre><h6 id="&#x62C9;&#x53D6;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;">&#x62C9;&#x53D6;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;</h6>
+</code></pre><h5 id="12-&#x62C9;&#x53D6;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;">1.2 &#x62C9;&#x53D6;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;</h5>
 <pre><code>- (void)getLocationEmergencyConnectWithHomeId:(long long)homeId
                                       success:(nullable TYEmergencyConnectListBlock)success
                                       failure:(nullable void(^)(NSError *error))failure;
-</code></pre><h6 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+</code></pre><h6 id="121-&#x53C2;&#x6570;&#x8BF4;&#x660E;">1.2.1 &#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
 <table>
 <thead>
 <tr>
@@ -489,7 +488,7 @@
 </tr>
 </tbody>
 </table>
-<h6 id="&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x5B9E;&#x4F53;&#x7C7B;&#x5B57;&#x6BB5;">&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x5B9E;&#x4F53;&#x7C7B;&#x5B57;&#x6BB5;</h6>
+<h6 id="122-&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x5B9E;&#x4F53;&#x7C7B;&#x5B57;&#x6BB5;">1.2.2 &#x8FD4;&#x56DE;&#x6570;&#x636E;&#x5B9E;&#x4F53;&#x7C7B;&#x5B57;&#x6BB5;</h6>
 <table>
 <thead>
 <tr>
@@ -540,7 +539,7 @@
 </tr>
 </tbody>
 </table>
-<h6 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
+<h6 id="123-&#x4EE3;&#x7801;&#x793A;&#x4F8B;">1.2.3 &#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
 <pre><code>[[TuyaSecurityConnectManager sharedInstance] getLocationEmergencyConnectWithHomeId:1111
 
 success:
@@ -552,12 +551,12 @@ success:
 _Nonnull error) {
     //&#x9519;&#x8BEF;&#x4FE1;&#x606F;
 }];
-</code></pre><h6 id="&#x6DFB;&#x52A0;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;">&#x6DFB;&#x52A0;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;</h6>
+</code></pre><h5 id="13-&#x6DFB;&#x52A0;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;">1.3 &#x6DFB;&#x52A0;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;</h5>
 <pre><code>- (void)addNewConnectWithHomeId:(long long)homeId
                    connectModel:(TYEmergencyListModel *)infoModel
                         success:(nullable void(^)(BOOL success))success
                         failure:(nullable void(^)(NSError *error))failure;
-</code></pre><h6 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+</code></pre><h6 id="131-&#x53C2;&#x6570;&#x8BF4;&#x660E;">1.3.1 &#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
 <table>
 <thead>
 <tr>
@@ -584,7 +583,7 @@ _Nonnull error) {
 </tr>
 </tbody>
 </table>
-<h6 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
+<h6 id="132-&#x4EE3;&#x7801;&#x793A;&#x4F8B;">1.3.2 &#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
 <pre><code>[[TuyaSecurityConnectManager sharedInstance] addNewConnectWithHomeId:123
                                                         connectModel:[TYEmergencyListModel new]
                                                              success:^(BOOL success) {
@@ -593,12 +592,12 @@ _Nonnull error) {
                                                              failure:^(NSError * _Nonnull error) {
     //&#x9519;&#x8BEF;&#x4FE1;&#x606F;
 }];
-</code></pre><h6 id="&#x7F16;&#x8F91;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;&#x7F16;&#x8F91;&#x3001;&#x6392;&#x5E8F;">&#x7F16;&#x8F91;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;(&#x7F16;&#x8F91;&#x3001;&#x6392;&#x5E8F;)</h6>
+</code></pre><h5 id="14-&#x7F16;&#x8F91;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;&#x7F16;&#x8F91;&#x3001;&#x6392;&#x5E8F;">1.4 &#x7F16;&#x8F91;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;(&#x7F16;&#x8F91;&#x3001;&#x6392;&#x5E8F;)</h5>
 <pre><code>- (void)editConnectWithHomeId:(long long)homeId
                   connectInfo:(NSString *)infoString
                       success:(nullable void(^)(BOOL success))success
                       failure:(nullable void(^)(NSError *error))failure;
-</code></pre><h6 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+</code></pre><h6 id="141-&#x53C2;&#x6570;&#x8BF4;&#x660E;">1.4.1 &#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
 <table>
 <thead>
 <tr>
@@ -625,7 +624,7 @@ _Nonnull error) {
 </tr>
 </tbody>
 </table>
-<h6 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
+<h6 id="142-&#x4EE3;&#x7801;&#x793A;&#x4F8B;">1.4.2 &#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
 <pre><code>[[TuyaSecurityConnectManager sharedInstance] editConnectWithHomeId:123
                                                        connectInfo:@&quot;&quot;
                                                            success:^(BOOL success) {
@@ -634,12 +633,12 @@ _Nonnull error) {
                                                            failure:^(NSError * _Nonnull error) {
     //&#x9519;&#x8BEF;&#x4FE1;&#x606F;
 }];
-</code></pre><h6 id="&#x5220;&#x9664;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;">&#x5220;&#x9664;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;</h6>
+</code></pre><h5 id="15-&#x5220;&#x9664;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;">1.5 &#x5220;&#x9664;&#x7D27;&#x6025;&#x8054;&#x7CFB;&#x4EBA;</h5>
 <pre><code>- (void)deleteConnectWithHomeId:(long long)homeId
                  withConnectIds:(NSString *)ids
                         success:(nullable void(^)(BOOL success))success
                         failure:(nullable void(^)(NSError *error))failure;
-</code></pre><h6 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
+</code></pre><h6 id="151&#x53C2;&#x6570;&#x8BF4;&#x660E;">1.5.1&#x53C2;&#x6570;&#x8BF4;&#x660E;</h6>
 <table>
 <thead>
 <tr>
@@ -666,7 +665,7 @@ _Nonnull error) {
 </tr>
 </tbody>
 </table>
-<h6 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
+<h6 id="152-&#x4EE3;&#x7801;&#x793A;&#x4F8B;">1.5.2 &#x4EE3;&#x7801;&#x793A;&#x4F8B;</h6>
 <pre><code>[[TuyaSecurityConnectManager sharedInstance] deleteConnectWithHomeId:123
                                                       withConnectIds:@&quot;&quot;
                                                              success:^(BOOL success) {
@@ -718,7 +717,7 @@ _Nonnull error) {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"紧急联系人","level":"1.9.3","depth":2,"next":{"title":"安防场景&消息","level":"1.10","depth":1,"path":"Scene/README.md","ref":"Scene/README.md","articles":[{"title":"安防场景","level":"1.10.1","depth":2,"path":"Scene/securityScene.md","ref":"Scene/securityScene.md","articles":[]},{"title":"地理围栏","level":"1.10.2","depth":2,"path":"Scene/geofence.md","ref":"Scene/geofence.md","articles":[]},{"title":"事件绑定","level":"1.10.3","depth":2,"path":"Scene/eventRecording.md","ref":"Scene/eventRecording.md","articles":[]},{"title":"布防提醒","level":"1.10.4","depth":2,"path":"Scene/armReminder.md","ref":"Scene/armReminder.md","articles":[]},{"title":"安防消息","level":"1.10.5","depth":2,"path":"Scene/message.md","ref":"Scene/message.md","articles":[]}]},"previous":{"title":"模式设置","level":"1.9.2","depth":2,"path":"Arm/modeSetting.md","ref":"Arm/modeSetting.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Arm/emContact.md","mtime":"2020-05-19T02:22:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-30T03:12:14.641Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"紧急联系人","level":"1.9.3","depth":2,"next":{"title":"安防场景&消息","level":"1.10","depth":1,"path":"Scene/README.md","ref":"Scene/README.md","articles":[{"title":"安防场景","level":"1.10.1","depth":2,"path":"Scene/securityScene.md","ref":"Scene/securityScene.md","articles":[]},{"title":"地理围栏","level":"1.10.2","depth":2,"path":"Scene/geofence.md","ref":"Scene/geofence.md","articles":[]},{"title":"事件绑定","level":"1.10.3","depth":2,"path":"Scene/eventRecording.md","ref":"Scene/eventRecording.md","articles":[]},{"title":"布防提醒","level":"1.10.4","depth":2,"path":"Scene/armReminder.md","ref":"Scene/armReminder.md","articles":[]},{"title":"安防消息","level":"1.10.5","depth":2,"path":"Scene/message.md","ref":"Scene/message.md","articles":[]}]},"previous":{"title":"模式设置","level":"1.9.2","depth":2,"path":"Arm/modeSetting.md","ref":"Arm/modeSetting.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Arm/emContact.md","mtime":"2020-07-30T04:44:15.528Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-30T04:45:08.449Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
